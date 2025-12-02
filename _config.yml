@@ -3,7 +3,7 @@ description: "ADA University · Fall 2025"
 
 # Netlify domain + empty baseurl
 # url: "https://site1101.netlify.app"
-baseurl: "ada-site.github.io/"
+baseurl: "https://ada-site.github.io"
 
 theme: minima
 
