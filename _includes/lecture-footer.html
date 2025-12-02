@@ -1,0 +1,39 @@
+<div class="lecture-nav">
+  {% if page.previous %}
+    <a class="prev-btn" href="{{ page.previous.url | relative_url }}">← Previous</a>
+  {% endif %}
+  {% if page.next %}
+    <a class="next-btn" href="{{ page.next.url | relative_url }}">Next →</a>
+  {% endif %}
+</div>
+
+<button id="back-to-top" title="Go to top">↑</button>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var btn = document.getElementById('toc-toggle');
+  var panel = document.getElementById('toc-panel');
+  if (btn && panel) {
+    btn.addEventListener('click', function() {
+      panel.classList.toggle('is-open');
+    });
+  }
+
+  var topButton = document.getElementById("back-to-top");
+
+  window.onscroll = function() {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      topButton.style.display = "block";
+    } else {
+      topButton.style.display = "none";
+    }
+  };
+
+  topButton.addEventListener("click", function() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+});
+</script>

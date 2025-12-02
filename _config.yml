@@ -1,0 +1,24 @@
+title: "SITE 1101 · Principles of Information Systems"
+description: "ADA University · Fall 2025"
+
+# Netlify domain + empty baseurl
+url: "https://site1101.netlify.app"
+baseurl: ""
+
+theme: minima
+
+# Top navigation menu
+header_pages:
+  - lecture-notes.md
+  - communication.md
+  
+collections:
+  lectures:
+    output: true
+    permalink: /lectures/:name/
+
+plugins:
+  - jekyll-feed
+
+markdown: kramdown
+

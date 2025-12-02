@@ -1,0 +1,9 @@
+<br>
+<span style="color: #666; font-style: italic; font-size: 0.9em;">
+  
+  {% assign words = page.content | number_of_words %}
+  {% if words < 360 %}
+    1 min read
+  {% else %}
+    ⏳ {{ words | divided_by: 180 }}  min read
+  {% endif %}
