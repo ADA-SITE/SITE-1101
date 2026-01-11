@@ -100,7 +100,7 @@ Lecture notes are supplement to the Learning Outcomes and Study Materials shared
     {% assign reading_time = words | divided_by: 180 | append: " min" %}
   {% endif %}
 
-  <a href="{{ lec.url }}" class="lecture-card">
+  <a href="{{ lec.url | relative_url }}" class="lecture-card">
     <div class="lecture-top-row">
       {% if lec.week %}
         <div class="lecture-week">
