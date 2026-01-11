@@ -36,7 +36,7 @@ The course provides a general overview of what SITE students of the [ADA Univers
 
 ## Fall 2025
 
-This website was launched at the end of the Fall 2025 semester with the efforts of our great Teaching Assistants [Nilufar Ismayilova](https://www.linkedin.com/in/nilufar-ismayilova-24b7523a2), [Rahida Asadli](https://www.linkedin.com/in/rahidaasadli) (see [Lecture Notes](lectures)), and [Rahman Karimov](https://www.linkedin.com/in/rahman-karimov-22444b25b) (Website), as well as the guidance of the course instructors [Rumiyya Alili](https://www.linkedin.com/in/rumiyya-alili) and [Ismayil Shahaliyev](https://www.ada.edu.az/en/schools/site/members/faculty/72-ismayil-shahaliyev).
+This website was launched at the end of the Fall 2025 semester with the efforts of our great Teaching Assistants [Nilufar Ismayilova](https://www.linkedin.com/in/nilufar-ismayilova-24b7523a2), [Rahida Asadli](https://www.linkedin.com/in/rahidaasadli) (see [Lecture Notes]({{ "/lectures/" | relative_url }})), and [Rahman Karimov](https://www.linkedin.com/in/rahman-karimov-22444b25b) (Website), as well as the guidance of the course instructors [Rumiyya Alili](https://www.linkedin.com/in/rumiyya-alili) and [Ismayil Shahaliyev](https://www.ada.edu.az/en/schools/site/members/faculty/72-ismayil-shahaliyev).
 
 ## Schedule
 
@@ -62,7 +62,7 @@ Check [Academic Calendar](https://www.ada.edu.az/en/academics/academic-calendar)
 
 ## Office Hours
 
-Students are required to consistently check the course Blackboard page for announcements. General-purpose questions useful to other students should be asked on Blackboard discussion page. For private matters, students should use email. See [communication rules](communication) for further details. TA office hours for the semester are updated below:
+Students are required to consistently check the course Blackboard page for announcements. General-purpose questions useful to other students should be asked on Blackboard discussion page. For private matters, students should use email. See [communication rules]({{ "/communication/" | relative_url }}) for further details. TA office hours for the semester are updated below:
 
 | Day       | Time         | Room |
 |-----------|--------------|------|
@@ -107,7 +107,7 @@ You will have two exams: midterm and final. Both exams will be computer-based (u
 otherwise) with questions of various types (e.g. multiple-choice, fill-in-the-blank, code/essay). More specific rules will be communicated to you before the exam.[^2]
 
 ## Study Materials
-Study materials will be shared with you on blackboard throughout the semester. [Lecture Notes](lectures) are available online for this course.
+Study materials will be shared with you on blackboard throughout the semester. [Lecture Notes]({{ "/lectures/" | relative_url }}) are available online for this course.
 
 ## Policies & Resources
 
