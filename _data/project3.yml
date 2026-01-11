@@ -1,0 +1,36 @@
+- team: "Cyberpunk 2026"
+  team_number: "1"
+  team_name: "Cyberpunk 2026"
+  rank: 1
+  video_id: "tgbNymZ7vqY"
+  # video_url: "https://www.youtube.com/watch?v=tgbNymZ7vqY"  # Alternative: use full URL instead of video_id
+  members: "Leyla, Farid, Elvin"
+  semester: "Fall 2025"
+  desc: "Full-stack e-commerce platform with payment integration."
+
+- team: "The Frontend Wizards"
+  team_number: "2"
+  team_name: "The Frontend Wizards"
+  rank: 2
+  video_id: "jNQXAC9IVRw"
+  members: "Leyla, Farid, Elvin"
+  semester: "Fall 2025"
+  desc: "Beautiful UI/UX using React and Tailwind."
+
+- team: "Backend Battalion"
+  team_number: "3"
+  team_name: "Backend Battalion"
+  rank: 3
+  video_id: "dQw4w9WgXcQ"
+  members: "Leyla, Farid, Elvin"
+  semester: "Fall 2025"
+  desc: "Robust API security and authentication system."
+
+- team: "Full Stack Squad"
+  team_number: "4"
+  team_name: "Full Stack Squad"
+  rank: 4
+  video_id: "LXb3EKWsInQ"
+  members: "Leyla, Farid, Elvin"
+  semester: "Fall 2025"
+  desc: "Seamless integration between client and server."

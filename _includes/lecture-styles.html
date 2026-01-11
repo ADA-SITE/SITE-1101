@@ -1,0 +1,79 @@
+<style>
+.lecture-header-info{
+  display:flex;
+  align-items:center;
+  gap:0.75rem;
+  flex-wrap:nowrap;
+  margin:0 0 1.2rem 0;
+  padding:0;
+}
+
+.lecture-header-week{
+  display:inline-flex;
+  align-items:center;
+  padding:0.25rem 0.65rem;
+  border-radius:999px;
+  font-size:0.78rem;
+  font-weight:500;
+  color:#6b6b6b;
+  background:#f2f2f2;
+  white-space:nowrap;
+}
+
+.lecture-header-reading-time{
+  display:inline-flex;
+  align-items:center;
+  font-size:0.78rem;
+  font-weight:500;
+  color:#6b6b6b;
+  white-space:nowrap;
+}
+
+.lecture-header-authors{
+  display:inline-flex;
+  align-items:center;
+  gap:0.4rem;
+  font-size:0.78rem;
+  font-weight:500;
+  color:#6b6b6b;
+  white-space:nowrap;
+}
+
+.lecture-header-authors::before{
+  content:"";
+  width:14px;
+  height:14px;
+  flex-shrink:0;
+  background:#6b6b6b;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M12 12a4.5 4.5 0 1 0-4.5-4.5A4.5 4.5 0 0 0 12 12Zm0 2c-4.42 0-8 2.24-8 5v1h16v-1c0-2.76-3.58-5-8-5Z'/%3E%3C/svg%3E") no-repeat center/contain;
+          mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M12 12a4.5 4.5 0 1 0-4.5-4.5A4.5 4.5 0 0 0 12 12Zm0 2c-4.42 0-8 2.24-8 5v1h16v-1c0-2.76-3.58-5-8-5Z'/%3E%3C/svg%3E") no-repeat center/contain;
+}
+
+.lecture-header-date{
+  display:inline-flex;
+  align-items:center;
+  gap:0.4rem;
+  font-size:0.78rem;
+  font-weight:500;
+  color:#6b6b6b;
+  white-space:nowrap;
+}
+
+.lecture-header-date::before{
+  content:"";
+  width:14px;
+  height:14px;
+  flex-shrink:0;
+  background:#6b6b6b;
+  opacity:0.9;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M7 2h2v2h6V2h2v2h3v18H4V4h3V2Zm13 8H6v10h14V10Z'/%3E%3C/svg%3E") no-repeat center/contain;
+          mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M7 2h2v2h6V2h2v2h3v18H4V4h3V2Zm13 8H6v10h14V10Z'/%3E%3C/svg%3E") no-repeat center/contain;
+}
+
+@media (max-width:700px){
+  .lecture-header-info{
+    flex-wrap:wrap;
+    row-gap:0.4rem;
+  }
+}
+</style>

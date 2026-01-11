@@ -1,0 +1,57 @@
+{% comment %}
+  Video Block Include
+  Usage: {% include video-block.html video_url="..." team_number="..." members="..." semester="..." %}
+  
+  Parameters:
+  - video_url: Full YouTube URL (required)
+  - team_number: Team number (e.g., "1", "5", "3")
+  - team_name: Optional team name (e.g., "Alpha", "Omega")
+  - members: Comma-separated list of team member names
+  - semester: Semester information (e.g., "Fall 2025")
+{% endcomment %}
+
+{% comment %} Extract video ID from URL {% endcomment %}
+{% if include.video_url %}
+  {% if include.video_url contains 'youtube.com/watch?v=' %}
+    {% assign video_id = include.video_url | split: 'v=' | last | split: '&' | first %}
+  {% elsif include.video_url contains 'youtu.be/' %}
+    {% assign video_id = include.video_url | split: 'youtu.be/' | last | split: '?' | first %}
+  {% elsif include.video_url contains 'youtube.com/embed/' %}
+    {% assign video_id = include.video_url | split: 'embed/' | last | split: '?' | first %}
+  {% else %}
+    {% assign video_id = include.video_url %}
+  {% endif %}
+{% else %}
+  {% assign video_id = '' %}
+{% endif %}
+
+{% comment %} Build team name {% endcomment %}
+{% if include.team_name %}
+  {% assign full_team_name = 'Team ' | append: include.team_number | append: ': ' | append: include.team_name %}
+{% else %}
+  {% assign full_team_name = 'Team ' | append: include.team_number %}
+{% endif %}
+
+<div class="project-card">
+  <div class="video-placeholder" data-id="{{ video_id }}">
+    <img src="https://img.youtube.com/vi/{{ video_id }}/maxresdefault.jpg" alt="Video Thumbnail">
+    <div class="play-button"></div>
+  </div>
+
+  <div class="card-content">
+    {% if include.members %}
+    <div style="font-size: 0.95rem; font-weight: 500; margin-bottom: 0.4rem; color: #333; line-height: 1.4;">
+      Team {{ include.team_number }}: <span style="font-weight: 400;">{{ include.members }}</span>
+    </div>
+    {% else %}
+    <div style="font-size: 0.95rem; font-weight: 500; margin-bottom: 0.4rem; color: #333;">{{ full_team_name }}</div>
+    {% endif %}
+
+    {% if include.semester %}
+    <div style="font-size: 0.85rem; color: #777; font-weight: 400;">
+      {{ include.semester }}
+    </div>
+    {% endif %}
+  </div>
+</div>
+

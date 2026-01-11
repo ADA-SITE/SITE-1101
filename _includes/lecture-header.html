@@ -1,0 +1,53 @@
+{% comment %}
+  Extract week number from title
+{% endcomment %}
+{% assign week_num = "" %}
+{% if page.title contains "Week" %}
+  {% assign title_parts = page.title | split: "Week" %}
+  {% if title_parts.size > 1 %}
+    {% assign week_part = title_parts[1] | split: "—" | first | strip %}
+    {% assign week_num = week_part %}
+  {% endif %}
+{% endif %}
+
+{% comment %}
+  Calculate reading time
+{% endcomment %}
+{% assign words = page.content | number_of_words %}
+{% if words < 360 %}
+  {% assign reading_time = "1 min" %}
+{% else %}
+  {% assign reading_time = words | divided_by: 180 | append: " min" %}
+{% endif %}
+
+<div class="lecture-header">
+  {% if week_num != "" %}
+  <div class="lecture-header-week">
+    <span>Week {{ week_num }}</span>
+    <span class="reading-time">⏳ {{ reading_time }}</span>
+  </div>
+  {% endif %}
+  
+  {{ content | split: "**Week" | first | split: "**Authors:**" | first | split: "**Created / Updated:**" | first | split: "{% include reading-time.html %}" | first }}
+  
+  {% if page.content contains "**Authors:**" %}
+    {% assign content_parts = page.content | split: "**Authors:**" %}
+    {% if content_parts.size > 1 %}
+      {% assign author_line = content_parts[1] | split: "**" | first | strip %}
+      <div class="lecture-header-authors">
+        <strong>Authors:</strong>{{ author_line }}
+      </div>
+    {% endif %}
+  {% endif %}
+  
+  {% if page.content contains "**Created / Updated:**" %}
+    {% assign content_parts = page.content | split: "**Created / Updated:**" %}
+    {% if content_parts.size > 1 %}
+      {% assign date_line = content_parts[1] | split: "**" | first | strip %}
+      <div class="lecture-header-date">
+        <strong>Created / Updated:</strong>{{ date_line }}
+      </div>
+    {% endif %}
+  {% endif %}
+</div>
+

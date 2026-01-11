@@ -1,0 +1,111 @@
+<style>
+/* Lecture footer navigation */
+.lecture-nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:1rem;
+  margin:3rem 0 2.5rem 0;
+}
+
+.lecture-nav a{
+  display:inline-flex;
+  align-items:center;
+  padding:0.5rem 0.9rem;
+  border-radius:8px;
+  font-size:0.85rem;
+  font-weight:500;
+  color:#555;
+  text-decoration:none;
+  background:#f6f6f6;
+  border:1px solid #e6e6e6;
+  transition:background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.lecture-nav a:hover{
+  background:#eeeeee;
+  transform:translateY(-1px);
+  box-shadow:0 2px 6px rgba(0,0,0,0.06);
+}
+
+/* Back to top button */
+#back-to-top{
+  position:fixed;
+  bottom:22px;
+  right:22px;
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  border:1px solid #e2e2e2;
+  background:#f7f7f7;
+  color:#555;
+  font-size:1rem;
+  font-weight:600;
+  cursor:pointer;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 2px 6px rgba(0,0,0,0.12);
+  transition:background 0.15s ease, transform 0.15s ease;
+}
+
+#back-to-top:hover{
+  background:#ededed;
+  transform:translateY(-2px);
+}
+
+@media (max-width:700px){
+  .lecture-nav{
+    flex-direction:column;
+  }
+  .lecture-nav a{
+    width:100%;
+    justify-content:center;
+  }
+}
+</style>
+
+<div class="lecture-nav">
+  {% if page.previous %}
+    <a href="{{ page.previous.url | relative_url }}">← Previous</a>
+  {% endif %}
+
+  {% if page.next %}
+    <a href="{{ page.next.url | relative_url }}">Next →</a>
+  {% endif %}
+</div>
+
+<button id="back-to-top" aria-label="Scroll to top">↑</button>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+  /* TOC toggle (if present) */
+  var tocBtn = document.getElementById('toc-toggle');
+  var tocPanel = document.getElementById('toc-panel');
+  if (tocBtn && tocPanel) {
+    tocBtn.addEventListener('click', function () {
+      tocPanel.classList.toggle('is-open');
+    });
+  }
+
+  /* Back to top */
+  var topButton = document.getElementById('back-to-top');
+
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 300) {
+      topButton.style.display = 'flex';
+    } else {
+      topButton.style.display = 'none';
+    }
+  });
+
+  topButton.addEventListener('click', function () {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+
+});
+</script>

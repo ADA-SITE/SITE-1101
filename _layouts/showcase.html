@@ -1,0 +1,110 @@
+---
+layout: default
+---
+
+<style>
+  .showcase-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+  }
+  .project-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+  }
+  .video-placeholder {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    background-color: #000;
+    cursor: pointer;
+  }
+  .video-placeholder img {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.8;
+  }
+  .video-placeholder:hover img { opacity: 1; }
+  .play-button {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    width: 60px; height: 40px; background-color: #ff0000; border-radius: 10px; z-index: 2;
+  }
+  .play-button::before {
+    content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    border-style: solid; border-width: 10px 0 10px 16px; border-color: transparent transparent transparent white;
+  }
+  .video-placeholder iframe {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 10;
+  }
+  .card-content { padding: 1.2rem; text-align: left; }
+  .team-name { font-size: 0.95rem; font-weight: 500; margin-bottom: 0.4rem; color: #333; line-height: 1.4; }
+  .team-members { font-size: 0.85rem; color: #666; margin-bottom: 8px; font-style: italic; }
+  .project-desc { font-size: 0.9rem; color: #666; line-height: 1.4; }
+  .intro {
+    margin-bottom: 2rem;
+  }
+  .intro p {
+    margin: 0;
+  }
+</style>
+
+<div class="intro">
+  <p>{{ page.description | markdownify }}</p>
+</div>
+
+<div class="showcase-grid">
+  
+  {% assign projects = site.data[page.data_file] %}
+
+  {% for project in projects %}
+    {% comment %} Extract team number from team string if not explicitly provided {% endcomment %}
+    {% if project.team_number %}
+      {% assign team_num = project.team_number %}
+    {% else %}
+      {% assign team_parts = project.team | split: ':' %}
+      {% if team_parts.size > 1 %}
+        {% assign team_num = team_parts[0] | replace: 'Team', '' | strip %}
+      {% else %}
+        {% assign team_num = '' %}
+      {% endif %}
+    {% endif %}
+
+    {% comment %} Extract team name if available {% endcomment %}
+    {% if project.team_name %}
+      {% assign team_name = project.team_name %}
+    {% elsif project.team contains ':' %}
+      {% assign team_parts = project.team | split: ':' %}
+      {% assign team_name = team_parts[1] | strip %}
+    {% else %}
+      {% assign team_name = '' %}
+    {% endif %}
+
+    {% include video-block.html 
+       video_url=project.video_url
+       team_number=team_num
+       team_name=team_name
+       members=project.members 
+       semester=project.semester %}
+  {% endfor %}
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  var videos = document.querySelectorAll(".video-placeholder");
+  videos.forEach(function(vid) {
+    vid.addEventListener("click", function() {
+      var iframe = document.createElement("iframe");
+      iframe.setAttribute("src", "https://www.youtube.com/embed/" + this.getAttribute("data-id") + "?autoplay=1&rel=0");
+      iframe.setAttribute("frameborder", "0");
+      iframe.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture");
+      iframe.setAttribute("allowfullscreen", "true");
+      this.innerHTML = "";
+      this.appendChild(iframe);
+    });
+  });
+});
+</script>

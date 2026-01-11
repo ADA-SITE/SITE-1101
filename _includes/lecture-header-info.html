@@ -1,0 +1,41 @@
+{% assign words = content | number_of_words %}
+{% if words < 360 %}
+  {% assign reading_time = "1 min" %}
+{% else %}
+  {% assign reading_time = words | divided_by: 180 | append: " min" %}
+{% endif %}
+
+<div class="lecture-header-info">
+
+  {% if page.week %}
+    <div class="lecture-header-week">
+      Week
+      {% if page.week.first %}
+        {{ page.week | join: ", " }}
+      {% else %}
+        {{ page.week }}
+      {% endif %}
+    </div>
+  {% endif %}
+
+  <div class="lecture-header-reading-time">
+    ⏳ {{ reading_time }}
+  </div>
+
+  {% if page.authors %}
+    <div class="lecture-header-authors">
+      {% if page.authors.first %}
+        {{ page.authors | join: ", " }}
+      {% else %}
+        {{ page.authors }}
+      {% endif %}
+    </div>
+  {% endif %}
+
+  {% if page.created or page.updated %}
+    <div class="lecture-header-date">
+      {% if page.created %}{{ page.created }}{% endif %}{% if page.created and page.updated %} / {% endif %}{% if page.updated %}{{ page.updated }}{% endif %}
+    </div>
+  {% endif %}
+
+</div>

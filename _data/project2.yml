@@ -1,0 +1,36 @@
+- team: "Team Red: SQL Masters"
+  team_number: "Red"
+  team_name: "SQL Masters"
+  rank: 1
+  video_id: "dQw4w9WgXcQ"
+  # video_url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"  # Alternative: use full URL instead of video_id
+  members: "Nigar, Orkhan, Samir"
+  semester: "Fall 2025"
+  desc: "Complex schema design with zero redundancy."
+
+- team: "Team Blue: Query Kings"
+  team_number: "Blue"
+  team_name: "Query Kings"
+  rank: 2
+  video_id: "LXb3EKWsInQ"
+  members: "Nigar, Orkhan, Samir"
+  semester: "Fall 2025"
+  desc: "Optimized indexing strategy for fast lookups."
+
+- team: "Team Green: Normalizers"
+  team_number: "Green"
+  team_name: "Normalizers"
+  rank: 3
+  video_id: "tgbNymZ7vqY"
+  members: "Nigar, Orkhan, Samir"
+  semester: "Fall 2025"
+  desc: "A perfect example of 3rd Normal Form."
+
+- team: "Team Yellow: Architects"
+  team_number: "Yellow"
+  team_name: "Architects"
+  rank: 4
+  video_id: "jNQXAC9IVRw"
+  members: "Nigar, Orkhan, Samir"
+  semester: "Fall 2025"
+  desc: "Innovative use of foreign keys."

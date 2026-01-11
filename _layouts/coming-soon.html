@@ -1,0 +1,45 @@
+---
+layout: default
+---
+
+<style>
+  .coming-soon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    text-align: center;
+    padding: 3rem 1rem;
+  }
+  .coming-soon-icon {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.6;
+  }
+  .coming-soon-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #222;
+  }
+  .coming-soon-message {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 600px;
+    line-height: 1.6;
+  }
+</style>
+
+<div class="coming-soon-container">
+  <div class="coming-soon-icon">🚧</div>
+  <h1 class="coming-soon-title">{{ page.title }}</h1>
+  <p class="coming-soon-message">
+    {% if page.description %}
+      {{ page.description }}
+    {% else %}
+      This project page is coming soon. Check back later for updates!
+    {% endif %}
+  </p>
+</div>
+
