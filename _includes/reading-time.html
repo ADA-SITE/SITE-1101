@@ -2,6 +2,6 @@
 {% if words < 360 %}
   {% assign reading_time = "1 min" %}
 {% else %}
-  {% assign reading_time = words | divided_by: 180 | append: " min" %}
+  {% assign reading_time = words | divided_by: 250 | append: " min" %}
 {% endif %}
 <span class="reading-time-inline">⏳ {{ reading_time }}</span>

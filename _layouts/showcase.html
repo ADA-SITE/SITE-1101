@@ -3,13 +3,28 @@ layout: default
 ---
 
 <style>
-  .showcase-grid {
+  .intro{
+    margin: 0 0 2rem 0;
+  }
+  .intro h1{
+    margin: 0 0 0.6rem 0;
+    line-height: 1.2;
+  }
+  .intro p{
+    margin: 0;
+    color: #555;
+    line-height: 1.55;
+  }
+
+  .showcase-grid{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 2rem;
-    padding: 2rem 0;
+    padding: 0;
+    margin: 0 0 2rem 0;
   }
-  .project-card {
+
+  .project-card{
     background: #fff;
     border-radius: 12px;
     overflow: hidden;
@@ -18,86 +33,140 @@ layout: default
     display: flex;
     flex-direction: column;
   }
-  .video-placeholder {
+
+  .video-placeholder{
     position: relative;
     width: 100%;
     padding-bottom: 56.25%;
     background-color: #000;
     cursor: pointer;
   }
-  .video-placeholder img {
-    position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.8;
+
+  .video-placeholder img{
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    opacity: 0.85;
+    transition: opacity 0.15s ease;
   }
-  .video-placeholder:hover img { opacity: 1; }
-  .play-button {
-    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-    width: 60px; height: 40px; background-color: #ff0000; border-radius: 10px; z-index: 2;
+
+  .video-placeholder:hover img{
+    opacity: 1;
   }
-  .play-button::before {
-    content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-    border-style: solid; border-width: 10px 0 10px 16px; border-color: transparent transparent transparent white;
+
+  .play-button{
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 64px;
+    height: 44px;
+    background-color: #ff0000;
+    border-radius: 12px;
+    z-index: 2;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
   }
-  .video-placeholder iframe {
-    position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 10;
+
+  .play-button::before{
+    content: '';
+    position: absolute;
+    top: 50%; left: 52%;
+    transform: translate(-50%, -50%);
+    border-style: solid;
+    border-width: 10px 0 10px 16px;
+    border-color: transparent transparent transparent #fff;
   }
-  .card-content { padding: 1.2rem; text-align: left; }
-  .team-name { font-size: 0.95rem; font-weight: 500; margin-bottom: 0.4rem; color: #333; line-height: 1.4; }
-  .team-members { font-size: 0.85rem; color: #666; margin-bottom: 8px; font-style: italic; }
-  .project-desc { font-size: 0.9rem; color: #666; line-height: 1.4; }
-  .intro {
-    margin-bottom: 2rem;
+
+  .video-placeholder iframe{
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 10;
   }
-  .intro p {
+
+  .card-content{
+    padding: 1.2rem;
+    text-align: left;
+  }
+
+  .team-name{
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin: 0 0 0.4rem 0;
+    color: #333;
+    line-height: 1.35;
+  }
+
+  .team-members{
+    font-size: 0.85rem;
+    color: #666;
+    margin: 0 0 0.5rem 0;
+    font-style: italic;
+  }
+
+  .project-desc{
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.45;
     margin: 0;
   }
 </style>
 
 <div class="intro">
-  <h1>{{ page.title }}</h1>
-  <p>{{ page.description | markdownify }}</p>
+  {% if page.title %}
+    <h1>{{ page.title }}</h1>
+  {% endif %}
+  {% if content %}
+    <div>{{ content }}</div>
+  {% endif %}
 </div>
 
-<div class="showcase-grid">
-  
-  {% assign projects = site.data[page.data_file] %}
+{% assign projects = site.data[page.data_file] %}
 
-  {% for project in projects %}
-    {% comment %} Extract team number from team string if not explicitly provided {% endcomment %}
-    {% if project.team_number %}
-      {% assign team_num = project.team_number %}
-    {% else %}
-      {% assign team_parts = project.team | split: ':' %}
-      {% if team_parts.size > 1 %}
-        {% assign team_num = team_parts[0] | replace: 'Team', '' | strip %}
+{% if projects and projects.size > 0 %}
+  <div class="showcase-grid">
+    {% for project in projects %}
+
+      {% if project.team_number %}
+        {% assign team_num = project.team_number %}
       {% else %}
-        {% assign team_num = '' %}
+        {% assign team_parts = project.team | split: ':' %}
+        {% if team_parts.size > 1 %}
+          {% assign team_num = team_parts[0] | replace: 'Team', '' | strip %}
+        {% else %}
+          {% assign team_num = '' %}
+        {% endif %}
       {% endif %}
-    {% endif %}
 
-    {% comment %} Extract team name if available {% endcomment %}
-    {% if project.team_name %}
-      {% assign team_name = project.team_name %}
-    {% elsif project.team contains ':' %}
-      {% assign team_parts = project.team | split: ':' %}
-      {% assign team_name = team_parts[1] | strip %}
-    {% else %}
-      {% assign team_name = '' %}
-    {% endif %}
+      {% if project.team_name %}
+        {% assign team_name = project.team_name %}
+      {% elsif project.team contains ':' %}
+        {% assign team_parts = project.team | split: ':' %}
+        {% assign team_name = team_parts[1] | strip %}
+      {% else %}
+        {% assign team_name = '' %}
+      {% endif %}
 
-    {% include video-block.html 
-       video_url=project.video_url
-       team_number=team_num
-       team_name=team_name
-       members=project.members 
-       semester=project.semester %}
-  {% endfor %}
-</div>
+      {% include video-block.html
+        video_url=project.video_url
+        team_number=team_num
+        team_name=team_name
+        members=project.members
+        semester=project.semester
+      %}
+
+    {% endfor %}
+  </div>
+{% else %}
+  <p>No projects found. Check <code>data_file</code> in the page front matter and ensure the data file exists in <code>_data/</code>.</p>
+{% endif %}
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
   var videos = document.querySelectorAll(".video-placeholder");
   videos.forEach(function(vid) {
     vid.addEventListener("click", function() {
+      if (this.querySelector("iframe")) return;
       var iframe = document.createElement("iframe");
       iframe.setAttribute("src", "https://www.youtube.com/embed/" + this.getAttribute("data-id") + "?autoplay=1&rel=0");
       iframe.setAttribute("frameborder", "0");

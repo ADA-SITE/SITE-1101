@@ -1,0 +1,13 @@
+---
+---
+
+@import "minima";
+
+/* Mobile hamburger icon color fix */
+.site-nav .menu-icon svg {
+  fill: #333;
+}
+
+.site-nav .menu-icon:hover svg {
+  fill: #000;
+}

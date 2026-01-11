@@ -2,33 +2,73 @@
 layout: page
 permalink: /
 ---
-
 <style>
-  .schedule-wrapper {
-    overflow-x: auto;     
-    position: relative;   
+  .schedule-wrapper{
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
     margin-bottom: 2rem;
-    box-shadow: inset -10px 0 10px -10px rgba(0,0,0,0.2); 
+    border: 1px solid #eee;
+    border-radius: 10px;
   }
 
+  .schedule-wrapper table{
+    min-width: 820px;
+    margin: 0;
+  }
+
+  .schedule-wrapper th,
+  .schedule-wrapper td{
+    padding: 0.55rem 0.7rem;
+    white-space: nowrap;
+  }
+
+  /* Desktop sticky columns */
   .schedule-wrapper th:first-child,
-  .schedule-wrapper td:first-child {
+  .schedule-wrapper td:first-child{
     position: sticky;
     left: 0;
-    background-color: #fff; 
+    background-color: #fff;
     z-index: 2;
     border-right: 2px solid #eee;
   }
 
   .schedule-wrapper th:nth-child(2),
-  .schedule-wrapper td:nth-child(2) {
+  .schedule-wrapper td:nth-child(2){
     position: sticky;
-    left: 60px;
+    left: 88px;
     background-color: #fff;
     z-index: 2;
     border-right: 2px solid #eee;
   }
+
+  /* Mobile adjustments */
+  @media (max-width: 700px){
+    .schedule-wrapper{
+      border-radius: 8px;
+    }
+
+    .schedule-wrapper table{
+      min-width: 720px;
+    }
+
+    .schedule-wrapper th,
+    .schedule-wrapper td{
+      padding: 0.45rem 0.55rem;
+      font-size: 0.85rem;
+    }
+
+    /* Sticky columns are awkward on mobile: disable */
+    .schedule-wrapper th:first-child,
+    .schedule-wrapper td:first-child,
+    .schedule-wrapper th:nth-child(2),
+    .schedule-wrapper td:nth-child(2){
+      position: static;
+      border-right: none;
+    }
+  }
 </style>
+
 
 # 🎓 SITE 1101: Principles of Information Systems
 
