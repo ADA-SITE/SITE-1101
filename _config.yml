@@ -1,9 +1,8 @@
 title: "SITE 1101 · Principles of Information Systems"
-description: "ADA University · Fall 2025"
+description: "ADA University"
 
-# Netlify domain + empty baseurl
-url: "https://ada-site.github.io/"
-baseurl: "SITE-1101"
+url: "https://ada-site.github.io"
+baseurl: "/SITE-1101"
 
 theme: minima
 
