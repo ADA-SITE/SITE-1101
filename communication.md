@@ -25,7 +25,7 @@ If it is a **personal (private) question**, then a student should opt for an ema
 
 Your emails should have a meaningful title (subject), introduction, body, and signature. The following is one possible template that you can use in your daily email conversations. You can [automatically generate](https://online.ada.edu.az/signature/ada.html) it for yourselves for ADA University. .
 
-![signature](/assets/images/signature.png)
+![signature]({{ "/assets/images/signature.png" | relative_url }})
 
 ### Extra tips
 
