@@ -1,0 +1,41 @@
+# MkDocs build output
+site/
+
+# MkDocs cache
+.cache/
+.mkdocs_cache/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.venv/
+venv/
+ENV/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors / IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Jupyter (if used)
+.ipynb_checkpoints/
+
+# Node (if MkDocs Material extras are built with npm)
+node_modules/
+package-lock.json
+
+# Temporary files
+*.tmp
+*.bak
+
+_drafts/

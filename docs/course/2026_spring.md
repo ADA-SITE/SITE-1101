@@ -1,0 +1,23 @@
+# Spring 2026
+
+!!! warning "Important"
+    The content is subject to change. Please consistently check the course page on Blackboard and the ADA University [Academic Calendar](https://www.ada.edu.az/en/academics/academic-calendar) for modifications. The last day of the add/drop period, holidays, and similar dates are noted in the calendar.
+
+| Week | Topic | Learning Outcomes | Assessment / Notes |
+|-----|-------|-------------------|--------------------|
+| 1 | Course Overview / Syllabus / Technology & Engineering | Describe the course structure and ground rules as defined in the syllabus. Define and describe the challenges of technology and engineering. | — |
+| 2 | Data, Information, Knowledge / Statistics / Systems / Information Systems | Differentiate between data and information. Describe the role of statistics. Define a system, its components, and interactions. Describe information systems and components of computer-based IS. | — |
+| 3 | Digital vs Analog / Data Units / Number Systems / Binary Arithmetic / Two’s Complement / Transistors / Boolean Logic | Compare digital and analog systems. Define bit, byte, and data units. Convert numbers between decimal, binary, and hexadecimal. Explain binary addition, subtraction, and two’s complement. Describe Boolean logic, truth tables, transistors, and logic gates. | **Project 1 out [Team]:** Constructing basic logic gates |
+| 4 | Hardware: CPU, GPU, Memory, I/O, Storage | Explain von Neumann architecture. Describe CPU components and operation. Explain GPU purpose. Differentiate memory types (ROM, RAM, cache), DRAM vs SRAM, and secondary storage technologies. | **Homework 1 out:** JavaScript programming |
+| 5 | Algorithms I: Name Binding, Selection, Repetition | Define algorithms. Explain basic algorithmic actions: name binding, selection, repetition. | **Project 2 out [Team]:** Hour of Code |
+| 6 | Algorithms II: Modularization, Recursion / Dijkstra’s Algorithm | Explain modularization and recursion. Describe Dijkstra’s shortest path algorithm. | — |
+| 7 | Software / Software Engineering / Programming Languages / Compilers & Interpreters / Operating Systems | Define software and software engineering. Explain best practices in software development. Differentiate syntax vs semantics. Explain programming paradigms and language evolution. Compare compiler and interpreter. Describe OS roles and activities. | **Midterm Exam:** March 10 (Tuesday) |
+| 8 | Telecommunications / Computer Networks / OSI Model / Network Topologies | Describe telecommunication models and media. Explain network classifications and characteristics. Describe computer networks and OSI layers. Compare network types and topologies. | **Project 3 out [Team]:** Programming LEGO robots |
+| 9 | Internet / IP Suite / Addressing / DNS / Routing / Intranet & Extranet / Distributed Systems | Describe Internet structure. Explain IP suite, IP and MAC addresses. Describe DNS and routing. Define intranet, extranet, and distributed systems. | — |
+|10 | World Wide Web / Markup Languages / Cloud Computing / System Architectures | Describe WWW structure and HTTP. Explain URLs. Describe markup languages. Explain cloud computing models and centralized vs decentralized systems. | **Homework 2 out:** SQL |
+|11 | Databases / Data Models / Indexing / Normalization / Big Data | Explain database approach and advantages. Describe ER modeling and indexing. Explain relational model and normalization. Define Big Data and knowledge discovery. | — |
+|12 | DBMS / SQL / NoSQL / Transactions / ACID / CAP | Explain DBMS types and purposes. Describe data manipulation operations. Explain SQL commands. Contrast SQL and NoSQL. Explain transactions, ACID properties, and CAP theorem. | **Project 4 out [Individual]:** Personal portfolio website |
+|13 | AI / ML / DL / Regression / Neural Networks / LLMs | Define AI, ML, DL. Explain regression and classification. Describe supervised vs unsupervised learning. Explain linear regression and RMSE. Describe neural networks, LLMs, CSP backtracking, minimax, and reinforcement learning. | — |
+|14 | Systems Development / SDLC / Waterfall / Agile / Prototyping / Testing / UML | Identify SDLC phases, participants, and outputs. Compare SDLC models. Explain DevOps and software testing. Describe UML diagrams (use case, class, sequence). | — |
+|15 | Engineering Ethics / Security / Privacy / Logic / Digital Hygiene | Explain engineering ethics and social responsibility. Describe logical reasoning and fallacies. Outline ACM Code of Ethics. Explain digital hygiene and social issues of information systems. | — |
+| —  | —  | — | **Final Exam:** May 13 (Wednesday) |
