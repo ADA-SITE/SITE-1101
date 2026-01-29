@@ -1,0 +1,1082 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://ada-site.github.io/SITE-1101/Lecture_Notes/03_hardware/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>03. Hardware – CPU, GPU, Memory, Storage Devices - SITE 1101 Principles of Information Systems</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="../../assets/styles/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#03-hardware-cpu-gpu-memory-storage-devices" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="SITE 1101 Principles of Information Systems" class="md-header__button md-logo" aria-label="SITE 1101 Principles of Information Systems" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SITE 1101 Principles of Information Systems
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              03. Hardware – CPU, GPU, Memory, Storage Devices
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="cyan"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ada-site/SITE-1101" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../course/2025_fall/" class="md-tabs__link">
+          
+  
+  
+  Course
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../general/communication/" class="md-tabs__link">
+          
+  
+  
+  General
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../projects/01_project/" class="md-tabs__link">
+          
+  
+  
+  Projects
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="SITE 1101 Principles of Information Systems" class="md-nav__button md-logo" aria-label="SITE 1101 Principles of Information Systems" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    SITE 1101 Principles of Information Systems
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ada-site/SITE-1101" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Course
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course/2025_fall/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fall 2025
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course/2026_spring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Spring 2026
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    General
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    General
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/communication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Communication Rules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/resources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Policies &amp; Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Projects
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Projects
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/01_project/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/02_project/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/03_project/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/04_project/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hardware
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#von-neumann-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Von Neumann Architecture
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#central-processing-unit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Central Processing Unit
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graphics-processing-unit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Graphics Processing Unit
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#memory-devices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Memory Devices
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Memory Devices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#primary-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Primary Storage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secondary-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Secondary Storage
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-material" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additional Material
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="03-hardware-cpu-gpu-memory-storage-devices">03. Hardware – CPU, GPU, Memory, Storage Devices</h1>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<ul>
+<li>Rahida Asadli, Ismayil Shahaliyev</li>
+<li>Oct 25 2025 / Dec 20 2025</li>
+</ul>
+</div>
+<h2 id="hardware">Hardware</h2>
+<p><a href="https://en.wikipedia.org/wiki/Computer_hardware"><em>Hardware</em></a> refers to the <strong>physical components</strong> of a computer system, the parts you can see and touch. It includes all electronic and mechanical elements that work together to input, process, store, and output data.</p>
+<p><em>Figure 1.</em> Image of computer motherboard model DellT3600. Adapted from “Motherboard,” Wikipedia, Wikimedia Commons, https://en.wikipedia.org/wiki/Motherboard. Licensed under <a href="https://creativecommons.org/licenses/by/2.5">CC BY 2.5</a>.</p>
+<p>The <strong>motherboard</strong> is the main circuit board and backbone of the computer, responsible for connecting and coordinating all hardware components. It provides electrical pathways (called <em>buses</em>) and controllers that allow the <em>Central Processing Unit (CPU)</em>, memory, storage devices, input components (e.g. keyboard, mouse, microphone, scanner), and output components (e.g. monitor, printer, speaker) to communicate quickly and in the correct sequence. The motherboard ensures that data flows smoothly between these parts, much like a central highway system linking different parts of a city. The <em>CPU socket</em> is the slot where the processor is installed; through tiny metal contacts, it connects directly to the motherboard so the CPU can fetch, decode, and execute instructions from memory. Beside it are the memory slots, where <em>Random-Access Memory (RAM)</em> modules are inserted. RAM temporarily holds the data and instructions the CPU is currently working with, allowing fast access and efficient processing.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Imagine you open the calculator app on your computer. When you click the icon, the action is sent through the motherboard. The calculator program is loaded into RAM, and the CPU begins reading its instructions from memory and carrying them out. When you type numbers, they are kept in RAM while the CPU performs the calculations. The result is then shown on the screen. If you close the app, the data in RAM is cleared, but the calculator program itself remains stored in a storage device for future use.</p>
+</div>
+<h2 id="von-neumann-architecture">Von Neumann Architecture</h2>
+<p>The <a href="https://en.wikipedia.org/wiki/Von_Neumann_architecture"><em>von Neumann architecture</em></a> (1945) describes how most computers are structured. It consists of five key components. The <strong>input unit</strong> receives data and instructions from external devices. The <strong>memory unit</strong> stores data and instructions, either temporarily during processing or permanently for long-term use. The <strong>arithmetic logic unit</strong> performs arithmetic operations, such as addition and subtraction, as well as logical operations. The <strong>control unit</strong> directs and coordinates all system activities by controlling the flow of data and instructions between components. Finally, the <strong>output unit</strong> presents the processed information to the user or transmits it to other systems through output devices or communication interfaces.</p>
+<p><em>Figure 2.</em> Diagram of the von Neumann architecture. Adapted from “Von Neumann architecture,” Wikipedia, Wikimedia Commons, https://en.wikipedia.org/wiki/Von_Neumann_architecture. Licensed under CC BY-SA 4.0.</p>
+<p>Both <strong>data</strong> and <strong>instructions</strong> are stored together in the same memory. This is called the <em>stored-program concept</em>. It was important because it allowed computers to keep programs in memory along with the data they use. This made it possible to change or run different programs by loading new instructions into memory, instead of manually changing the computer’s hardware connections. It simplified computer design, enabled automation of complex tasks, and made programming far more flexible.</p>
+<p>It is common sense to us now, but only because it became the foundation of modern computing. Before the stored-program concept, computers like <a href="https://en.wikipedia.org/wiki/ENIAC">ENIAC</a> had to be rewired by hand for every new task. There was no “program” to load—the hardware was the program. <a href="https://en.wikipedia.org/wiki/John_von_Neumann">John von Neumann</a>’s idea separated hardware (the machine) from software (the instructions it runs) and treated code as just another form of data. That shift made general-purpose computers possible.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When you use a calculator app to add two numbers, both the program’s instructions (load number, add, display result) and the numbers you enter are stored in RAM. The CPU retrieves and executes the instructions one by one, reads the data from memory, performs the addition, and writes the result back, following the stored-program model.</p>
+</div>
+<h2 id="central-processing-unit">Central Processing Unit</h2>
+<p align="center">
+  <img src="../../assets/images/lecture04/motherboard.png" alt="">
+</p>
+
+<p><a href="https://en.wikipedia.org/wiki/Central_processing_unit"><strong>Central Processing Unit (CPU)</strong></a> follows program instructions and performs the steps needed to complete tasks—from typing a word to playing music. The CPU also controls and coordinates the work of other parts of the computer, making sure everything happens in the right order. A CPU consists of three main parts.</p>
+<p><em>Figure 3.</em> A high-end consumer CPU made by <a href="https://en.wikipedia.org/wiki/Intel">Intel</a>: an <a href="https://en.wikipedia.org/wiki/Intel_Core_i9-14900KF">Intel Core i9-14900KF</a>. Adapted from “Central processing unit,” Wikipedia, Wikimedia Commons, https://en.wikipedia.org/wiki/Central_processing_unit. Licensed under <a href="https://creativecommons.org/licenses/by/2.5">CC BY 2.5</a>.</p>
+<p><a href="https://en.wikipedia.org/wiki/Control_unit">Control Unit (CU)</a> manages and directs activities inside the CPU. It tells the computer when to fetch data, when to carry out an instruction, and where to send results. You can think of it as the traffic controller of the CPU.</p>
+<p><a href="https://en.wikipedia.org/wiki/Arithmetic_logic_unit">Arithmetic Logic Unit (ALU)</a> performs arithmetic operations (addition, subtraction, multiplication, division) and logical operations (comparisons such as equal to, greater than, AND, OR, NOT). When the CPU executes an instruction like “add 2 + 3,” the CU sends the task to the ALU. The ALU performs the calculation and sends the result back to registers or memory.</p>
+<p><a href="https://en.wikipedia.org/wiki/Processor_register">Registers</a> are tiny, high-speed memory locations built directly into the CPU. They store data and instructions temporarily during processing. Because they are inside the CPU, registers are much faster than RAM. Examples include:</p>
+<ul>
+<li>Instruction Register (IR) holds the current instruction being executed.</li>
+<li>Program Counter (PC) keeps track of the next instruction’s address in memory.</li>
+<li>Accumulator (ACC) stores intermediate arithmetic and logic results.</li>
+</ul>
+<p>Every action the CPU performs follows four main steps, known as the <a href="https://en.wikipedia.org/wiki/Instruction_cycle"><strong>machine cycle</strong></a>:</p>
+<ul>
+<li><strong>Fetch</strong>: the CPU gets an instruction from RAM.</li>
+<li><strong>Decode</strong>: the CPU determines what the instruction means.</li>
+<li><strong>Execute</strong>: the CPU carries out the action (the ALU does the work).</li>
+<li><strong>Store</strong>: the CPU saves the result back to memory or sends it to an output device.</li>
+</ul>
+<p>This process (<strong>fetch → decode → execute → store</strong>) repeats continuously, millions or billions of times per second.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When a computer adds two numbers, several CPU components work together. First, the CU fetches the instruction from main memory (the binary code telling the CPU what to do). Then it decodes the instruction and identifies which data to use. After decoding, the CU sends control signals that tell the ALU to perform the operation and tell the registers when to load or output data.</p>
+<p>The ALU receives the numbers from registers, performs the addition in binary, and produces the result. Registers act as extremely fast storage locations: before the ALU starts, the inputs are placed in registers; after the ALU finishes, the output is stored in a register, ready to be written back to memory or used by the next instruction.</p>
+<p>Throughout the process, the CU enforces timing and order, ensuring that data moves only when it should. This coordination—fetching, decoding, executing, and storing—is what allows simple operations to happen reliably at very high speed.</p>
+</div>
+<p>The <strong>clock</strong> is the timing system of the CPU. It sends out a steady stream of electrical pulses that set the pace for operations. The <em>clock speed</em> indicates how many cycles occur per second and is measured in Hertz (Hz). For example, a CPU with a 3.0 GHz clock runs about 3 billion cycles per second.</p>
+<p><strong>Word size</strong> is the number of bits the CPU can process in one operation. The most common sizes are <em>32-bit</em> and <em>64-bit</em>. A 64-bit CPU can handle larger data chunks and can address much more memory than a 32-bit CPU.</p>
+<p>Modern CPUs contain multiple <strong>cores</strong>, meaning multiple processing units inside a single chip. Each core can run instructions independently, allowing parallel processing. A dual-core CPU can run two heavy tasks at once (for example, encoding a video while running a game), while lighter tasks can be managed by <a href="https://en.wikipedia.org/wiki/Time-sharing">time-sharing</a> even on a single core.</p>
+<p><strong>Instruction Set Architecture (ISA)</strong> is the built-in language of the CPU. It defines the commands the CPU can understand and execute. The ISA specifies what operations exist and how programs interact with memory and hardware, while the <a href="https://en.wikipedia.org/wiki/Microarchitecture">microarchitecture</a> describes how a particular CPU implements and executes those instructions internally. Common examples include x86/x86-64 (Intel, AMD) and ARM (mobile devices and many modern laptops).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>An Intel CPU executes x86 instructions, while many smartphone CPUs execute ARM instructions. Programs must be compiled for the correct instruction set so the CPU can run them.</p>
+</div>
+<h2 id="graphics-processing-unit">Graphics Processing Unit</h2>
+<p>While the CPU is responsible for general-purpose computation and overall control, modern computers also rely on the <a href="https://en.wikipedia.org/wiki/Graphics_processing_unit"><strong>Graphics Processing Unit (GPU)</strong></a>. A GPU is a specialized processor designed to perform a very large number of simple calculations in <a href="https://en.wikipedia.org/wiki/Parallel_computing">parallel</a>. Originally, GPUs were built for graphics workloads such as rendering 3D scenes and updating frames smoothly in games and graphical applications.</p>
+<p>Unlike the CPU, which has a small number of powerful cores optimized for sequential work, a GPU contains thousands of simpler cores optimized for parallel operations. This makes GPUs efficient at tasks where the same computation must be applied to many data elements at once, such as pixels, vertices, or vectors.</p>
+<p>Today, GPUs are widely used beyond graphics, including scientific computing, simulations, video processing, and <a href="https://en.wikipedia.org/wiki/Artificial_intelligence">artificial intelligence</a>, where large matrix and vector operations are common. In typical workloads, the CPU manages control flow and coordination, while the GPU performs heavy numerical computation.</p>
+<h2 id="memory-devices">Memory Devices</h2>
+<p>Every computer must store data and instructions so the CPU can use them. The place where this information is kept is called memory. Different kinds of memory serve different purposes—some are very fast but <em>volatile</em> (temporary), while others are slower but <em>non-volatile</em> (persistent). Volatile memory loses its contents when power is removed; non-volatile memory does not.</p>
+<p>A common classification is:</p>
+<ul>
+<li><strong>Primary storage</strong>: volatile storage used directly by the CPU (registers, cache, RAM).</li>
+<li><strong>Secondary storage</strong>: non-volatile persistent storage (SSD, HDD) that must be loaded into primary memory before use.</li>
+<li><strong>Tertiary storage</strong>: non-volatile, much slower storage used for backups and archives, often accessed sequentially (optical discs<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>, magnetic tapes).</li>
+</ul>
+<h3 id="primary-storage">Primary Storage</h3>
+<p><strong>RAM (Random Access Memory)</strong> is the main working memory. It temporarily stores data and instructions the CPU is currently using. RAM is volatile and has two common types: Dynamic RAM (DRAM) and Static RAM (SRAM).</p>
+<ul>
+<li><strong>DRAM</strong> stores each bit in a tiny <a href="https://en.wikipedia.org/wiki/Capacitor">capacitor</a>. Because capacitors leak charge, DRAM must be refreshed continuously. DRAM is cheaper and higher capacity, but slower than SRAM. It serves as the computer’s main memory.</li>
+<li><strong>SRAM</strong> uses <a href="https://en.wikipedia.org/wiki/Flip-flop_%28electronics%29">flip-flop circuits</a> that keep data stable while power is on, without refreshing. SRAM is faster but larger and more expensive.</li>
+</ul>
+<p><strong>Cache memory</strong> is a very small, ultra-fast SRAM built into the CPU. It stores frequently used data and instructions so the CPU does not repeatedly fetch them from slower RAM. <em>L1 cache</em> is the smallest and fastest (per core). <em>L2 cache</em> is larger and slower. <em>L3 cache</em> is larger still and often shared across cores.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Imagine you have several browser tabs open. The content and program state for those tabs are stored in DRAM so the CPU can access them while you work. If power is removed, those in-memory states disappear.</p>
+<p>At the same time, the CPU uses much smaller but faster SRAM cache for the most frequently used instructions and data. When the same parts of a webpage or video are accessed repeatedly, cache reduces the time spent waiting on DRAM, improving responsiveness.</p>
+</div>
+<p><strong>Read-Only Memory (ROM)<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup></strong> is non-volatile memory that retains data when power is off. During startup, the CPU reads firmware from ROM—commonly <a href="https://en.wikipedia.org/wiki/BIOS">BIOS</a> or <a href="https://en.wikipedia.org/wiki/UEFI">UEFI</a>—which checks hardware and then loads the <a href="https://en.wikipedia.org/wiki/Operating_system">operating system</a> into RAM. ROM is typically programmed by the manufacturer, although modern forms like <a href="https://en.wikipedia.org/wiki/EEPROM">EEPROM</a> can be updated electronically.</p>
+<h3 id="secondary-storage">Secondary Storage</h3>
+<p>Storage devices use two main retrieval methods: <a href="https://en.wikipedia.org/wiki/Sequential_access">sequential access</a> and <a href="https://en.wikipedia.org/wiki/Random_access">direct (random) access</a>. In sequential access, data is read in order until the desired location is reached. In random access, the device can jump directly to a location.</p>
+<p><strong>Hard Disk Drive (HDD)</strong> stores data on spinning magnetic platters, commonly 5,400–7,200 RPM. Data is read and written by a moving head. HDDs provide large capacity at low cost, but are slower due to mechanical movement and more vulnerable to shock. HDDs support random access.</p>
+<p><strong>Solid State Drive (SSD)</strong> stores data in <a href="https://en.wikipedia.org/wiki/Flash_memory">flash memory</a> and has no moving parts, making it much faster and more reliable than HDDs. SSDs offer fast boot times, quick application loading, and low-latency file access. Their cost per gigabyte is typically higher than HDDs.</p>
+<p><em>Figure 4.</em> Storage hierarchy pyramid (made with matplotlib).</p>
+<p>To summarize, the storage hierarchy organizes memory and storage by speed, cost per bit, and capacity. At the top, registers and cache are the fastest but smallest and most expensive per bit. RAM is next: slower than cache, larger, and still volatile. Below RAM, SSDs provide persistent storage with low latency. HDDs provide larger capacity at lower cost but with slower access times. Optical discs and magnetic tape sit lower in the hierarchy: they are cheaper per bit and good for distribution or archival storage, but much slower, especially for random access. Moving upward increases speed and cost per bit while reducing capacity; moving downward increases capacity and lowers cost per bit while increasing access time.</p>
+<h2 id="additional-material">Additional Material</h2>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=_Pqfjer8-O4">How do Transistors Build into a CPU? How do Transistors Work?</a></li>
+<li><a href="https://www.youtube.com/watch?v=wtdnatmVdIg">How do Hard Disk Drives Work?</a></li>
+<li><a href="https://www.youtube.com/watch?v=7J7X7aZvMXQ">How does Computer Memory Work?</a></li>
+<li><a href="https://www.youtube.com/watch?v=1I5ZMmrOfnA">How Computers Calculate - the ALU: Crash Course Computer Science #5</a></li>
+<li><a href="https://www.youtube.com/watch?v=vqs_0W-MSB0">How a CPU Works in 100 Seconds</a></li>
+<li><a href="https://www.youtube.com/watch?v=Ml3-kVYLNr8">Von Neumann Architecture - Computerphile</a></li>
+<li><a href="https://www.youtube.com/embed/h9Z4oGN89MU">How do Graphics Cards Work? Exploring GPU Architecture</a></li>
+</ul>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p><em>Disk</em> is standard in computer science for magnetic and solid-state storage (hard disk, disk drive). <em>Disc</em> is used for optical media (CD/DVD/Blu-ray discs).&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>ROM is not used as working memory and is best treated separately from primary/secondary/tertiary storage.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>ROM is not working memory and is not considered primary memory, because it stores non-volatile firmware used mainly during system startup rather than data and instructions actively processed by the CPU.&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/ada-site/SITE-1101" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://ada.edu.az/en/" target="_blank" rel="noopener" title="ada.edu.az" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M271.9 20.2c-9.8-5.6-21.9-5.6-31.8 0l-224 128c-12.6 7.2-18.8 22-15.1 36S17.5 208 32 208h32v208l-51.2 38.4C4.7 460.4 0 469.9 0 480c0 17.7 14.3 32 32 32h448c17.7 0 32-14.3 32-32 0-10.1-4.7-19.6-12.8-25.6L448 416V208h32c14.5 0 27.2-9.8 30.9-23.8s-2.5-28.8-15.1-36l-224-128zM400 208v208h-64V208zm-112 0v208h-64V208zm-112 0v208h-64V208zm80-112a32 32 0 1 1 0 64 32 32 0 1 1 0-64"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.sections", "navigation.expand", "navigation.top", "navigation.footer", "navigation.tabs", "content.code.copy", "content.code.annotate", "search.highlight", "search.suggest", "content.footnote.tooltips"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../assets/app/katex.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      
+    
+  </body>
+</html>

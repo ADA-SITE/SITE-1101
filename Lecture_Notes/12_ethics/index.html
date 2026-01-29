@@ -1,0 +1,1158 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://ada-site.github.io/SITE-1101/Lecture_Notes/12_ethics/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>12. Ethics, Security, and Logical Reasoning - SITE 1101 Principles of Information Systems</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="../../assets/styles/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#12-ethics-security-and-logical-reasoning" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="SITE 1101 Principles of Information Systems" class="md-header__button md-logo" aria-label="SITE 1101 Principles of Information Systems" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SITE 1101 Principles of Information Systems
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              12. Ethics, Security, and Logical Reasoning
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="cyan"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ada-site/SITE-1101" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../course/2025_fall/" class="md-tabs__link">
+          
+  
+  
+  Course
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../general/communication/" class="md-tabs__link">
+          
+  
+  
+  General
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../projects/01_project/" class="md-tabs__link">
+          
+  
+  
+  Projects
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="SITE 1101 Principles of Information Systems" class="md-nav__button md-logo" aria-label="SITE 1101 Principles of Information Systems" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    SITE 1101 Principles of Information Systems
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ada-site/SITE-1101" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Course
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course/2025_fall/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fall 2025
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course/2026_spring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Spring 2026
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    General
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    General
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/communication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Communication Rules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/resources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Policies &amp; Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Projects
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Projects
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/01_project/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/02_project/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/03_project/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/04_project/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#space-shuttle-challenger-disaster" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Space Shuttle Challenger Disaster
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trolley-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trolley Problem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deduction-and-induction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deduction and Induction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ambiguity-of-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ambiguity of Language
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#asimovs-laws-of-robotics-laws" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Asimov's Laws of Robotics {#laws}
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acm-code-of-ethics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ACM Code of Ethics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viruses-and-cyber-attacks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Viruses and Cyber Attacks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#digital-hygiene" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Digital Hygiene
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-materials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additional Materials
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="12-ethics-security-and-logical-reasoning">12. Ethics, Security, and Logical Reasoning</h1>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<ul>
+<li>Nilufar Ismayilova, Rumiyya Alili, Ismayil Shahaliyev</li>
+<li>Nov 29 2025 / Dec 25 2025</li>
+</ul>
+</div>
+<p><em>The most dangerous phrase in the language is: "We've always done it this way".</em></p>
+<p><em>~</em> <a href="https://en.wikipedia.org/wiki/Grace_Hopper"><em>Grace Hopper</em></a></p>
+<h2 id="space-shuttle-challenger-disaster">Space Shuttle <em>Challenger</em> Disaster</h2>
+<p>One of the most important historical examples used to discuss ethics in engineering and information systems is the <a href="https://en.wikipedia.org/wiki/Space_Shuttle_Challenger_disaster">Space Shuttle <em>Challenger</em> disaster</a> (1986). The <em>Challenger</em> shuttle broke apart shortly after launch, resulting in the deaths of all seven crew members.</p>
+<figure style="margin: 1em 0; text-align: center;">
+  <img src="../../assets/images/lecture14/1.png" alt="Crew members of the Challenger shuttle" style="max-width: 85%; height: auto;">
+  <figcaption style="margin-top: 0.5em; font-size: 0.9em; opacity: 0.85;">
+    Crew members of the Challenger shuttle: (back) <a href="https://en.wikipedia.org/wiki/Ellison_Onizuka">Onizuka</a>, <a href="https://en.wikipedia.org/wiki/Christa_McAuliffe">McAuliffe</a>, <a href="https://en.wikipedia.org/wiki/Gregory_Jarvis">Jarvis</a>, <a href="https://en.wikipedia.org/wiki/Judith_Resnik">Resnik</a>; (front) <a href="https://en.wikipedia.org/wiki/Michael_J._Smith_%28astronaut%29">Smith</a>, <a href="https://en.wikipedia.org/wiki/Dick_Scobee">Scobee</a>, <a href="https://en.wikipedia.org/wiki/Ronald_McNair">McNair</a>. By NASA, Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=181762">link</a>.
+  </figcaption>
+</figure>
+
+<p>Investigations later showed that the disaster was not caused by a single technical failure alone, but by a combination of engineering, organizational, and ethical failures. A critical technical issue involved <a href="https://en.wikipedia.org/wiki/O-ring">O-ring</a> seals in the solid rocket boosters.</p>
+<p>These O-rings were responsible for preventing hot combustion gases from escaping during launch. This design created a <a href="https://en.wikipedia.org/wiki/Single_point_of_failure">single point of failure</a>: if the O-ring did not seal properly, there was no additional system to contain the pressure. One component became responsible for the safety of the entire mission.</p>
+<p>Before the <em>Challenger</em> launch, engineers from Morton Thiokol analyzed data from previous shuttle flights and noticed that the O-rings performed worse at lower temperatures. During a pre-launch meeting, engineers explicitly recommended delaying the launch because the temperature on launch day was far below any previous flight conditions. However, NASA managers were under pressure to maintain the launch schedule and asked engineers to provide proof that the launch would fail, instead of proof that it was unsafe. Communication problems, schedule pressure, and fear of delaying the mission played a major role in ignoring these warnings.</p>
+<figure style="margin: 1em 0; text-align: center;">
+  <img src="../../assets/images/lecture14/2.png" alt="Cross-sectional diagram of the SRB field joint" style="max-width: 55%; height: auto;">
+  <figcaption style="margin-top: 0.5em; font-size: 0.9em; opacity: 0.85;">
+    Cross-sectional diagram of the original SRB field joint. The top end of the lower rocket segment has a deep U-shaped cavity (a <a href="https://en.wikipedia.org/wiki/Clevis">clevis</a>). Two grooves hold O-rings that seal the gap between the tang and the clevis. By Rogers Commission, Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=107789463">link</a>.
+  </figcaption>
+</figure>
+
+<p>This phenomenon is called <a href="https://en.wikipedia.org/wiki/Normalization_of_deviance">normalization of deviance</a>. NASA had seen O-ring erosion in earlier flights but accepted it as "normal" because flights had not failed yet. When warning signs appear repeatedly without immediate catastrophic consequences, organizations can begin to accept abnormal and risky conditions as normal. This creates a culture where critical safety concerns are downplayed, and each successful outcome despite the warnings reinforces the dangerous belief that "it will be fine this time too."</p>
+<div class="frame" markdown="1">
+
+**_Exercise._** Identify the key ethical mistakes that occurred in the _Challenger_ shuttle case and explain what engineers and decision-makers should have done differently to ensure public safety and proper handling of technical concerns.
+
+</div>
+
+<h2 id="trolley-problem">Trolley Problem</h2>
+<p>Ethical questions in technology (and life) often involve difficult trade-offs, where every available option leads to some form of harm or disadvantage. One well-known thought experiment used to explore moral reasoning in such situations is the <a href="https://en.wikipedia.org/wiki/Trolley_problem">trolley problem</a>. In its basic form, a runaway trolley is heading toward several people standing on a track. You have the option to pull a lever that redirects the trolley onto another track, where it will harm only one person instead. The dilemma forces individuals to choose between actively causing harm to one person or passively allowing greater harm to occur.</p>
+<figure style="margin: 1em 0; text-align: center;">
+  <img src="../../assets/images/lecture14/3.png" alt="Trolley problem diagram" style="max-width: 45%; height: auto;">
+  <figcaption style="margin-top: 0.5em; font-size: 0.9em; opacity: 0.85;">
+    Diagram (adapted from Wikimedia). CC BY-SA 4.0, <a href="https://commons.wikimedia.org/w/index.php?curid=67107784">link</a>.
+  </figcaption>
+</figure>
+
+<p>The trolley problem has no simple or universally correct answer. Instead, it highlights how ethical decisions often involve conflicting values, such as minimizing harm, respecting individual rights, and determining responsibility for outcomes. Some people focus on the consequences of actions and choose the option that saves the most lives, while others believe it is morally wrong to actively cause harm, even if it leads to a better overall outcome.</p>
+<p><a href="https://plato.stanford.edu/entries/consequentialism/">Consequentialism</a> judges decisions by their outcomes. A consequentialist, especially a utilitarian, might argue that diverting the trolley is morally right because it reduces the total loss of life.</p>
+<p><a href="https://plato.stanford.edu/entries/ethics-deontological/">Deontological ethics</a> evaluates actions based on rules, duties, and respect for individual rights. From this view, deliberately causing a person's death is morally wrong regardless of the positive result.</p>
+<p>The scenario also engages the <a href="https://plato.stanford.edu/entries/double-effect/">doctrine of double effect</a>, which distinguishes between harm that is foreseen but unintended and harm that is used as a means to an end. Another important idea is agent responsibility: whether moral judgment depends on what we do directly versus what we merely allow to happen.</p>
+<p>In the context of information systems, artificial intelligence, and automation, similar dilemmas arise in real-world system design. For example, engineers developing autonomous vehicles must consider how a system should behave in unavoidable accident scenarios. Should the system prioritize the safety of passengers, pedestrians, or follow traffic laws strictly regardless of the outcome?</p>
+<div class="frame" markdown="1">
+
+**_Exercise._** Consider a self-driving car approaching an unavoidable accident. If the car continues forward, it will collide with several pedestrians crossing the street illegally. If it swerves, it will crash into a barrier, putting the passenger at serious risk. Should the algorithm prioritize minimizing total harm, protecting the passenger, or following traffic laws strictly? What would you choose? Why?
+
+</div>
+
+<h2 id="deduction-and-induction">Deduction and Induction</h2>
+<p>Logical reasoning plays a central role in engineering, information systems, and ethical decision-making. Many of the foundational ideas behind logical reasoning were first systematized by <a href="https://plato.stanford.edu/entries/aristotle/">Aristotle</a>, who is often regarded as the founder of <a href="https://en.wikipedia.org/wiki/Logic#Formal_logic">formal logic</a>.</p>
+<p>Aristotle introduced <a href="https://en.wikipedia.org/wiki/Deductive_reasoning">deductive reasoning</a>, particularly through the concept of the <a href="https://en.wikipedia.org/wiki/Syllogism">syllogism</a>, which is a structured form of argument consisting of premises that lead to a necessary conclusion. In deductive reasoning, the argument moves from general principles to specific cases. If the premises are true and the logical structure is valid, the conclusion must also be true.</p>
+<div class="frame" markdown="1">
+
+**_Example._** Below is perhaps the most famous syllogism:
+
+_All humans are mortal._
+
+_Socrates is a human._
+
+_Therefore, Socrates is mortal._
+
+</div>
+
+<div class="frame" markdown="1">
+
+**_Exercise._** Is the argument below logically sound? If not, identify what is wrong with its reasoning.
+
+_All secure systems require authentication._  
+_This system requires authentication._  
+_Therefore, this system is secure._
+
+</div>
+
+<p>In contrast, <a href="https://en.wikipedia.org/wiki/Inductive_reasoning">inductive reasoning</a> moves from specific observations to broader generalizations. Rather than guaranteeing truth, induction produces conclusions that are probable or likely, based on patterns in observed data.</p>
+<div class="frame" markdown="1">
+
+**_Example._**
+
+_This system failed after several cyber attacks._  
+_Similar systems also failed after attacks._  
+_Therefore, such systems are likely vulnerable._
+
+</div>
+
+<div class="frame" markdown="1">
+
+**_Exercise._** Give an example of inductive reasoning in information systems, where conclusions are drawn from historical data rather than strict rules.
+
+</div>
+
+<p>Modern science relies primarily on induction. We observe patterns in data and infer general laws or predictions. Machine learning itself is grounded in induction: models infer patterns from past samples in the hope that those patterns generalize to new cases. This approach is powerful, but it never guarantees certainty.</p>
+<div class="frame" markdown="1">
+
+**_Important._** [Mathematical induction](https://en.wikipedia.org/wiki/Mathematical_induction) is a deductive proof method, not induction from repeated observations. Meanwhile, the so-called "deductions" of Sherlock Holmes are typically inductive generalizations rather than strict logical necessity.
+
+</div>
+
+<p>This reliance on induction raises a major philosophical issue identified by <a href="https://plato.stanford.edu/entries/hume/">David Hume</a>. Inductive conclusions assume that the future will resemble the past, yet there is no logical proof for this assumption.</p>
+<p><a href="https://plato.stanford.edu/entries/popper/">Karl Popper</a> later emphasized that no amount of positive evidence can conclusively prove a scientific theory, but a single counterexample can disprove it. This is captured by the "black swan" illustration and the idea of <a href="https://en.wikipedia.org/wiki/Falsifiability">falsifiability</a>.</p>
+<div class="frame" markdown="1">
+
+**_Important._** Even mathematical certainty is limited by the axioms that define a system. Change those axioms, and the truths derived from them change as well. In [Euclidean geometry](https://en.wikipedia.org/wiki/Euclidean_geometry), parallel lines never intersect. In [spherical geometry](https://en.wikipedia.org/wiki/Spherical_geometry), great circles always intersect, so parallel lines do not exist. Deductive conclusions are guaranteed only if the starting assumptions are.
+
+</div>
+
+<h2 id="ambiguity-of-language">Ambiguity of Language</h2>
+<p>Natural language is inherently imprecise. Many disagreements in engineering, science, and ethics arise not from factual disputes but from differences in how people interpret the same words. Terms such as "secure," "harm," or "responsibility" may appear obvious, yet their meaning can shift dramatically depending on context.</p>
+<p>To avoid misunderstandings, we may attempt to translate vague statements into precise logical form. Aristotle took a major step by abstracting arguments away from their wording and focusing on their form:</p>
+<div class="frame" markdown="1">
+
+All **A** are **B**.
+
+**C** is **A**.
+
+Therefore, **C** is **B**.
+
+</div>
+
+<p>As scientific knowledge expanded, ambiguity became an increasingly serious obstacle. <a href="https://plato.stanford.edu/entries/frege/">Gottlob Frege</a> developed symbolic logic to separate meaning from grammar.</p>
+<p><a href="https://plato.stanford.edu/entries/russell/">Bertrand Russell</a> and <a href="https://plato.stanford.edu/entries/whitehead/">Alfred North Whitehead</a> pursued this project in <a href="https://plato.stanford.edu/entries/principia-mathematica/"><em>Principia Mathematica</em></a>, attempting to ground mathematics in logic.</p>
+<p>However, this project revealed important limitations. Even if the structure of an argument is perfectly logical, its symbols must still be defined by humans. Meaning remains uncertain, especially in ethical or social contexts. Real-world decisions also involve conflicting goals and values that cannot be fully captured by rigid rules.</p>
+<h2 id="asimovs-laws-of-robotics-laws">Asimov's Laws of Robotics {#laws}</h2>
+<p>The science-fiction writer <a href="https://en.wikipedia.org/wiki/Isaac_Asimov">Isaac Asimov</a> proposed the <em>Three Laws of Robotics</em> in 1942:</p>
+<ul>
+<li>A robot may not injure a human being or, through inaction, allow a human being to come to harm.</li>
+<li>A robot must obey the orders given it by human beings except where such orders would conflict with the First Law.</li>
+<li>A robot must protect its own existence as long as such protection does not conflict with the First or Second Laws.</li>
+</ul>
+<p>In structure, these laws resemble rule-based logic (IF/THEN constraints). While they seem protective, Asimov’s own stories showed how clean rules can produce unintended outcomes. If "prevent harm" is interpreted literally, robots may restrict human freedom to eliminate risk.</p>
+<p>This illustrates a core difficulty in real system design and the broader <a href="https://en.wikipedia.org/wiki/AI_alignment">AI alignment problem</a>: specifying rules, objectives, or <a href="https://en.wikipedia.org/wiki/Reinforcement_learning">reward functions</a> does not guarantee acceptable outcomes. Language is vague, values conflict, and context shifts.</p>
+<div class="frame" markdown="1">
+
+**_Example._** An AI programmed to "maximize user engagement" on social media might discover that divisive, inflammatory content keeps people engaged longer. The system optimizes the stated goal but produces harmful outcomes such as polarization and misinformation.
+
+</div>
+
+<div class="frame" markdown="1">
+
+**_Exercise._** Improve the engagement objective above by proposing a clearer goal and constraints that protect user well-being, reduce misinformation, and prevent harmful content from being promoted, while still allowing the system to recommend interesting material.
+
+</div>
+
+<h2 id="acm-code-of-ethics">ACM Code of Ethics</h2>
+<p>Decisions made by computing professionals can protect users or put them in danger. A system can succeed technically and still fail its users through privacy violations, unfair outcomes, or unsafe deployment.</p>
+<p>Professional organizations such as the <a href="https://www.acm.org/">Association for Computing Machinery</a> (ACM) provide <a href="https://www.acm.org/code-of-ethics">codes of ethics</a> to guide these decisions. The ACM Code emphasizes avoiding harm, honesty, fairness, privacy protection, and accountability. Ethical judgment still requires interpretation and context awareness, because ethics cannot be reduced to formulas or automated decision rules.</p>
+<h2 id="viruses-and-cyber-attacks">Viruses and Cyber Attacks</h2>
+<p>Technological advancement is not inherently good or bad: it expands capability, and that includes capability for harm. Systems that work under honest use can fail under malicious intent. Protecting users requires understanding how systems are attacked, not only how they are designed.</p>
+<p><a href="https://en.wikipedia.org/wiki/Social_engineering_%28security%29">Social engineering</a> targets people rather than code. <a href="https://en.wikipedia.org/wiki/Phishing">Phishing</a> impersonates trusted institutions to steal credentials. <a href="https://en.wikipedia.org/wiki/Spear-phishing">Spear-phishing</a> targets specific individuals or organizations.</p>
+<p><a href="https://en.wikipedia.org/wiki/Malware">Malware</a> exploits weaknesses in software and configurations. A <a href="https://en.wikipedia.org/wiki/Trojan_horse_%28computing%29">Trojan horse</a> appears legitimate while doing harm. <a href="https://en.wikipedia.org/wiki/Ransomware">Ransomware</a> encrypts data and demands payment. <a href="https://en.wikipedia.org/wiki/Computer_worm">Worms</a> spread automatically. <a href="https://en.wikipedia.org/wiki/Spyware">Spyware</a> collects information silently.</p>
+<p><a href="https://en.wikipedia.org/wiki/Cyberattack">Network attacks</a> target communication. A <a href="https://en.wikipedia.org/wiki/Man-in-the-middle_attack">Man-in-the-Middle (MITM) attack</a> intercepts or alters data. <a href="https://en.wikipedia.org/wiki/Denial-of-service_attack">Denial-of-Service (DoS)</a> overwhelms services so legitimate users cannot access them.</p>
+<p><a href="https://en.wikipedia.org/wiki/Credential_stuffing">Credential stuffing</a> uses leaked passwords from one service to break into accounts on another. <a href="https://en.wikipedia.org/wiki/Brute-force_attack">Brute-force attacks</a> guess passwords until one succeeds.</p>
+<p><a href="https://en.wikipedia.org/wiki/Data_wiping">Wipers</a> permanently erase data for sabotage. <a href="https://en.wikipedia.org/wiki/Clickjacking">Clickjacking</a> disguises harmful actions behind innocent clicks. <a href="https://en.wikipedia.org/wiki/Typosquatting">Typosquatting</a> exploits URL mistakes to redirect victims to fake sites.</p>
+<div class="frame" markdown="1">
+
+**_Example._** A student downloads a “free PDF textbook” from an unofficial website. The file contains a Trojan that installs on the laptop, records keystrokes, and sends credentials to an attacker. Later, the laptop becomes part of a [botnet](https://en.wikipedia.org/wiki/Botnet) and is used in a DoS attack against a university server.
+
+</div>
+
+<h2 id="digital-hygiene">Digital Hygiene</h2>
+<p><a href="https://karpathy.bearblog.dev/digital-hygiene/">Digital hygiene</a> refers to everyday habits that protect devices, personal data, and online identity. It focuses on regular preventive actions rather than reacting only after damage occurs.</p>
+<p>Using strong, unique passwords reduces the risk of account takeover. Password managers help generate and store unique passwords, but they introduce a single point of failure: if the master password is compromised, many accounts may be exposed. <a href="https://en.wikipedia.org/wiki/Multi-factor_authentication">Multi-factor authentication</a> (MFA) reduces this risk by adding a second verification step.</p>
+<p>Users should avoid relying on any single device or storage location. Regular <a href="https://en.wikipedia.org/wiki/Backup">backups</a>, ideally stored offline or in a trusted cloud service, reduce the damage of ransomware, device failure, or accidental deletion. The goal is to avoid single points of failure for anything important.</p>
+<p>Keeping software and operating systems updated is essential, as updates often patch known security vulnerabilities. Users should also avoid suspicious links and untrusted downloads, and be cautious when sharing personal information online, since attackers use such details to craft convincing phishing attempts.</p>
+<p>Using secure networks reduces exposure to eavesdropping and interception, especially when accessing banking or university services. Together, these practices form a practical and proactive defense.</p>
+<h2 id="additional-materials">Additional Materials</h2>
+<ul>
+<li><a href="https://archive.org/details/ChallengerDisaster">Challenger Distaster</a></li>
+<li><a href="https://www.youtube.com/watch?v=NT3VU4B5Dsc">Consequentialism vs. Deontology</a></li>
+<li><a href="https://neal.fun/absurd-trolley-problems/">Absurd Trolley Problems</a></li>
+<li><a href="https://www.youtube.com/watch?v=1boxiCcpZ-w">AI Decides on Absurd Trolley Problems</a></li>
+<li><a href="https://www.youtube.com/watch?v=9_Gor1E8IxI">David Hume and the Problem of Induction</a></li>
+<li><a href="https://www.youtube.com/watch?v=_ig5AqP0SFE&amp;list=PLSP9UbXmBuqq2VIdj2JhYgjlYVWrWC2or&amp;index=3">The Ascent of Money Episode 3: Blowing Bubbles</a></li>
+<li><a href="https://iep.utm.edu/aristotle-logic/">Aristotle: Logic Internet Encyclopedia of Philosophy</a></li>
+<li><a href="https://www.youtube.com/watch?v=3teiT--QGzo">Isaac Asimov - Laws of Robotics - Extra Sci Fi</a></li>
+<li><a href="https://www.acm.org/code-of-ethics">ACM Code of Ethics</a></li>
+<li><a href="https://www.youtube.com/watch?v=3CccfnRpPtM">Theranos - Silicon Valley's Greatest Disaster</a></li>
+<li><a href="https://www.youtube.com/watch?v=VJFaO2-zsCU">Every Type of Computer Virus Explained in 8 Minutes</a></li>
+<li><a href="https://www.youtube.com/watch?v=6mQ1L6YX9pY">Every Type of Cyber Attack Explained in 8 Minutes</a></li>
+<li><a href="https://karpathy.bearblog.dev/digital-hygiene/">Digital hygiene</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/ada-site/SITE-1101" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://ada.edu.az/en/" target="_blank" rel="noopener" title="ada.edu.az" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M271.9 20.2c-9.8-5.6-21.9-5.6-31.8 0l-224 128c-12.6 7.2-18.8 22-15.1 36S17.5 208 32 208h32v208l-51.2 38.4C4.7 460.4 0 469.9 0 480c0 17.7 14.3 32 32 32h448c17.7 0 32-14.3 32-32 0-10.1-4.7-19.6-12.8-25.6L448 416V208h32c14.5 0 27.2-9.8 30.9-23.8s-2.5-28.8-15.1-36l-224-128zM400 208v208h-64V208zm-112 0v208h-64V208zm-112 0v208h-64V208zm80-112a32 32 0 1 1 0 64 32 32 0 1 1 0-64"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.sections", "navigation.expand", "navigation.top", "navigation.footer", "navigation.tabs", "content.code.copy", "content.code.annotate", "search.highlight", "search.suggest", "content.footnote.tooltips"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../assets/app/katex.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      
+    
+  </body>
+</html>

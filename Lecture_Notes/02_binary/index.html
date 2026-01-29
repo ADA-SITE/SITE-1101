@@ -1,0 +1,1499 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://ada-site.github.io/SITE-1101/Lecture_Notes/02_binary/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>02. Binary Representation, Arithmetic & Logic Operations - SITE 1101 Principles of Information Systems</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="../../assets/styles/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#02-binary-representation-arithmetic-logic-operations" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="SITE 1101 Principles of Information Systems" class="md-header__button md-logo" aria-label="SITE 1101 Principles of Information Systems" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SITE 1101 Principles of Information Systems
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              02. Binary Representation, Arithmetic &amp; Logic Operations
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="cyan"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ada-site/SITE-1101" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../course/2025_fall/" class="md-tabs__link">
+          
+  
+  
+  Course
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../general/communication/" class="md-tabs__link">
+          
+  
+  
+  General
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../projects/01_project/" class="md-tabs__link">
+          
+  
+  
+  Projects
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="SITE 1101 Principles of Information Systems" class="md-nav__button md-logo" aria-label="SITE 1101 Principles of Information Systems" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    SITE 1101 Principles of Information Systems
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ada-site/SITE-1101" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Course
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course/2025_fall/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fall 2025
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course/2026_spring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Spring 2026
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    General
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    General
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/communication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Communication Rules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/resources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Policies &amp; Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Projects
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Projects
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/01_project/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/02_project/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/03_project/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/04_project/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#digital-vs-analog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Digital vs Analog
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bit-byte-data-units" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bit, Byte, Data Units
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#number-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Number Systems
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#binary-arithmetic-and-twos-complement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Binary Arithmetic and Two’s Complement
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Binary Arithmetic and Two’s Complement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1-positive-result" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 1: Positive result
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2-negative-result" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 2: Negative result
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transistors-and-moores-law" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Transistors and Moore’s Law
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#boolean-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Boolean Logic
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Boolean Logic">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#and" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AND
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#or" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OR
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        XOR
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-material" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additional Material
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="02-binary-representation-arithmetic-logic-operations">02. Binary Representation, Arithmetic &amp; Logic Operations</h1>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<ul>
+<li>Nilufar Ismayilova, Ismayil Shahaliyev</li>
+<li>Oct 23 2025 / Dec 19 2025</li>
+</ul>
+</div>
+<h2 id="digital-vs-analog">Digital vs Analog</h2>
+<p><em>Discrete</em> means values change in separate, well-defined steps with no possible values in between. A standard light switch is a simple example: it is either on or off—there is nothing between those two states. Likewise, a digital clock that shows 14:35 jumps straight to 14:36 with no “in-between” time displayed.</p>
+<p><em>Continuous</em> means values can vary smoothly and without breaks over a range. Between any two values, there are infinitely many possible intermediate values. A classic example is a mercury thermometer: if the temperature is 21°C and then rises to 22°C, it passes through 21.1°C, 21.11°C, 21.111°C, and so on. The temperature does not “jump” from one reading to another; it changes continuously.</p>
+<p>This distinction is why <em>digital</em> systems are far more reliable than <em>analog</em> ones. In a continuous analog system, even a tiny fluctuation—temperature drift or electrical noise—can change the value. In a discrete digital system, as long as the signal is close enough to one of the two states (for example, above 3V is “1” and below 1V is “0”), the system will interpret it correctly. This tolerance to noise is why modern computers rely almost entirely on discrete binary states.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In an analog system, numbers 3 and 5 could be represented by physical quantities such as voltage levels of 3V and 5V. To add them, the machine might combine the voltages to produce 8V. But if noise shifts levels by just 0.2V, the output might become 7.8V or 8.2V, which no longer corresponds exactly to 8. Repeated operations would accumulate these errors, making the result unreliable.</p>
+</div>
+<p>The solution was to abandon continuous analog representation in favor of discrete digital states. Digital circuits only need to distinguish between a small set of clearly separated values, which makes them more reliable, scalable, and resistant to noise. Once that decision was made, the simplest and most robust choice was to use two discrete states. This directly matches what electronic components can reliably detect: current flowing or not, voltage high or low, transistor open or closed. Those two states are naturally represented by 0 and 1, forming the <a href="https://en.wikipedia.org/wiki/Binary_number">binary number</a> system.</p>
+<h2 id="bit-byte-data-units">Bit, Byte, Data Units</h2>
+<p>All digital information—including instructions themselves—is expressed as <em>bits</em> (binary digits, formally introduced by <a href="https://en.wikipedia.org/wiki/Claude_Shannon">Claude Shannon</a> in <a href="https://en.wikipedia.org/wiki/A_Mathematical_Theory_of_Communication">A Mathematical Theory of Communication</a>). A <em>bit</em> is the smallest unit of data and can hold one of two values: 0 or 1. Every number, letter, image, or instruction is ultimately encoded as a sequence of bits.</p>
+<p>With two bits, there are 2×2=4 possible combinations: 00, 01, 10, and 11. With three bits, there are 2×2×2=8 combinations: 000, 001, 010, 011, 100, 101, 110, and 111. In general, with <strong>N</strong> bits, the total number of combinations is <strong>2^N</strong>. Each additional bit doubles the range of values that can be represented.</p>
+<p>Eight bits grouped together form a <em>byte</em>, the standard unit for representing a single character or a small piece of data. For example, the binary sequence <code>01000001</code> represents the letter “A” in <a href="https://en.wikipedia.org/wiki/ASCII">ASCII</a>. Larger quantities of data are measured in multiples of bytes: kilobytes (KB), megabytes (MB), gigabytes (GB), and beyond.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Data Unit</strong></th>
+<th><strong>Size</strong></th>
+<th><strong>Data Unit</strong></th>
+<th><strong>Size</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bit (b)</td>
+<td>1</td>
+<td>Byte (B)</td>
+<td>8 bits</td>
+</tr>
+<tr>
+<td>Kilobyte (KB)</td>
+<td>10³ bytes</td>
+<td>Megabyte (MB)</td>
+<td>10⁶ bytes</td>
+</tr>
+<tr>
+<td>Gigabyte (GB)</td>
+<td>10⁹ bytes</td>
+<td>Terabyte (TB)</td>
+<td>10¹² bytes</td>
+</tr>
+<tr>
+<td>Petabyte (PB)</td>
+<td>10¹⁵ bytes</td>
+<td>Exabyte (EB)</td>
+<td>10¹⁸ bytes</td>
+</tr>
+<tr>
+<td>Zettabyte (ZB)</td>
+<td>10²¹ bytes</td>
+<td>Yottabyte (YB)</td>
+<td>10²⁴ bytes</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition success">
+<p class="admonition-title">Exercise</p>
+<p>How many different colors can be represented in an RGB image if each of the three color channels (Red, Green, Blue) is stored using 8 bits?</p>
+</div>
+<h2 id="number-systems">Number Systems</h2>
+<p>Every piece of data inside a computer—numbers, letters, images, even videos—is represented using <em>number systems</em>. A number system defines how we represent and interpret numerical values using a specific set of symbols (digits) and a <em>base</em> that indicates how many symbols are available.</p>
+<table>
+<thead>
+<tr>
+<th><strong>System</strong></th>
+<th><strong>Base</strong></th>
+<th><strong>Digits Used</strong></th>
+<th><strong>Example</strong></th>
+<th><strong>Usage</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Decimal (Base-10)</strong></td>
+<td>10</td>
+<td>0–9</td>
+<td>245₁₀</td>
+<td>Everyday counting and arithmetic.</td>
+</tr>
+<tr>
+<td><strong>Binary (Base-2)</strong></td>
+<td>2</td>
+<td>0, 1</td>
+<td>101101₂</td>
+<td>Used internally by digital computers.</td>
+</tr>
+<tr>
+<td><strong>Hexadecimal (Base-16)</strong></td>
+<td>16</td>
+<td>0–9, A–F</td>
+<td>2AF₁₆</td>
+<td>Memory addresses, machine code, colors, compact notation.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Decimal system (Base-10).</strong> Each position represents a power of 10.</p>
+<p>Example: 245₁₀ = (2×10²) + (4×10¹) + (5×10⁰) = 200 + 40 + 5 = 245₁₀</p>
+<p><strong>Binary system (Base-2).</strong> Each position represents a power of 2.</p>
+<p>Example: 1011₂ = (1×2³) + (0×2²) + (1×2¹) + (1×2⁰) = 8 + 0 + 2 + 1 = 11₁₀</p>
+<p><strong>Hexadecimal system (Base-16).</strong> Uses 0–9 and A–F for values 10–15. Each hex digit equals 4 binary bits.</p>
+<p>Example: 2AF₁₆ = (2×16²) + (A×16¹) + (F×16⁰) = (2×256) + (10×16) + (15×1) = 687₁₀</p>
+<table>
+<thead>
+<tr>
+<th><strong>Decimal</strong></th>
+<th><strong>Binary</strong></th>
+<th><strong>Hex</strong></th>
+<th><strong>Decimal</strong></th>
+<th><strong>Binary</strong></th>
+<th><strong>Hex</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0000</td>
+<td>0</td>
+<td>8</td>
+<td>1000</td>
+<td>8</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0001</td>
+<td>1</td>
+<td>9</td>
+<td>1001</td>
+<td>9</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0010</td>
+<td>2</td>
+<td>10</td>
+<td>1010</td>
+<td>A</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0011</td>
+<td>3</td>
+<td>11</td>
+<td>1011</td>
+<td>B</td>
+</tr>
+<tr>
+<td>4</td>
+<td>0100</td>
+<td>4</td>
+<td>12</td>
+<td>1100</td>
+<td>C</td>
+</tr>
+<tr>
+<td>5</td>
+<td>0101</td>
+<td>5</td>
+<td>13</td>
+<td>1101</td>
+<td>D</td>
+</tr>
+<tr>
+<td>6</td>
+<td>0110</td>
+<td>6</td>
+<td>14</td>
+<td>1110</td>
+<td>E</td>
+</tr>
+<tr>
+<td>7</td>
+<td>0111</td>
+<td>7</td>
+<td>15</td>
+<td>1111</td>
+<td>F</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Decimal → Binary:</strong> Convert 13₁₀ by writing it as powers of two: 8+4+1=13. Hence <strong>1101₂</strong>.</p>
+<p><strong>Binary → Decimal:</strong> 1011₂ means 8+2+1=11, so it is <strong>11₁₀</strong>.</p>
+<p><strong>Binary ↔ Hexadecimal:</strong> Group into 4-bit chunks: 10101110₂ = 1010 1110₂ = AE₁₆.</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Exercise</p>
+<p>Write down different numbers and convert back and forth between decimal, binary, and hexadecimal.</p>
+</div>
+<h2 id="binary-arithmetic-and-twos-complement">Binary Arithmetic and Two’s Complement</h2>
+<p>Just like in the decimal system, numbers in binary can be added together. Since binary uses only 0 and 1, the addition rules are simple. Binary addition is a core operation performed by the Arithmetic Logic Unit (ALU) in a CPU.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Addition</strong></th>
+<th><strong>Result</strong></th>
+<th><strong>Carry</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0 + 0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0 + 1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1 + 0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1 + 1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>In digital systems, subtraction is often performed using addition:
+A − B = A + (−B)</p>
+<p>To make this work with the same adder circuit, computers represent negative numbers using <em>two’s complement</em>.</p>
+<p>With 3 bits, there are 2³ = 8 different bit patterns. In <strong>unsigned</strong> representation, they represent 0 to 7.</p>
+<p>A naïve “sign bit” approach (one sign bit + magnitude bits) creates two zeros (+0 and −0) and breaks arithmetic in practice.</p>
+<p><strong>Two’s complement</strong> avoids these issues. With 3 bits, positives go from 000 (0) to 011 (3), and negatives go from 100 (−4) to 111 (−1). There is only one zero, and addition/subtraction works naturally.</p>
+<p>To find the negative of a number in two’s complement:
+1) invert the bits, 2) add 1, 3) discard any overflow carry.</p>
+<h3 id="example-1-positive-result">Example 1: Positive result</h3>
+<p>A=7, B=5. Compute A−B using 4-bit binary.[^1]</p>
+<table>
+<thead>
+<tr>
+<th><strong>Step</strong></th>
+<th><strong>Operation</strong></th>
+<th><strong>Result</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Write in binary</td>
+<td>A = 0111₂, B = 0101₂</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Two’s complement of B</td>
+<td>0101 → 1010 → 1010 + 0001 = 1011₂</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Add</td>
+<td>0111 + 1011 = 10010₂</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Discard carry</td>
+<td>0010₂</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Convert</td>
+<td>2₁₀</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example-2-negative-result">Example 2: Negative result</h3>
+<p>Compute 5−7 using 4-bit binary.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Step</strong></th>
+<th><strong>Operation</strong></th>
+<th><strong>Result</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Write in binary</td>
+<td>5 = 0101₂, 7 = 0111₂</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Two’s complement of 7</td>
+<td>0111 → 1000 → 1000 + 0001 = 1001₂</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Add</td>
+<td>0101 + 1001 = 1110₂</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Interpret as negative</td>
+<td>1110₂ is negative in 4-bit two’s complement</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Magnitude (optional)</td>
+<td>1110 → 0001 → +1 = 0010₂ → 2₁₀, so result is −2₁₀</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition success">
+<p class="admonition-title">Exercise</p>
+<p>Subtract any two numbers in binary using two’s complement.</p>
+</div>
+<h2 id="transistors-and-moores-law">Transistors and Moore’s Law</h2>
+<figure style="margin: 1em 0; text-align: center;">
+  <img src="../../assets/images/lecture02/2.png" alt="npn transistor" style="max-width: 80%; height: auto;">
+  <figcaption style="margin-top: 0.5em; font-size: 0.9em; opacity: 0.85;">
+    By <a href="//commons.wikimedia.org/wiki/User:Omegatron" title="User:Omegatron">Omegatron</a> - <span typeof="mw:File"><a href="//commons.wikimedia.org/wiki/File:W3C_grn.svg" class="mw-file-description"></a></span>&nbsp;The <a href="//commons.wikimedia.org/wiki/Help:SVG" title="Help:SVG">SVG</a> code is <span class="plainlinks" style="background:var(--background-color-success-subtle, #dff2eb); color: inherit;"><a rel="nofollow" class="external text" href="https://validator.w3.org/check?uri=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FSpecial%3AFilepath%2FBJT_NPN_symbol.svg&amp;doctype=Inline">valid</a></span>.<span typeof="mw:File"><a href="//commons.wikimedia.org/wiki/File:Inkscape-yes.svg" class="mw-file-description"></a></span>&nbsp;This symbol was created with <a href="https://en.wikipedia.org/wiki/Inkscape" class="extiw" title="w:Inkscape">Inkscape</a> by user&nbsp;<a href="//commons.wikimedia.org/wiki/User:Omegatron" title="User:Omegatron">Omegatron</a>., <a href="https://creativecommons.org/licenses/by-sa/3.0" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=2792640">Link</a>
+  </figcaption>
+</figure>
+
+<p>Modern computer chips contain billions of transistors packed into an area smaller than a fingernail. In 1965, Intel co-founder Gordon Moore observed that the number of transistors on a chip was roughly doubling every two years, which became known as <a href="https://en.wikipedia.org/wiki/Moore%27s_law">Moore’s Law</a> (it is not a physical law). This trend made computers faster, smaller, and cheaper for decades.</p>
+<p>Transistor scaling has slowed due to physical and engineering constraints such as heat dissipation (power density), leakage currents at very small geometries, and the increasing difficulty and cost of manufacturing at nanometer scales.</p>
+<h2 id="boolean-logic">Boolean Logic</h2>
+<p>All digital logic is based on <a href="https://en.wikipedia.org/wiki/Boolean_algebra">Boolean algebra</a>, named after <a href="https://en.wikipedia.org/wiki/George_Boole">George Boole</a>. In this system, everything is either <strong>true</strong> or <strong>false</strong>, or in computer terms, <strong>1</strong> or <strong>0</strong>.</p>
+<p>Three core operations are:</p>
+<ul>
+<li><strong>NOT</strong> flips the value: 1→0 and 0→1.</li>
+<li><strong>AND</strong> outputs 1 only if both inputs are 1.</li>
+<li><strong>OR</strong> outputs 1 if at least one input is 1.</li>
+</ul>
+<p>These operations are implemented using <strong>logic gates</strong>. Every complex computation—from addition to running software—reduces to many fast gate operations.</p>
+<p align="center">
+  <img src="../../assets/images/lecture02/3.png" alt="">
+</p>
+
+<table>
+<thead>
+<tr>
+<th><strong>A</strong></th>
+<th><strong>Q</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p><em>Figure: NOT logic gate symbol (Public Domain). Source: Wikimedia Commons.</em></p>
+<h3 id="and">AND</h3>
+<table>
+<thead>
+<tr>
+<th><strong>A</strong></th>
+<th><strong>B</strong></th>
+<th><strong>Q</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p align="center">
+  <img src="../../assets/images/lecture02/4.png" alt="">
+</p>
+
+<p><em>Figure: AND logic gate symbol (Public Domain). Source: Wikimedia Commons.</em></p>
+<h3 id="or">OR</h3>
+<table>
+<thead>
+<tr>
+<th><strong>A</strong></th>
+<th><strong>B</strong></th>
+<th><strong>Q</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p align="center">
+  <img src="../../assets/images/lecture02/5.png" alt="">
+</p>
+
+<p><em>Figure: OR logic gate symbol (Public Domain). Source: Wikimedia Commons.</em></p>
+<h3 id="xor">XOR</h3>
+<table>
+<thead>
+<tr>
+<th><strong>A</strong></th>
+<th><strong>B</strong></th>
+<th><strong>Q</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p align="center">
+  <img src="../../assets/images/lecture02/6.png" alt="">
+</p>
+
+<p><em>Figure: XOR logic gate symbol (Public Domain). Source: Wikimedia Commons.</em></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Exercise.</strong> How would you implement XOR using only NOT, AND, and OR? You can use an online <a href="https://logic.ly/demo/">digital logic simulator</a>.</p>
+<p><strong>Exercise.</strong> Use logic gates to add any two single-bit binary numbers. Which gates would you use? Hint: use the addition table above.</p>
+</div>
+<h2 id="additional-material">Additional Material</h2>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=O5nskjZ_GoI">Early Computing: Crash Course Computer Science #1</a></li>
+<li><a href="https://www.youtube.com/watch?v=LN0ucKNX0hc">Electronic Computing: Crash Course Computer Science #2</a></li>
+<li><a href="https://www.youtube.com/watch?v=gI-qXk7XojA">Boolean Logic &amp; Logic Gates: Crash Course Computer Science #3</a></li>
+<li><a href="https://www.youtube.com/watch?v=lKTsv6iVxV4&amp;">Binary: Plusses &amp; Minuses (Why We Use Two’s Complement) - Computerphile</a></li>
+<li><a href="https://www.youtube.com/watch?v=AF8d72mA41M">Why It Was Almost Impossible to Make the Blue LED</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/ada-site/SITE-1101" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://ada.edu.az/en/" target="_blank" rel="noopener" title="ada.edu.az" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M271.9 20.2c-9.8-5.6-21.9-5.6-31.8 0l-224 128c-12.6 7.2-18.8 22-15.1 36S17.5 208 32 208h32v208l-51.2 38.4C4.7 460.4 0 469.9 0 480c0 17.7 14.3 32 32 32h448c17.7 0 32-14.3 32-32 0-10.1-4.7-19.6-12.8-25.6L448 416V208h32c14.5 0 27.2-9.8 30.9-23.8s-2.5-28.8-15.1-36l-224-128zM400 208v208h-64V208zm-112 0v208h-64V208zm-112 0v208h-64V208zm80-112a32 32 0 1 1 0 64 32 32 0 1 1 0-64"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.sections", "navigation.expand", "navigation.top", "navigation.footer", "navigation.tabs", "content.code.copy", "content.code.annotate", "search.highlight", "search.suggest", "content.footnote.tooltips"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../assets/app/katex.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      
+    
+  </body>
+</html>

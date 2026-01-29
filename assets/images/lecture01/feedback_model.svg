@@ -1,0 +1,5 @@
+<svg width="207mm" height="76mm" version="1.1" viewBox="0 0 207 76" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <rect width="207" height="76" fill="#fff"/>
+ <path id="a" d="m32.5 23 9-3-9-3 2.5 3z"/><use transform="translate(48)" xlink:href="#a"/><use transform="rotate(-90 56 20)" xlink:href="#a"/><use transform="matrix(-1 0 0 1 166 40)" xlink:href="#a"/><use transform="translate(164)" xlink:href="#a"/><circle cx="151" cy="20" r="3"/>
+ <g fill="none" stroke-width="1.3"><circle cx="56" cy="20" r="14" stroke="#080"/><path d="m151 20v40h-22m-5-40h76m-117 40h-27v-20m14-20h13m-81 0h34" stroke="#000"/><path d="m90 3v33l33-16z" stroke="#00c"/><path d="m67 20h-22m11-11v21" stroke="#080"/><path d="m83 46h41v28h-41z" stroke="#c00"/></g>
+ <g font-family="Arial"><text x="3" y="14" font-size="12px">Input<tspan x="165" y="14">Output</tspan></text><text x="95" y="24" fill="#00c" font-size="16px">A<tspan x="98" y="66" fill="#c00">B</tspan></text></g></svg>

@@ -1,0 +1,1080 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://ada-site.github.io/SITE-1101/Lecture_Notes/04_algorithm/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Algorithm & Algorithmic Actions - SITE 1101 Principles of Information Systems</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="../../assets/styles/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#algorithmic-actions" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="SITE 1101 Principles of Information Systems" class="md-header__button md-logo" aria-label="SITE 1101 Principles of Information Systems" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SITE 1101 Principles of Information Systems
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Algorithm & Algorithmic Actions
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="cyan"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ada-site/SITE-1101" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../course/2025_fall/" class="md-tabs__link">
+          
+  
+  
+  Course
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../general/communication/" class="md-tabs__link">
+          
+  
+  
+  General
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../projects/01_project/" class="md-tabs__link">
+          
+  
+  
+  Projects
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="SITE 1101 Principles of Information Systems" class="md-nav__button md-logo" aria-label="SITE 1101 Principles of Information Systems" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    SITE 1101 Principles of Information Systems
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ada-site/SITE-1101" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Course
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course/2025_fall/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fall 2025
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course/2026_spring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Spring 2026
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    General
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    General
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/communication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Communication Rules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/resources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Policies &amp; Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Projects
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Projects
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/01_project/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/02_project/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/03_project/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/04_project/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#algorithmic-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Algorithmic Actions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dijkstras-shortest-path-algorithm-dijkstra-shortest-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dijkstra's Shortest Path Algorithm {#dijkstra-shortest-path}
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-material" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additional Material
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<p>{% include lecture-styles.html %}</p>
+<p>{% include lecture-header-info.html %}</p>
+<!-- 
+<button id="toc-toggle">☰ Sections</button>
+
+<div id="toc-panel">
+  <h4>On this page</h4>
+  <ul>
+    <li><a href="#algorithmic-actions">Algorithmic Actions</a></li>
+     <li><a href="#dijkstra-shortest-path">Dijkstra's Shortest Path Algorithm</a></li>
+    <li><a href="#additional-material">Additional Material</a></li>
+  </ul>
+</div> -->
+
+<p>An <a href="https://en.wikipedia.org/wiki/Algorithm">algorithm</a> is a step-by-step procedure or set of rules to solve a specific problem or perform a task. It is like a recipe in cooking: you follow a clear sequence of actions to achieve a specific result. In computer science, algorithms receive some <em>input</em>, <em>process</em> it in a logical way, and produce an <em>output</em>. What makes a <strong>good algorithm</strong> is that it has a clear starting point, a clear ending point, and every step is unambiguous - there is no confusion about how it should be executed.</p>
+<div class="frame" markdown="1">
+
+**_Example._** Imagine you want to find the largest of three numbers: A, B, and C. A simple algorithm would say: first compare A and B. If A is greater than or equal to B, then compare A with C. If A is still the greatest, then A is the largest number. Otherwise, C is the largest. But if in the very first comparison B was already greater than A, then compare B with C, and whichever is larger is the answer. This exact set of steps can be written in code or performed by a person.
+
+**_Exercise._** Bring an example of an algorithm from your daily life.
+
+</div>
+
+<p>The word <em>algorithm</em> traces back to the name of the mathematician <a href="https://en.wikipedia.org/wiki/Al-Khwarizmi">Al-Khwarizmi</a>, whose systematic approach to calculation and problem-solving became foundational to modern mathematics and computing. Similarly, the word algebra comes from his mathematical treatise <em>Al-Jabr</em>, translated as "completion" or "rejoining".</p>
+<p><a href="https://en.wikipedia.org/wiki/Turing_Award">Turing Award</a> winner computer scientist <a href="https://en.wikipedia.org/wiki/Donald_Knuth">Donald Knuth</a> is best known for the book <em>The Art of Computer Programming</em>. His work helped establish <em>algorithmic analysis</em> as a discipline.</p>
+<p><a href="https://en.wikipedia.org/wiki/Computational_complexity">Computational complexity</a> of an algorithm describes how the resources an algorithm needs (e.g. time, memory, etc.) grow as the input size increases. <strong>Time complexity</strong> tracks how many computational steps are required. <strong>Space complexity</strong> tracks how much memory is used. Within these, we distinguish worst-case, average-case, and best-case behavior depending on how the input might vary. <a href="https://en.wikipedia.org/wiki/Big_O_notation">Asymptotic (Big O) notation</a> provides a language for comparing growth rates when inputs become large. Big O gives an upper bound: it states that the algorithm grows no faster than some function up to constant factors. Big O abstracts away hardware, implementation details, and constants, focusing only on how the algorithm scales with input size.</p>
+<p align="center">
+  <img src="{{ '/assets/images/lecture04/image.png' | relative_url }}" alt="">
+</p>
+
+<p>Knuth also wrote a <a href="https://cs.stanford.edu/~knuth/azerbaijan.pdf">special foreword</a> publication for participants of the International Olympiad in Informatics (<a href="https://stats.ioinformatics.org/olympiads/2019">IOI 2019</a>) held in Azerbaijan. <em>A Book of Tasty Algorithms</em> is a playful recipe book based on dishes from Azerbaijani cuisine, representing algorithmic ideas through the familiar structure of cooking, drawing a parallel between writing algorithms and following recipes.</p>
+<h2 id="algorithmic-actions">Algorithmic Actions</h2>
+<p>Algorithmic actions describe the fundamental operations that make up any computer program. These actions determine how a program makes decisions, repeats steps, organizes tasks, and manages data. The five main algorithmic actions are <strong>selection</strong>, <strong>repetition</strong>, <strong>modularization</strong>, <strong>recursion</strong>, and <strong>name binding</strong>.</p>
+<p><strong>Selection</strong> means choosing between different paths of execution based on a condition. It allows the program to "decide" what to do depending on input or data values.</p>
+<div class="frame" markdown="1">
+
+**_Example._** If the temperature is above 30 °C, the system turns on the air conditioner; otherwise, it keeps it off. In programming (pseudo-code):
+
+{% highlight c %}
+
+if (temperature > 30) {
+
+turnOnAC();
+
+} else {
+
+turnOffAC();
+
+}
+{% endhighlight %}
+
+</div>
+
+<p><strong>Repetition</strong> means performing the same set of instructions multiple times until a certain condition is met. This prevents code duplication and makes programs efficient.</p>
+<div class="frame" markdown="1">
+
+**_Example._** Printing numbers from 1 to 5 using a loop. In programming (pseudo-code):
+
+{% highlight c %}
+
+for (int i = 1; i <= 5; i++) {
+
+print(i);
+
+}
+
+{% endhighlight %}
+
+</div>
+
+<p><strong>Modularization</strong> means dividing a complex program into smaller, manageable, and reusable parts, called modules. This improves readability, debugging, and reusability.</p>
+<div class="frame" markdown="1">
+
+**_Example._** A billing program may have:
+
+**calculateTax()**\- computes tax on a purchase
+
+**printBill()**\- prints the final receipt
+
+Each module performs one well-defined task, making the program organized and easier to maintain.
+</div>
+
+<p>At a deeper level, modularization is a principle of system organization, not limited to programming. It refers to the act of decomposing any complex system - software, mechanical, social, or educational - into smaller subsystems that can be developed, understood, or replaced independently.</p>
+<p>In programming, modularization starts with <strong>functions</strong>, which perform a single, well-defined task. Related functions can be grouped into <strong>classes</strong>, which represent objects or abstract entities. Several classes and functions together form a <strong>module</strong>, typically a single file in a programming language like Python. A <strong>package</strong> is a collection of related modules organized in a directory (folder) structure, and multiple packages can form a <strong>library</strong> or <strong>framework</strong>, representing a higher level of modular organization. At the top level, systems or applications integrate many libraries and frameworks, sometimes developed by entirely different teams or companies.</p>
+<p>In <strong>engineering</strong>, a car is designed in modules such as the engine, transmission, and electrical system, each of which can be developed or replaced independently. In <strong>education</strong>, a curriculum may be modularized into separate courses or subjects, each focusing on a distinct domain of knowledge but contributing to an integrated learning goal. In <strong>management</strong>, an organization may be divided into departments - finance, marketing, research, operations - each acting as a module with a specific role but coordinated under one structure. In <strong>architecture</strong>, buildings are designed with modular components such as prefabricated walls or units that can be rearranged or replaced.</p>
+<p>At even higher levels, modularization can be systemic or societal. Complex infrastructures - transportation networks, communication systems, and governance structures - are modularized into interacting parts <a href="https://en.wikipedia.org/wiki/Financial_crisis_of_2007%E2%80%932008">so that local failures do not collapse the entire system</a>.</p>
+<p>Modularization is about <strong>complexity management</strong>: dividing a whole into parts that are <strong>independent in function</strong> and <strong>cooperative in purpose</strong>.</p>
+<div class="frame" markdown="1">
+
+**_Exercise._** _Take a major goal of yours for the next six months and divide it into manageable modules._
+
+</div>
+
+<p><strong>Recursion</strong> occurs when a function calls itself to solve smaller parts of the same problem. Each recursive step reduces the problem size until it reaches a <strong>base case</strong>, the simplest situation where the function stops calling itself. Base case is NOT the starting point, it is the STOPPING CONDITION.</p>
+<p>You can imagine of <strong>real-life recursion</strong>: tree has branches, branches have their smaller branches, those branches have their own smaller branches, etc. But this recursion may go infinitely and you usually need to stop at some point. That stopping condition is the base case. Let's say, after four-five branching steps a tree will stop growing any branches. With that logic, there is no base case in the case of two mirrors oppositely directed to each other. There is no base can and you will see infinite reflections. Or: <em>infinite recursion.</em></p>
+<p>In case of <strong>factorial</strong>, we know that the factorial of n is the factorial of the previous number multiplied by n. That means:
+{% highlight c %}</p>
+<p>factorial(5) = factorial(4) * 5</p>
+<p>factorial(4) = factorial(3) * 4</p>
+<p>factorial(3) = factorial(2) * 3</p>
+<p>factorial(2) = factorial(1) * 2</p>
+<p>{% endhighlight %}</p>
+<p>Or, as a general case:</p>
+<p>factorial(n) = factorial(n-1) * n_</p>
+<p>We can write the following recursive function:</p>
+<div class="frame" markdown="1">
+
+{% highlight c %}
+
+factorial(n) {
+
+return n * factorial(n - 1);}
+
+{% endhighlight %}
+</div>
+
+<p>But this pseudo-code has an issue. It is akin to two mirrors looking at each other - it will never stop. It will return the following functions:</p>
+<p>factorial(1) = factorial(0) * 1_</p>
+<p>factorial(0) = factorial(-1) * 0_</p>
+<p>factorial(-1) = factorial(-2) * -1_</p>
+<p><em>ad infinitum</em></p>
+<p>Not only factorial(-1)_ doesn't make sense, but also you will be in an infinite recursion. To fix it, you need to add a halting (stopping) condition: Base case.</p>
+<div class="frame" markdown="1">
+
+{% highlight c %}
+
+factorial(n) {
+
+if (n == 1 or n == 0) return 1; // base case
+
+else return n * factorial(n - 1); // recursive call
+
+}
+{% endhighlight %}
+
+</div>
+
+<p>So, your code will work in the following way, given that n is a non-negative number (in this case n=4): factorial(4) = factorial(3) * 4 = factorial(2) * 3 * 4 = factorial(1) * 2 * 3 * 4 = 1 * 2 * 3 * 4 = 24._</p>
+<div class="frame" markdown="1">
+
+**_Exercise._** Write a pseudo-code for recursive algorithm to find the sum of natural numbers.
+</div>
+
+<p><strong>Name binding</strong> refers to the process of connecting <em>identifiers</em> (names) to specific objects, values, or <strong>memory locations</strong> in a program. It defines <em>where</em> and <em>when</em> a variable's name is linked to the data it represents. This action allows the program to store, access, and update information consistently.</p>
+<div class="frame" markdown="1">
+
+**_Example._** When you type:
+
+**70**
+
+Somewhere in the memory an **object** is created. For example in memory cell represented with hexadecimal number 0x21A95BC, bytes will allocated to represent 70 in binary. Then, if you want to reuse that value in the future, you need to **assign** (not equalize) that value to an identifier.
+
+**speed = 70**
+
+the name speed becomes bound to the value 70 stored in memory. If later the value changes (speed = 50), the same name now refers to a different value but the same memory binding.
+
+</div>
+
+<p>There are two main types of binding: <strong>Static (compile-time)</strong>: the link between name and value is fixed before execution (e.g., variable types in C or Java (e.g. <em>int speed = 70</em>). <strong>Dynamic (run-time)</strong>: the link occurs while the program is running (e.g., variable reassignment in Python).</p>
+<h2 id="dijkstras-shortest-path-algorithm-dijkstra-shortest-path">Dijkstra's Shortest Path Algorithm {#dijkstra-shortest-path}</h2>
+<p>In many information systems, a common task is to search for an item. In some systems, the problem involves navigating networks, such as transportation systems or computer networks, where components are connected by links with different costs, delays, or capacities. In these cases, the goal is not merely to locate an item, but to determine an <em>optimal path</em> through the network.</p>
+<p><a href="https://en.wikipedia.org/wiki/Edsger_W._Dijkstra">Edsger W. Dijkstra</a> was a Dutch computer scientist and one of the founders of modern computer science. <a href="https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm">Dijkstra's algorithm</a> is a classic solution that computes the shortest path from a starting node to all other nodes in a <a href="https://en.wikipedia.org/wiki/Graph_%28discrete_mathematics%29">weighted graph</a> where all edge weights are non-negative. The algorithm maintains a set of nodes whose minimum distance from the start is already known. At each step, it selects the node with the smallest temporary distance, finalizes its distance, and then updates (relaxes) its neighbors by checking whether passing through this node yields a shorter path.</p>
+<p><img alt="" src="data:image/gif;base64,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" /></p>
+<p><em>Dijkstra's algorithm to find the shortest path between a and b. It picks the unvisited vertex with the lowest distance, calculates the distance through it to each unvisited neighbor, and updates the neighbor's distance if smaller. Mark visited (set to red) when done with neighbors.</em></p>
+<p><em>By Ibmua - Work by uploader., Public Domain,</em> <a href="https://commons.wikimedia.org/w/index.php?curid=6282617"><em>https://commons.wikimedia.org/w/index.php?curid=6282617</em></a></p>
+<p>A <a href="https://en.wikipedia.org/wiki/Priority_queue">priority queue</a> is often used to efficiently select the next node with the smallest distance, which allows the algorithm to scale well for large graphs. The algorithm finishes when all nodes have been processed or when the destination node is finalized. The output is both the shortest distance and the actual path taken.</p>
+<h1 id="additional-material">Additional Material</h1>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=rL8X2mlNHPM">Intro to Algorithms: Crash Course Computer Science #13</a></li>
+<li><a href="https://www.youtube.com/watch?v=6hfOvs8pY1k">What's an algorithm? - David J. Malan</a></li>
+<li><a href="https://www.youtube.com/embed/Mv9NEXX1VHc">What on Earth is Recursion? - Computerphile</a></li>
+<li><a href="https://www.youtube.com/embed/2SUvWfNJSsM">Binary, Hanoi and Sierpinski, part 1</a></li>
+<li><a href="https://www.youtube.com/watch?v=GazC3A4OQTE">Dijkstra's Algorithm - Computerphile</a></li>
+</ul>
+<p>{% include lecture-footer.html %}</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/ada-site/SITE-1101" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://ada.edu.az/en/" target="_blank" rel="noopener" title="ada.edu.az" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M271.9 20.2c-9.8-5.6-21.9-5.6-31.8 0l-224 128c-12.6 7.2-18.8 22-15.1 36S17.5 208 32 208h32v208l-51.2 38.4C4.7 460.4 0 469.9 0 480c0 17.7 14.3 32 32 32h448c17.7 0 32-14.3 32-32 0-10.1-4.7-19.6-12.8-25.6L448 416V208h32c14.5 0 27.2-9.8 30.9-23.8s-2.5-28.8-15.1-36l-224-128zM400 208v208h-64V208zm-112 0v208h-64V208zm-112 0v208h-64V208zm80-112a32 32 0 1 1 0 64 32 32 0 1 1 0-64"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.sections", "navigation.expand", "navigation.top", "navigation.footer", "navigation.tabs", "content.code.copy", "content.code.annotate", "search.highlight", "search.suggest", "content.footnote.tooltips"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../assets/app/katex.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1218 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://ada-site.github.io/SITE-1101/Lecture_Notes/06_network/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>06. Telecommunications and Computer Networks - SITE 1101 Principles of Information Systems</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="../../assets/styles/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#06-telecommunications-and-computer-networks" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="SITE 1101 Principles of Information Systems" class="md-header__button md-logo" aria-label="SITE 1101 Principles of Information Systems" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SITE 1101 Principles of Information Systems
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              06. Telecommunications and Computer Networks
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="cyan"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ada-site/SITE-1101" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../course/2025_fall/" class="md-tabs__link">
+          
+  
+  
+  Course
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../general/communication/" class="md-tabs__link">
+          
+  
+  
+  General
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../projects/01_project/" class="md-tabs__link">
+          
+  
+  
+  Projects
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="SITE 1101 Principles of Information Systems" class="md-nav__button md-logo" aria-label="SITE 1101 Principles of Information Systems" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    SITE 1101 Principles of Information Systems
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ada-site/SITE-1101" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Course
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course/2025_fall/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fall 2025
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course/2026_spring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Spring 2026
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    General
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    General
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/communication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Communication Rules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/resources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Policies &amp; Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Projects
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Projects
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/01_project/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/02_project/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/03_project/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/04_project/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#telecommunications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Telecommunications
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#glossary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Glossary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#direction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Direction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#time" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Time
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#range" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Range
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#computer-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Computer Networks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#glossary_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Glossary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network-topologies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Network Topologies
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Network Topologies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bus-topology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bus Topology
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#star-topology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Star Topology
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ring-topology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ring Topology
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mesh-topology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mesh Topology
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-material" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additional Material
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="06-telecommunications-and-computer-networks">06. Telecommunications and Computer Networks</h1>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<ul>
+<li>Rahida Asadli, Ismayil Shahaliyev</li>
+<li>Nov 23 2025 / Dec 21 2025</li>
+</ul>
+</div>
+<h2 id="telecommunications">Telecommunications</h2>
+<p><a href="https://en.wikipedia.org/wiki/Telecommunications">Telecommunications</a> is the long-distance transmission of information using electronic or <a href="https://en.wikipedia.org/wiki/Electromagnetic_spectrum">electromagnetic signals</a>. Whenever two devices exchange information (a voice call, a video stream, a bank transaction), telecommunications is operating in the background. Telecommunications makes communication possible without physical proximity. A phone call between countries, a campus network connecting buildings, or a satellite sending weather data to Earth are all telecommunications in action.</p>
+<p>Every telecommunication system follows the same basic structure: <em>sender → channel (medium) → receiver</em>. The sender is where information originates. The channel is the path between sender and receiver, such as copper cable, fiber-optic cable, or wireless radio waves. The receiver converts the incoming signal back into a usable form. For communication to work, both sides follow shared rules called <em>protocols</em>, which define how data is formatted, transmitted, and interpreted.</p>
+<h2 id="glossary">Glossary</h2>
+<p>Before starting, it helps to know core terms that appear frequently in telecommunications and networks.</p>
+<p><strong>Attenuation</strong> is the weakening of a signal as it travels through a medium. The longer the distance, the weaker the signal becomes. Copper cables usually attenuate faster than fiber. When attenuation becomes too high, the receiver may get a distorted or unreadable signal, which is why long links may require repeaters or amplifiers.</p>
+<p><strong>Electromagnetic interference (EMI)</strong> is the disturbance caused by external electrical or magnetic sources. Power lines, motors, and electronic devices can disrupt electrical signals in copper cables. Fiber uses light, so it is not affected by EMI.</p>
+<p><strong>Bandwidth</strong> is the maximum amount of data that a medium or network can carry per second. It is capacity, not “speed of electricity.” Bandwidth is usually measured in Mbps or Gbps.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A 100 Mbps connection can carry more data per second than a 10 Mbps connection, so large files download faster. Twisted-pair cables support lower bandwidth over short distances compared to coaxial, and fiber typically supports much higher bandwidth over much longer distances.</p>
+</div>
+<p><strong>Throughput</strong> is the actual amount of data successfully delivered per second. Throughput is usually lower than bandwidth because of interference, distance, congestion, and hardware limits.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A Wi-Fi link may have a 300 Mbps bandwidth rating, but real throughput might be 80 Mbps due to walls, competing networks, and device limitations. Complaints about “slow internet” are usually complaints about throughput.</p>
+</div>
+<p><strong>Signal type</strong> refers to the physical form of transmitted data. Twisted-pair and coaxial carry electrical signals. Fiber carries optical signals (light). This is a major reason fiber performs better over distance and resists interference, but it is typically more expensive and harder to install.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Property</strong></th>
+<th><strong>Twisted pair</strong></th>
+<th><strong>Coaxial cable</strong></th>
+<th><strong>Fiber-optic cable</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cost</td>
+<td>Low</td>
+<td>Medium (≈2–3× twisted pair)</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Installation</td>
+<td>Easy</td>
+<td>Easy</td>
+<td>Difficult</td>
+</tr>
+<tr>
+<td>Attenuation</td>
+<td>High</td>
+<td>Moderate</td>
+<td>Very low</td>
+</tr>
+<tr>
+<td>Signal type</td>
+<td>Electrical</td>
+<td>Electrical</td>
+<td>Optical (light)</td>
+</tr>
+<tr>
+<td>Bandwidth</td>
+<td>~1–100 Mbps</td>
+<td>Hundreds of Mbps to Gbps</td>
+<td>Gbps to Tbps</td>
+</tr>
+<tr>
+<td>Distance</td>
+<td>~100 m</td>
+<td>~100 m</td>
+<td>Kilometers</td>
+</tr>
+<tr>
+<td>EMI effect</td>
+<td>High</td>
+<td>Low</td>
+<td>None</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Latency</strong> is the time it takes for data to travel from one point to another. Even with high bandwidth, high latency can make communication feel slow. Local networks usually have low latency. Long-distance communication often has higher latency.</p>
+<p><strong>Exercise.</strong> Determine the bandwidth and throughput of your device’s current connection.</p>
+<h2 id="direction">Direction</h2>
+<p>Communication systems can be classified by how data flows between sender and receiver.</p>
+<p><strong>Simplex</strong> is one-way communication. The receiver cannot respond over the same channel. Television broadcasting is a classic example.</p>
+<p><strong>Half-duplex</strong> is two-way communication, but not at the same time. Devices take turns sending and receiving. Walkie-talkies are a typical example.</p>
+<p><strong>Full-duplex</strong> is simultaneous two-way communication. Phone calls and modern network links are full-duplex, enabling smooth interaction.</p>
+<h2 id="time">Time</h2>
+<p>Communication systems can also be classified by timing.</p>
+<p><strong>Synchronous communication</strong> requires both endpoints to be active at the same time and exchange data immediately. It is used when results must be immediate, such as live calls, real-time control, or interactive request-response systems.</p>
+<p><strong>Asynchronous communication</strong> removes time coupling. The sender does not block waiting for the receiver. Messages may be buffered, queued, or stored and processed later. This improves scalability and fault tolerance and is used heavily in modern systems (email delivery, job queues, background processing, batch workflows).</p>
+<h2 id="range">Range</h2>
+<p>Distance shapes the technologies and infrastructure used.</p>
+<p><strong>Personal Area Network (PAN)</strong> covers a few meters around a person, connecting devices such as phones, smartwatches, and earbuds.</p>
+<p><strong>Local Area Network (LAN)</strong> covers a home, office, building, or campus network segment. LANs use Ethernet, Wi-Fi, switches, and routers.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A home network is a LAN: the router connects phones, laptops, and TVs and provides shared access to the internet. A university lab network is also a LAN.</p>
+</div>
+<p><strong>Metropolitan Area Network (MAN)</strong> spans a larger area, typically a city or a large multi-building campus.</p>
+<p><strong>Wide Area Network (WAN)</strong> covers very large areas such as countries or continents. WANs rely on backbone networks, long-haul fiber, satellites, and high-capacity routers.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Internet is the most significant WAN. International banking and airline reservation systems also run over WAN-scale connectivity.</p>
+</div>
+<h2 id="computer-networks">Computer Networks</h2>
+<p>A <a href="https://en.wikipedia.org/wiki/Computer_network">computer network</a> is a collection of devices connected so they can exchange data. Devices communicate by sending information over cables or wireless signals. To do this, networks rely on hardware, addressing, and agreed rules.</p>
+<h2 id="glossary_1">Glossary</h2>
+<p><strong>MAC (Media Access Control) address</strong> is a hardware-based identifier for a network interface, typically shown as 12 hexadecimal digits such as <code>00:1A:2B:3C:4D:5E</code>. It identifies devices within a local network segment.</p>
+<p><strong>IP (Internet Protocol) address</strong> is a logical address used for communication across networks. Unlike MAC addresses, IP addresses can change depending on the network.</p>
+<p><strong>Hub</strong> connects multiple devices but does not direct traffic intelligently. It repeats incoming data to all ports, creating unnecessary traffic.</p>
+<p><strong>Switch</strong> forwards data intelligently inside a local network. It learns MAC addresses and sends frames only to the intended device.</p>
+<p><strong>Router</strong> connects different networks and forwards packets based on IP addresses. A home router connects a LAN to the ISP and then to the Internet.</p>
+<p><strong>Modem</strong> connects a local network to the ISP’s physical infrastructure. It converts digital data into a signal suitable for the medium and converts incoming signals back into digital data. Many home devices combine modem + router + switch, but these are logically different roles.</p>
+<p><strong>Frame</strong> is the data unit used inside a local network (switching). Frames carry MAC addresses.</p>
+<p><strong>Packet</strong> is the data unit used across networks (routing). Packets carry IP addresses.</p>
+<p><strong>Packet switching</strong> breaks data into packets and routes them independently. This allows many users to share the same links efficiently, supports alternative routes when failures occur, and retransmits only lost packets instead of entire messages.</p>
+<p><strong>Port</strong> is a logical endpoint used by applications to separate different types of communication on the same device. For example, web traffic commonly uses port 80 (HTTP) or 443 (HTTPS).</p>
+<p><strong>Exercise.</strong> Determine the IP and MAC addresses of your device.</p>
+<h2 id="network-topologies">Network Topologies</h2>
+<p>Network topology describes the physical or logical arrangement of devices and connections. The topology affects reliability, performance, cost, and how failures spread.</p>
+<h3 id="bus-topology">Bus Topology</h3>
+<p>All devices share a single main cable. If the main cable fails, the entire network fails. As more devices communicate, collisions and congestion increase.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Early office networks used one coaxial cable as a shared backbone. Damage to that cable could stop all communication.</p>
+</div>
+<p><img src="../../assets/images/lecture08/3.png" alt="Bus topology" style="max-width: 100%; height: auto;"></p>
+<h3 id="star-topology">Star Topology</h3>
+<p>All devices connect to a central device (usually a switch). If one cable fails, only that device is affected. If the central device fails, the whole network stops.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Modern home and office networks usually follow star topology: devices connect to a central router or switch.</p>
+</div>
+<p><img src="../../assets/images/lecture08/2.png" alt="Star topology" style="max-width: 100%; height: auto;"></p>
+<h3 id="ring-topology">Ring Topology</h3>
+<p>Devices form a loop. Data travels around the ring until it reaches the destination. A single break can disrupt the loop unless rerouting exists.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Some older campus and metropolitan networks used ring designs to connect buildings in a loop.</p>
+</div>
+<h3 id="mesh-topology">Mesh Topology</h3>
+<p>Devices connect through multiple redundant paths. If one link fails, traffic can reroute through others. This is reliable but expensive and complex.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Internet backbone providers use mesh-style redundancy so failures do not interrupt global connectivity.</p>
+</div>
+<p><img src="../../assets/images/lecture08/1.png" alt="Network topologies" style="max-width: 100%; height: auto;"></p>
+<table>
+<thead>
+<tr>
+<th><strong>Topology</strong></th>
+<th><strong>Advantages</strong></th>
+<th><strong>Disadvantages</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bus</td>
+<td>Simple and cheap for small networks; less cable</td>
+<td>Backbone failure stops everything; performance drops as devices increase; hard to troubleshoot</td>
+</tr>
+<tr>
+<td>Star</td>
+<td>Easy to manage; single device failure usually isolated; easy to add/remove devices; strong performance</td>
+<td>Central switch/router failure stops the network; more cable required</td>
+</tr>
+<tr>
+<td>Ring</td>
+<td>Predictable data flow; no collisions in token-based rings; equal access</td>
+<td>One failure can disrupt the loop; harder to reconfigure</td>
+</tr>
+<tr>
+<td>Mesh</td>
+<td>High reliability; multiple paths; strong fault tolerance</td>
+<td>Expensive; complex installation and maintenance</td>
+</tr>
+<tr>
+<td>Line</td>
+<td>Simple linear structure; easy to extend at ends</td>
+<td>Middle failure breaks downstream communication; limited scalability</td>
+</tr>
+<tr>
+<td>Tree</td>
+<td>Easy to expand; common in large networks</td>
+<td>Backbone failure affects branches; more cable; more complex configuration</td>
+</tr>
+</tbody>
+</table>
+<h2 id="additional-material">Additional Material</h2>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=3QhU9jd03a0">Computer Networks: Crash Course Computer Science #28</a></li>
+<li><a href="https://www.youtube.com/watch?v=TIiQiw7fpsU">MAC address explained</a></li>
+<li><a href="https://www.youtube.com/watch?v=1z0ULvg_pW8">Hub, Switch, &amp; Router Explained - What's the difference?</a></li>
+<li><a href="https://www.youtube.com/watch?v=zbqrNg4C98U">Network Topologies (Star, Bus, Ring, Mesh, Ad hoc, Infrastructure, &amp; Wireless Mesh Topology)</a></li>
+<li><a href="https://www.youtube.com/watch?v=g2fT-g9PX9o">Network Ports Explained</a></li>
+<li><a href="https://www.youtube.com/watch?v=HLziLmaYsO0&amp;t=342s">What is Ethernet?</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/ada-site/SITE-1101" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://ada.edu.az/en/" target="_blank" rel="noopener" title="ada.edu.az" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M271.9 20.2c-9.8-5.6-21.9-5.6-31.8 0l-224 128c-12.6 7.2-18.8 22-15.1 36S17.5 208 32 208h32v208l-51.2 38.4C4.7 460.4 0 469.9 0 480c0 17.7 14.3 32 32 32h448c17.7 0 32-14.3 32-32 0-10.1-4.7-19.6-12.8-25.6L448 416V208h32c14.5 0 27.2-9.8 30.9-23.8s-2.5-28.8-15.1-36l-224-128zM400 208v208h-64V208zm-112 0v208h-64V208zm-112 0v208h-64V208zm80-112a32 32 0 1 1 0 64 32 32 0 1 1 0-64"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.sections", "navigation.expand", "navigation.top", "navigation.footer", "navigation.tabs", "content.code.copy", "content.code.annotate", "search.highlight", "search.suggest", "content.footnote.tooltips"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../assets/app/katex.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      
+    
+  </body>
+</html>
