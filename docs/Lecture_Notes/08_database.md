@@ -1,35 +1,7 @@
----
-layout: page
-title: Databases & Database Management Systems
-order: 7
-week: 11
-authors: "Rahida Asadli, Rumiyya Alili, Ismayil Shahaliyev"
-created: "Dec 1 2025"
-updated: "Dec 22 2025"
----
+# 08. Databases & Database Management Systems
 
-{% include lecture-styles.html %}
-
-{% include lecture-header-info.html %}
-
-<!-- {% include reading-time.html %}
-
-<button id="toc-toggle">☰ Sections</button>
-
-<div id="toc-panel" class="toc-panel" style="display:none;"> <ul>
-    <li><a href="#database-approach">Database Approach</a></li>
-    <li><a href="#data-models">Data Models</a></li>
-    <li><a href="#relational-database-model">Relational Database Model</a></li>
-    <li><a href="#sql">Structured Query Language (SQL)</a></li>
-    <li><a href="#database-normalization">Database Normalization</a></li>
-    <li><a href="#data-manipulation">Data Manipulation</a></li>
-    <li><a href="#database-transactions">Database Transactions</a></li>
-    <li><a href="#acid-properties">ACID Properties</a></li>
-    <li><a href="#cap-theorem">CAP Theorem</a></li>
-    <li><a href="#additional-material">Additional Material</a></li>
-  </ul>
-</div> -->
-
+:material-account: Rahida Asadli, Rumiyya Alili, Ismayil Shahaliyev  
+:material-calendar: Dec 1 2025 :material-calendar-edit: Jan 31, 2026
 
 In the past, many systems stored information in simple text files. For example, a file named students.txt could have lines like:
 <div class="frame" markdown="1">
@@ -300,4 +272,3 @@ This leads to trade-offs. For example, WhatsApp must always deliver messages (av
 </script>
 
 {% include lecture-footer.html %}
-

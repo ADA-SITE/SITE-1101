@@ -10,12 +10,17 @@
 
 The [motherboard](https://en.wikipedia.org/wiki/Motherboard) is the main circuit board and backbone of the computer, responsible for connecting and coordinating all hardware components. It provides electrical pathways (called _buses_) and controllers that allow the _Central Processing Unit (CPU)_, memory, storage devices, input components (e.g. keyboard, mouse, microphone, scanner), and output components (e.g. monitor, printer, speaker) to communicate quickly and in the correct sequence. The motherboard ensures that data flows smoothly between these parts, much like a central highway system linking different parts of a city. The _CPU socket_ is the slot where the processor is installed; through tiny metal contacts, it connects directly to the motherboard so the CPU can fetch, decode, and execute instructions from memory. Beside it are the memory slots, where _Random-Access Memory (RAM)_ modules are inserted. RAM temporarily holds the data and instructions the CPU is currently working with, allowing fast access and efficient processing.
 
-<figure style="margin: 1em 0; text-align: center;">
-  <img src="../../assets/images/lecture03/motherboard.jpg" alt="motherboard" style="max-width: 80%; height: auto;">
-  <figcaption style="margin-top: 0.5em; font-size: 0.9em; opacity: 0.85;">
-    The motherboard of a Samsung Galaxy SII; almost all functions of the device are integrated into a very small board, By <a href="//commons.wikimedia.org/wiki/User:1Veertje" title="User:1Veertje">Vera de Kok</a> - <span class="int-own-work" lang="en">Own work</span>, <a href="https://creativecommons.org/licenses/by-sa/3.0" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=20051184">Link</a>
+<figure class="w50">
+  <img src="../../assets/images/lecture03/motherboard.jpg" alt="Motherboard">
+  <figcaption>
+    The motherboard of a Samsung Galaxy SII; almost all functions of the device are integrated into a very small board. By
+    <a href="//commons.wikimedia.org/wiki/User:1Veertje" title="User:1Veertje">Vera de Kok</a> –
+    <span class="int-own-work" lang="en">Own work</span>,
+    <a href="https://creativecommons.org/licenses/by-sa/3.0" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>,
+    <a href="https://commons.wikimedia.org/w/index.php?curid=20051184">Link</a>
   </figcaption>
 </figure>
+
 
 !!! note
     Imagine you open the calculator app on your computer. When you click the icon, the action is sent through the motherboard. The calculator program is loaded into RAM, and the CPU begins reading its instructions from memory and carrying them out. When you type numbers, they are kept in RAM while the CPU performs the calculations. The result is then shown on the screen. If you close the app, the data in RAM is cleared, but the calculator program itself remains stored in a storage device for future use.
@@ -24,12 +29,19 @@ The [motherboard](https://en.wikipedia.org/wiki/Motherboard) is the main circuit
 
 The [_von Neumann architecture_](https://en.wikipedia.org/wiki/Von_Neumann_architecture) (1945) describes how most computers are structured. It consists of five key components. The **input unit** receives data and instructions from external devices. The **memory unit** stores data and instructions, either temporarily during processing or permanently for long-term use. The **arithmetic logic unit** performs arithmetic operations, such as addition and subtraction, as well as logical operations. The **control unit** directs and coordinates all system activities by controlling the flow of data and instructions between components. Finally, the **output unit** presents the processed information to the user or transmits it to other systems through output devices or communication interfaces.
 
-<figure style="margin: 1em 0; text-align: center;">
-  <img src="../../assets/images/lecture03/von_neumann.svg" alt="von neumann architecture" style="max-width: 80%; height: auto;">
-  <figcaption style="margin-top: 0.5em; font-size: 0.9em; opacity: 0.85;">
-    A von Neumann architecture scheme, By <a href="//commons.wikimedia.org/w/index.php?title=User:Kapooht&amp;action=edit&amp;redlink=1" class="new" title="User:Kapooht (page does not exist)">Kapooht</a> - <span class="int-own-work" lang="en">Own work</span>, <a href="https://creativecommons.org/licenses/by-sa/3.0" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=25789639">Link</a>
+<figure class="w100">
+  <img src="../../assets/images/lecture03/von_neumann.svg" alt="Von Neumann architecture">
+  <figcaption>
+    A von Neumann architecture scheme. By
+    <a href="//commons.wikimedia.org/w/index.php?title=User:Kapooht&amp;action=edit&amp;redlink=1"
+       title="User:Kapooht (page does not exist)">Kapooht</a> –
+    <span class="int-own-work" lang="en">Own work</span>,
+    <a href="https://creativecommons.org/licenses/by-sa/3.0"
+       title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>,
+    <a href="https://commons.wikimedia.org/w/index.php?curid=25789639">Link</a>
   </figcaption>
 </figure>
+
 
 Both **data** and **instructions** are stored together in the same memory. This is called the _stored-program concept_. It was important because it allowed computers to keep programs in memory along with the data they use. This made it possible to change or run different programs by loading new instructions into memory, instead of manually changing the computer’s hardware connections. It simplified computer design, enabled automation of complex tasks, and made programming far more flexible.
 
@@ -40,12 +52,18 @@ It is common sense to us now, but only because it became the foundation of moder
 
 ## Central Processing Unit
 
-[Central Processing Unit (CPU)](https://en.wikipedia.org/wiki/Central_processing_unit) follows program instructions and performs the steps needed to complete tasks, from typing a word to playing music. The CPU also controls and coordinates the work of other parts of the computer, making sure everything happens in the right order. 
+[Central Processing Unit (CPU)](https://en.wikipedia.org/wiki/Central_processing_unit) follows program instructions and performs the steps needed to complete tasks, from typing a word to playing music. The CPU also controls and coordinates the work of other parts of the computer, making sure everything happens in the right order. It has three main components.
 
-<figure style="margin: 1em 0; text-align: center;">
-  <img src="../../assets/images/lecture03/cpu.jpg" alt="cpu" style="max-width: 80%; height: auto;">
-  <figcaption style="margin-top: 0.5em; font-size: 0.9em; opacity: 0.85;">
-    A high-end consumer CPU made by Intel: an <a href='https://en.wikipedia.org/wiki/List_of_Intel_Core_processors'>Intel Core i9-14900KF</a>, By <a href="//commons.wikimedia.org/wiki/User:Pstrahl" title="User:Pstrahl">Pstrahl</a> - <span class="int-own-work" lang="en">Own work</span>, <a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=151972144">Link</a>
+<figure class="w50 float-left">
+  <img src="../../assets/images/lecture03/cpu.jpg" alt="CPU">
+  <figcaption>
+    A high-end consumer CPU made by Intel: an
+    <a href="https://en.wikipedia.org/wiki/List_of_Intel_Core_processors">Intel Core i9-14900KF</a>.
+    By <a href="//commons.wikimedia.org/wiki/User:Pstrahl" title="User:Pstrahl">Pstrahl</a> –
+    <span class="int-own-work" lang="en">Own work</span>,
+    <a href="https://creativecommons.org/licenses/by-sa/4.0"
+       title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>,
+    <a href="https://commons.wikimedia.org/w/index.php?curid=151972144">Link</a>
   </figcaption>
 </figure>
 
@@ -92,7 +110,7 @@ While the CPU is responsible for general-purpose computation and overall control
 
 Unlike the CPU, which has a small number of powerful cores optimized for sequential work, a GPU contains thousands of simpler cores optimized for parallel operations. This makes GPUs efficient at tasks where the same computation must be applied to many data elements at once, such as pixels, vertices, or vectors.
 
-Today, GPUs are widely used beyond graphics, including scientific computing, simulations, video processing, and [artificial intelligence](../10_ai), where large matrix and vector operations are common. In typical workloads, the CPU manages control flow and coordination, while the GPU performs heavy numerical computation.
+Today, GPUs are widely used beyond graphics, including scientific computing, simulations, video processing, and [artificial intelligence](../09_ai), where large matrix and vector operations are common. In typical workloads, the CPU manages control flow and coordination, while the GPU performs heavy numerical computation.
 
 ## Memory Devices
 
@@ -128,10 +146,11 @@ Storage devices use two main retrieval methods: [sequential access](https://en.w
 
 **Solid State Drive (SSD)** stores data in [flash memory](https://en.wikipedia.org/wiki/Flash_memory) and has no moving parts, making it much faster and more reliable than HDDs. SSDs offer fast boot times, quick application loading, and low-latency file access. Their cost per gigabyte is typically higher than HDDs.
 
-<figure style="margin: 1em 0; text-align: center;">
-  <img src="../../assets/images/lecture03/storage.png" alt="storage hierarchy pyramid" style="max-width: 80%; height: auto;">
-  <figcaption style="margin-top: 0.5em; font-size: 0.9em; opacity: 0.85;">
-    Storage hierarchy pyramid (created with <a href='https://matplotlib.org/'>matplotlib</a>).
+<figure class="w80 float-left">
+  <img src="../../assets/images/lecture03/storage.png" alt="Storage hierarchy pyramid">
+  <figcaption>
+    Storage hierarchy pyramid (created with
+    <a href="https://matplotlib.org/">matplotlib</a>).
   </figcaption>
 </figure>
 

@@ -124,14 +124,19 @@ Compute $B−A$ using 4-bit binary.
 
 ## Transistors and Moore’s Law
 
-
-<figure style="margin: 1em 0; text-align: center;">
-  <img src="../../assets/images/lecture02/transistor.svg" alt="npn transistor" style="max-width: 80%; height: auto;">
-  <figcaption style="margin-top: 0.5em; font-size: 0.9em; opacity: 0.85;">
-    By <a href="//commons.wikimedia.org/wiki/User:Omegatron" title="User:Omegatron">Omegatron</a> - <span typeof="mw:File"><a href="//commons.wikimedia.org/wiki/File:W3C_grn.svg" class="mw-file-description"></a></span>&nbsp;The <a href="//commons.wikimedia.org/wiki/Help:SVG" title="Help:SVG">SVG</a> code is <span class="plainlinks" style="background:var(--background-color-success-subtle, #dff2eb); color: inherit;"><a rel="nofollow" class="external text" href="https://validator.w3.org/check?uri=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FSpecial%3AFilepath%2FBJT_NPN_symbol.svg&amp;doctype=Inline">valid</a></span>.<span typeof="mw:File"><a href="//commons.wikimedia.org/wiki/File:Inkscape-yes.svg" class="mw-file-description"></a></span>&nbsp;This symbol was created with <a href="https://en.wikipedia.org/wiki/Inkscape" class="extiw" title="w:Inkscape">Inkscape</a> by user&nbsp;<a href="//commons.wikimedia.org/wiki/User:Omegatron" title="User:Omegatron">Omegatron</a>., <a href="https://creativecommons.org/licenses/by-sa/3.0" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=2792640">Link</a>
+<figure class="w80">
+  <img src="../../assets/images/lecture02/transistor.svg" alt="NPN transistor">
+  <figcaption>
+    By <a href="//commons.wikimedia.org/wiki/User:Omegatron" title="User:Omegatron">Omegatron</a>.
+    The <a href="//commons.wikimedia.org/wiki/Help:SVG" title="Help:SVG">SVG</a> code is
+    <a rel="nofollow" href="https://validator.w3.org/check?uri=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FSpecial%3AFilepath%2FBJT_NPN_symbol.svg&amp;doctype=Inline">valid</a>.
+    This symbol was created with
+    <a href="https://en.wikipedia.org/wiki/Inkscape">Inkscape</a>.
+    <a href="https://creativecommons.org/licenses/by-sa/3.0"
+       title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>,
+    <a href="https://commons.wikimedia.org/w/index.php?curid=2792640">Link</a>
   </figcaption>
 </figure>
-
 
 Modern computer chips contain billions of transistors packed into an area smaller than a fingernail. In 1965, Intel co-founder [Gordon Moore](https://en.wikipedia.org/wiki/Gordon_Moore) observed that the number of transistors on a chip was roughly doubling every two years, which became known as [Moore’s Law](https://en.wikipedia.org/wiki/Moore%27s_law) (it is not a physical law). This trend made computers faster, smaller, and cheaper for decades.
 
@@ -142,18 +147,10 @@ Modern computer chips contain billions of transistors packed into an area smalle
 
 All digital logic is based on [Boolean algebra](https://en.wikipedia.org/wiki/Boolean_algebra), named after [George Boole](https://en.wikipedia.org/wiki/George_Boole). In this system, everything is either `true` or `false`, or in computer terms, $1$ or $0$. Logic operations are implemented using [logic gates](https://en.wikipedia.org/wiki/Logic_gate). Every complex computation — from addition to running software — reduces to many fast gate operations.
 
-<div style="
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-  margin: 1em auto;
-  max-width: 900px;
-  text-align: center;
-">
-
+<div class="figure-grid">
   <figure>
-    <img src="../../assets/images/lecture02/not.svg" alt="NOT gate" style="max-width: 100%; height: auto;">
-    <figcaption style="margin-top: 0.4em; font-size: 0.85em; opacity: 0.85;">
+    <img src="../../assets/images/lecture02/not.svg" alt="NOT gate">
+    <figcaption>
       NOT gate, By <a href="//commons.wikimedia.org/wiki/User:Inductiveload" title="User:Inductiveload">Inductiveload</a> –
       <span class="int-own-work" lang="en">Own work</span>, Public Domain,
       <a href="https://commons.wikimedia.org/w/index.php?curid=5729018">Link</a>
@@ -161,8 +158,8 @@ All digital logic is based on [Boolean algebra](https://en.wikipedia.org/wiki/Bo
   </figure>
 
   <figure>
-    <img src="../../assets/images/lecture02/and.svg" alt="AND gate" style="max-width: 100%; height: auto;">
-    <figcaption style="margin-top: 0.4em; font-size: 0.85em; opacity: 0.85;">
+    <img src="../../assets/images/lecture02/and.svg" alt="AND gate">
+    <figcaption>
       AND gate, By <a href="//commons.wikimedia.org/wiki/User:Inductiveload" title="User:Inductiveload">Inductiveload</a> –
       <span class="int-own-work" lang="en">Own work</span>, Public Domain,
       <a href="https://commons.wikimedia.org/w/index.php?curid=5729013">Link</a>
@@ -170,8 +167,8 @@ All digital logic is based on [Boolean algebra](https://en.wikipedia.org/wiki/Bo
   </figure>
 
   <figure>
-    <img src="../../assets/images/lecture02/or.svg" alt="OR gate" style="max-width: 100%; height: auto;">
-    <figcaption style="margin-top: 0.4em; font-size: 0.85em; opacity: 0.85;">
+    <img src="../../assets/images/lecture02/or.svg" alt="OR gate">
+    <figcaption>
       OR gate, By <a href="//commons.wikimedia.org/wiki/User:Inductiveload" title="User:Inductiveload">Inductiveload</a> –
       <span class="int-own-work" lang="en">Own work</span>, Public Domain,
       <a href="https://commons.wikimedia.org/w/index.php?curid=5729019">Link</a>
@@ -179,14 +176,13 @@ All digital logic is based on [Boolean algebra](https://en.wikipedia.org/wiki/Bo
   </figure>
 
   <figure>
-    <img src="../../assets/images/lecture02/xor.svg" alt="XOR gate" style="max-width: 100%; height: auto;">
-    <figcaption style="margin-top: 0.4em; font-size: 0.85em; opacity: 0.85;">
+    <img src="../../assets/images/lecture02/xor.svg" alt="XOR gate">
+    <figcaption>
       XOR gate, By <a href="//commons.wikimedia.org/wiki/User:Inductiveload" title="User:Inductiveload">Inductiveload</a> –
       <span class="int-own-work" lang="en">Own work</span>, Public Domain,
       <a href="https://commons.wikimedia.org/w/index.php?curid=5729022">Link</a>
     </figcaption>
   </figure>
-
 </div>
 
 **Truth tables** are a precise way to describe how a logical operation behaves. They list all possible input values (usually 0 and 1) and show the exact output produced for each case. This makes the behavior of a logic gate or logical rule completely unambiguous and easy to verify. Below are standard truth tables for basic logic gates.

@@ -7,13 +7,21 @@
 
 [_Technology_](https://en.wikipedia.org/wiki/Technology) (from ancient Greek _τέχνη + λογία = techne + logia_: science + art, skill) is the application of techniques, skills, methods, and processes to produce goods and services or achieve specific objectives.
 
-<figure style="margin: 1em 0; text-align: center;">
-  <img src="../../assets/images/lecture01/westernization.png" alt="Europeanization (Molla Nasraddin)" style="max-width: 80%; height: auto;">
-  <figcaption style="margin-top: 0.5em; font-size: 0.9em; opacity: 0.85;">
+<!--
+<figure class="w80">
+  <img src="../../assets/images/lecture01/westernization.png" alt="Europeanization (Molla Nasraddin)">
+  <figcaption>
     The caricature (1911) from the satirical
-    <a href="https://en.wikipedia.org/wiki/Molla_Nasraddin_(magazine)" target="_blank" rel="noopener noreferrer">Molla Nasraddin magazine</a>. On the left, the Japanese man is shown adopting European (modern) knowledge and tools in a practical way (skills and technology), while keeping his cultural heritage by wearing traditional outfit. On the right, a local Muslim (Azerbaijani) is shown copying only the outward style (clothes and manners) without the inward transformation.
+    <a href="https://en.wikipedia.org/wiki/Molla_Nasraddin_(magazine)" target="_blank" rel="noopener noreferrer">
+      Molla Nasraddin magazine
+    </a>.
+    On the left, the Japanese man is shown adopting European (modern) knowledge and tools in a practical way (skills and technology),
+    while keeping his cultural heritage by wearing traditional outfit.
+    On the right, a local Muslim (Azerbaijani) is shown copying only the outward style (clothes and manners) without the inward transformation.
+    Modernization and progress should be understood as inward development through integration of technology.
   </figcaption>
 </figure>
+-->
 
 
 ## Data, Information, Knowledge
@@ -34,18 +42,20 @@ _Context_ is the background, circumstances, or setting that gives meaning to dat
 [Cybernetics](https://en.wikipedia.org/wiki/Cybernetics) is the study of control, communication, and feedback in systems, a field developed by [Norbert Wiener](https://en.wikipedia.org/wiki/Norbert_Wiener). During WWII, Weiner worked on predicting the future position of enemy aircraft: he realized that both the gun and the pilot form a feedback system are constantly correcting actions based on error and delay rather than following a fixed plan. This insight led him to extend control theory beyond machines to living systems, emphasizing self-regulation and adaptation under uncertainty. This way of thinking later influenced [artificial intelligence](https://en.wikipedia.org/wiki/Artificial_intelligence) and [deep learning](https://en.wikipedia.org/wiki/Deep_learning), where feedback from errors is used to adjust internal _parameters_ and improve performance.
 
 !!! tip
-    We will discuss artificial intelligence in our future weeks. See the [lecture notes](../10_ai) dedicated to the topic.
+    We will discuss artificial intelligence in our future weeks. See the [lecture notes](../09_ai) dedicated to the topic.
 
 _System_ is a set of interrelated components working together toward a common goal by accepting **inputs**, **processing** them, and producing **outputs**. _Control system_ is a system that continuously monitors outputs and uses **feedback** to adjust inputs or processes, maintaining the system's desired performance and stability.
 
 
-<figure style="margin: 1em 0; text-align: center;">
-  <img src="../../assets/images/lecture01/feedback_model.svg" alt="Feedback Model (Control System)" style="max-width: 80%; height: auto;">
-  <figcaption style="margin-top: 0.5em; font-size: 0.9em; opacity: 0.85;">
-    By Me (<a href="//commons.wikimedia.org/wiki/User:Intgr" title="User:Intgr">Intgr</a>) - <span class="int-own-work" lang="en">Own work</span>, Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=2836622">Link</a>
+<figure class="w80">
+  <img src="../../assets/images/lecture01/feedback_model.svg" alt="Feedback Model (Control System)">
+  <figcaption>
+    By <a href="//commons.wikimedia.org/wiki/User:Intgr" title="User:Intgr">Intgr</a> –
+    <span class="int-own-work" lang="en">Own work</span>,
+    Public Domain,
+    <a href="https://commons.wikimedia.org/w/index.php?curid=2836622">Link</a>
   </figcaption>
 </figure>
-
 
 !!! note
     In a home heating system, the desired room temperature is the input, the furnace heating the air is the process, and the warm air circulating through the house is the output. Feedback comes from a thermostat, which senses the actual temperature and switches the furnace on or off to keep the room at the set temperature.
