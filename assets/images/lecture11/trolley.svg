@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 355.86459 121.44375" height="459" width="1345" version="1.1" xmlns:i="&amp;#38;ns_ai;" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <rect style="paint-order:stroke markers fill" height="121.44" width="355.86" y="-7.2164e-15" x="0" fill="#fff"/>
+ <switch transform="matrix(.26458 0 0 .26458 -47.879 59.121)">
+  <foreignObject y="0" x="0" height="1" width="1" requiredExtensions="http://ns.adobe.com/AdobeIllustrator/10.0/">
+   <i:pgfRef xlink:href="#adobe_illustrator_pgf"/>
+  </foreignObject>
+  <g i:extraneous="self">
+   <g transform="matrix(1.25 0 0 -1.25 359.06 506.51)">
+    <path d="m-237.58 383.26c4.162 0 7.538 3.376 7.538 7.539 0 4.166-3.376 7.541-7.538 7.541-4.166 0-7.539-3.376-7.539-7.541 0.001-4.163 3.374-7.539 7.539-7.539"/>
+   </g>
+   <g transform="matrix(1.25 0 0 -1.25 367.4 508.45)">
+    <path d="m-235.91 382.87c5.333 0 9.702-4.327 9.702-9.657v-23.384c0-1.821-1.433-3.298-3.257-3.298-1.821 0-3.302 1.478-3.302 3.298v21.084h-1.702v-58.663c0-2.446-1.996-4.425-4.439-4.425-2.446 0-4.425 1.979-4.425 4.425v34.063h-1.815v-34.063c0-2.446-1.979-4.425-4.421-4.425-2.443 0-4.425 1.979-4.425 4.425 0 3.614-0.039 58.663-0.039 58.663h-1.68v-21.084c0-1.821-1.478-3.298-3.302-3.298-1.823 0-3.257 1.478-3.257 3.298v23.384c0 5.33 4.368 9.657 9.705 9.657z"/>
+   </g>
+  </g>
+ </switch>
+ <g transform="matrix(.76324 0 0 .76324 1.4515 13.377)" fill-rule="evenodd">
+  <path style="color-rendering:auto;text-decoration-color:#000000;color:#000000;font-variant-numeric:normal;shape-rendering:auto;font-variant-ligatures:normal;text-decoration-line:none;font-variant-position:normal;mix-blend-mode:normal;solid-color:#000000;font-feature-settings:normal;shape-padding:0;font-variant-alternates:normal;text-indent:0;dominant-baseline:auto;font-variant-caps:normal;image-rendering:auto;white-space:normal;text-decoration-style:solid;text-orientation:mixed;isolation:auto;text-transform:none" d="m48.275-6.7441-15.902 10.473 0.772 0.5074 15.14 9.9547 15.545-10.47zm-0.0078 1.457l13.389 9.0078-13.379 9.0113-13.697-9.0035z"/>
+  <path d="m103.61 31.485c-0.21114 1.1965-1.0868 1.344-1.7491 2.0063 1.36-0.0025 3.572-0.01756 3.5769-0.14328l0.0717-1.8401z"/>
+  <path d="m20.797 48.194c0.05149 8.0379 11.564 8.0381 11.564 0.07228"/>
+  <path d="m44.649 48.192c0.05149 8.0379 11.564 8.0381 11.564 0.07228"/>
+  <path d="m89.967 48.192c0.05149 8.0379 11.564 8.0381 11.564 0.07228"/>
+  <path d="m113.89 48.192c0.0515 8.0379 11.564 8.0381 11.564 0.07228"/>
+  <path d="m33.609 51.862h9.6852c-0.49294-0.8538-0.71783-1.7589-0.68664-3.6139h-8.1493c-0.05769 1.8808-0.35257 2.7536-0.84926 3.6139z"/>
+  <path d="m102.8 51.88h9.6852c-0.49294-0.8538-0.71783-1.7589-0.68664-3.6139h-8.1493c-0.0577 1.8808-0.35257 2.7536-0.84927 3.6139z"/>
+  <path d="m107.85 17.62c-0.90205 0.63683-1.7344 1.1755-1.7344 1.7234l0.0105 22.384c0.21115 1.1965 1.0616 1.3945 1.7239 2.0568l-4.1152-0.03147-0.0513-24.456c0-0.48396-0.85694-1.0506-1.7414-1.675z"/>
+  <path d="m15.01 14.089h116.04v3.6603h-116.01z"/>
+  <path d="m79.204 17.599c0.90204 0.63683 1.7344 1.1755 1.7344 1.7234l-0.01054 12.181c-0.21114 1.1965-1.0615 1.3945-1.7239 2.0568h5.9078c-0.66381-0.66381-1.5421-0.82116-1.7386-2.0274l-0.0028-12.257c0-0.48396 0.85694-1.0506 1.7414-1.675z"/>
+  <path d="m56.484 17.581c0.90204 0.63683 1.7344 1.1755 1.7344 1.7234l-0.01054 12.181c-0.21114 1.1965-1.0615 1.3945-1.7239 2.0568h5.9078c-0.66381-0.66381-1.5421-0.82116-1.7386-2.0274l-0.0028-12.257c0-0.48396 0.85694-1.0506 1.7414-1.675z"/>
+  <path d="m33.922 17.62c0.90204 0.63683 1.7344 1.1755 1.7344 1.7234l-0.01054 22.384c-0.21114 1.1965-1.0615 1.3945-1.7239 2.0568l4.1152-0.03147 0.05133-24.456c0-0.48396 0.85694-1.0506 1.7414-1.675z"/>
+  <path d="m117.87 17.62c0.90204 0.63683 1.7344 1.1755 1.7344 1.7234l-0.0105 22.384c-0.21115 1.1965-1.0616 1.3945-1.7239 2.0568l4.1152-0.03147-0.0253-26.119z"/>
+  <path d="m28.423 17.599c-0.90204 0.63683-1.7344 1.1755-1.7344 1.7234l0.01054 22.384c0.21114 1.1965 1.0615 1.3945 1.7239 2.0568l-4.1152-0.000694 0.02528-26.149z"/>
+  <path d="m17.384 17.557-7.8459 15.612v9.4715c0 1.7105 2.0174 3.4923 3.5572 3.4875h120.1c1.5094 0 3.5572-2.1119 3.5572-3.4875v-9.6255l-7.964-15.518h-2.2803l5.3618 10.566c0.9147 3.4484-1.9129 4.9371-3.348 5.4413l-6.7516-0.02782 0.0556 10.281h-17.99v-10.281h-65.914v10.267h-13.504v-10.253h-6.7932c-1.5404 0-4.1414-1.8488-3.2089-5.3292l5.2191-10.603z"/>
+  <path d="m38.172 31.497c0.21114 1.1965 1.0868 1.344 1.7491 2.0063-1.36-0.0025-3.572-0.01756-3.5769-0.14328l-0.07165-1.8401z"/>
+  <path style="color-rendering:auto;text-decoration-color:#000000;color:#000000;font-variant-numeric:normal;shape-rendering:auto;font-variant-ligatures:normal;text-decoration-line:none;font-variant-position:normal;mix-blend-mode:normal;solid-color:#000000;font-feature-settings:normal;shape-padding:0;font-variant-alternates:normal;text-indent:0;dominant-baseline:auto;font-variant-caps:normal;image-rendering:auto;white-space:normal;text-decoration-style:solid;text-orientation:mixed;isolation:auto;text-transform:none" d="m36.58 12.779-1.2012 1.4414 25.611 0.03125-0.13867-0.14844-1.2656-1.3242zm0.08203 0.17188h22.85l1.072 1.127-24.834-0.031z"/>
+ </g>
+ <g stroke="#000" stroke-width=".92323" fill="none">
+  <path d="m106.36 43.524h242.82"/>
+  <path d="m12.171 55.757h337.01"/>
+  <path id="f" style="color:#000000" d="m267.49 66.951-9.3477-3.3467c-40.51-14.502-98.78-20.067-119.79-19.965" stroke="#000" stroke-width=".92323" fill="none"/>
+ </g>
+ <use xlink:href="#f" transform="translate(-1.8465 12.119)" height="100" width="360" y="0" x="0"/>
+ <g fill="none">
+  <path d="m231.94 56.608-7.0586-1.5236h8.4051" stroke="#fff" stroke-width=".46161px"/>
+  <g stroke="#000">
+   <path style="color:#000000" d="m225.29 54.363h12.485l2.7675-0.74155" stroke-width=".92323"/>
+   <path style="color:#000000" d="m224.67 55.771c4.0723 0.81134 8.1447 1.8306 12.217 2.8594l2.5552 1.2961" stroke-width=".92323"/>
+   <path d="m220.29 46.178 2.4538-1.4167h18.896l2.3445 1.3536" stroke-width=".46161px"/>
+   <path d="m242.46 68.182-2.7222 0.7861-18.343-4.537-1.9509-1.8769" stroke-width=".46161px"/>
+  </g>
+ </g>
+ <switch id="e" transform="matrix(.22533 0 0 .22533 178.15 10.236)">
+  <foreignObject y="0" width="1" requiredExtensions="http://ns.adobe.com/AdobeIllustrator/10.0/" x="0" height="1">
+   <i:pgfRef xlink:href="#adobe_illustrator_pgf"/>
+  </foreignObject>
+  <g i:extraneous="self">
+   <g transform="matrix(1.25 0 0 -1.25 359.06 506.51)">
+    <path d="m-237.58 383.26c4.162 0 7.538 3.376 7.538 7.539 0 4.166-3.376 7.541-7.538 7.541-4.166 0-7.539-3.376-7.539-7.541 0.001-4.163 3.374-7.539 7.539-7.539"/>
+   </g>
+   <g transform="matrix(1.25 0 0 -1.25 367.4 508.45)">
+    <path d="m-235.91 382.87c5.333 0 9.702-4.327 9.702-9.657v-23.384c0-1.821-1.433-3.298-3.257-3.298-1.821 0-3.302 1.478-3.302 3.298v21.084h-1.702v-58.663c0-2.446-1.996-4.425-4.439-4.425-2.446 0-4.425 1.979-4.425 4.425v34.063h-1.815v-34.063c0-2.446-1.979-4.425-4.421-4.425-2.443 0-4.425 1.979-4.425 4.425 0 3.614-0.039 58.663-0.039 58.663h-1.68v-21.084c0-1.821-1.478-3.298-3.302-3.298-1.823 0-3.257 1.478-3.257 3.298v23.384c0 5.33 4.368 9.657 9.705 9.657z"/>
+   </g>
+  </g>
+ </switch>
+ <g>
+  <rect height="1.3229" width="7.9375" y="36.777" x="178.59"/>
+  <circle cy="27.12" cx="179.52" r="1.7198"/>
+  <path stroke-linejoin="round" d="m182.44 36.777-2.9104-9.525" fill-opacity=".37647" stroke="#000" stroke-linecap="square" stroke-width="1.0583"/>
+ </g>
+ <g stroke-linejoin="round" fill-opacity=".25168" stroke="#000" stroke-linecap="square" stroke-width="1.0583" fill="#f00">
+  <path d="m265.38 79.11 74.083 24.871"/>
+  <path d="m267.84 67.146 74.793 25.193"/>
+  <use id="a" style="paint-order:stroke markers fill" fill-opacity="1" xlink:href="#e" transform="translate(100.01 22.754)" height="100%" width="100%" stroke="#ffffff" y="0" x="0" stroke-width="1.5875" fill="#000000"/>
+ </g>
+ <use id="d" xlink:href="#a" transform="translate(11.642)" height="100%" width="100%" y="0" x="0"/>
+ <use id="c" xlink:href="#d" transform="translate(11.113)" height="100%" width="100%" y="0" x="0"/>
+ <use id="b" xlink:href="#c" transform="translate(11.113)" height="100%" width="100%" y="0" x="0"/>
+ <use xlink:href="#b" transform="translate(11.113)" height="100%" width="100%" y="0" x="0"/>
+ <use xlink:href="#a" transform="translate(9.525 35.983)" height="100%" width="100%" y="0" x="0"/>
+</svg>

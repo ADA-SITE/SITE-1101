@@ -1,9 +1,50 @@
-Center images/plots produced from converted notebooks
+.md-content img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.md-typeset figure {
+  margin: 1em auto;
+  text-align: center;
+}
+
+.md-typeset figure img,
+.md-typeset figure svg {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.md-typeset figcaption {
+  margin-top: 0.5em;
+  font-size: 0.9em;
+  opacity: 0.85;
+  line-height: 1.4;
+}
+
+.md-typeset figure.w80 img { max-width: 80%; }
+.md-typeset figure.w70 img { max-width: 70%; }
+.md-typeset figure.w60 img { max-width: 60%; }
+
 .jp-RenderedImage,
 .output_png,
 .output_svg {
-  display: flex;
-  justify-content: center;
+  text-align: center;
+}
+
+.jp-RenderedImage img,
+.output_png img,
+.output_svg img,
+.jp-RenderedImage svg,
+.output_svg svg {
+  display: inline-block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
 }
 
 .md-typeset ul li,
@@ -16,9 +57,6 @@ Center images/plots produced from converted notebooks
   margin-bottom: 0;
 }
 
-
-
-/*  */
 .team-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -26,7 +64,9 @@ Center images/plots produced from converted notebooks
 }
 
 @media (max-width: 900px) {
-  .team-grid { grid-template-columns: 1fr; }
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .team-card {
@@ -34,7 +74,7 @@ Center images/plots produced from converted notebooks
   border: 1px solid var(--md-default-fg-color--lightest);
   border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 6px 18px rgba(0,0,0,.08);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
 }
 
 .team-media {
@@ -52,7 +92,6 @@ Center images/plots produced from converted notebooks
   border: 0;
 }
 
-/* Bottom white panel */
 .team-info {
   background: #fff;
   padding: 1rem 1.1rem;
@@ -60,7 +99,7 @@ Center images/plots produced from converted notebooks
 
 .team-title {
   line-height: 1.35;
-  font-size: .9em;
+  font-size: 0.9em;
   color: #1f1f1f;
 }
 
@@ -73,8 +112,88 @@ Center images/plots produced from converted notebooks
 }
 
 .team-semester {
-  margin-top: .35rem;
-  font-size: .8em;
+  margin-top: 0.35rem;
+  font-size: 0.8em;
   color: #6b6b6b;
 }
+
+.figure-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin: 1em auto;
+  max-width: 900px;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .figure-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.figure-grid figure img {
+  max-width: 100%;
+  height: auto;
+}
+
+.figure-grid figcaption {
+  margin-top: 0.4em;
+  font-size: 0.85em;
+  opacity: 0.85;
+}
+
+
+.md-typeset figure.w50 img { max-width: 50%; }
+.md-typeset figure.w60 img { max-width: 60%; }
+.md-typeset figure.w70 img { max-width: 70%; }
+.md-typeset figure.w80 img { max-width: 80%; }
+.md-typeset figure.w90 img { max-width: 90%; }
+.md-typeset figure.w100 img { max-width: 100%; }
+
+.md-typeset figure.float-left {
+  float: left;
+  margin: 0.2em 1em 0.5em 0;
+  max-width: 50%;
+}
+
+.md-typeset figure.float-left img {
+  max-width: 100%;
+  height: auto;
+}
+
+.md-typeset figure.float-left figcaption {
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .md-typeset figure.float-left,
+  .md-typeset figure.float-right {
+    float: none;
+    max-width: 100%;
+    margin: 1em auto;
+  }
+
+  .md-typeset figure.float-left figcaption,
+  .md-typeset figure.float-right figcaption {
+    text-align: center;
+  }
+}
+
+
+
+.meta-text {
+  font-size: 0.9em;
+  font-weight: 500;
+  opacity: 0.9;
+  white-space: nowrap;
+}
+
+/* spacing after metadata block */
+.meta-text:last-of-type {
+  margin-bottom: 0.9em;
+  display: inline-block;
+}
+
+
 

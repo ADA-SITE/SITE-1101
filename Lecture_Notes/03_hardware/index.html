@@ -11,6 +11,10 @@
         <link rel="canonical" href="https://ada-site.github.io/SITE-1101/Lecture_Notes/03_hardware/">
       
       
+        <link rel="prev" href="../02_binary/">
+      
+      
+        <link rel="next" href="../04_algorithm/">
       
       
         
@@ -21,7 +25,7 @@
     
     
       
-        <title>03. Hardware – CPU, GPU, Memory, Storage Devices - SITE 1101 Principles of Information Systems</title>
+        <title>03. Hardware: CPU, GPU, Memory, Storage Devices - SITE 1101 Principles of Information Systems</title>
       
     
     
@@ -110,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              03. Hardware – CPU, GPU, Memory, Storage Devices
+              03. Hardware: CPU, GPU, Memory, Storage Devices
             
           </span>
         </div>
@@ -246,6 +250,28 @@
   
   
   General
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../01_intro/" class="md-tabs__link">
+          
+  
+  
+  Lecture Notes
 
         </a>
       </li>
@@ -556,6 +582,519 @@
       
   
   
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Lecture Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01_intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    01. Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02_binary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    02. Binary Representation, Arithmetic &amp; Logic Operations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    03. Hardware: CPU, GPU, Memory, Storage Devices
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    03. Hardware: CPU, GPU, Memory, Storage Devices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hardware
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#von-neumann-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Von Neumann Architecture
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#central-processing-unit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Central Processing Unit
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graphics-processing-unit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Graphics Processing Unit
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#memory-devices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Memory Devices
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Memory Devices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#primary-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Primary Storage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secondary-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Secondary Storage
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-material" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additional Material
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04_algorithm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    04. Algorithm &amp; Algorithmic Actions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05_software/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    05. Programming &amp; Software
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06_network/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    06. Telecommunications and Computer Networks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07_internet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    07. Internet and World Wide Web
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08_database/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    08. Databases &amp; Database Management Systems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09_ai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    09. Artificial Intelligence, Machine Learning, Deep Learning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10_sdlc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. Systems Development Life Cycle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11_ethics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. Ethics, Security, and Logical Reasoning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
   
   
     
@@ -574,10 +1113,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
   
   
@@ -595,8 +1134,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -865,99 +1404,131 @@
   
 
 
-<h1 id="03-hardware-cpu-gpu-memory-storage-devices">03. Hardware – CPU, GPU, Memory, Storage Devices</h1>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<ul>
-<li>Rahida Asadli, Ismayil Shahaliyev</li>
-<li>Oct 25 2025 / Dec 20 2025</li>
-</ul>
-</div>
+<h1 id="03-hardware-cpu-gpu-memory-storage-devices">03. Hardware: CPU, GPU, Memory, Storage Devices</h1>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"/></svg></span>
+<span class="meta-text">Rahida Asadli, Ismayil Shahaliyev</span><br />
+<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg></span>
+<span class="meta-text">Oct 25, 2025</span>
+&nbsp;&nbsp;
+<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h5v-2H5V8h14v1h2V5a2 2 0 0 0-2-2m2.7 10.35-1 1-2.05-2 1-1c.2-.21.54-.22.77 0l1.28 1.28c.19.2.19.52 0 .72M12 18.94l6.07-6.06 2.05 2L14.06 21H12z"/></svg></span>
+<span class="meta-text">Jan 30, 2026</span></p>
 <h2 id="hardware">Hardware</h2>
 <p><a href="https://en.wikipedia.org/wiki/Computer_hardware"><em>Hardware</em></a> refers to the <strong>physical components</strong> of a computer system, the parts you can see and touch. It includes all electronic and mechanical elements that work together to input, process, store, and output data.</p>
-<p><em>Figure 1.</em> Image of computer motherboard model DellT3600. Adapted from “Motherboard,” Wikipedia, Wikimedia Commons, https://en.wikipedia.org/wiki/Motherboard. Licensed under <a href="https://creativecommons.org/licenses/by/2.5">CC BY 2.5</a>.</p>
-<p>The <strong>motherboard</strong> is the main circuit board and backbone of the computer, responsible for connecting and coordinating all hardware components. It provides electrical pathways (called <em>buses</em>) and controllers that allow the <em>Central Processing Unit (CPU)</em>, memory, storage devices, input components (e.g. keyboard, mouse, microphone, scanner), and output components (e.g. monitor, printer, speaker) to communicate quickly and in the correct sequence. The motherboard ensures that data flows smoothly between these parts, much like a central highway system linking different parts of a city. The <em>CPU socket</em> is the slot where the processor is installed; through tiny metal contacts, it connects directly to the motherboard so the CPU can fetch, decode, and execute instructions from memory. Beside it are the memory slots, where <em>Random-Access Memory (RAM)</em> modules are inserted. RAM temporarily holds the data and instructions the CPU is currently working with, allowing fast access and efficient processing.</p>
+<p>The <a href="https://en.wikipedia.org/wiki/Motherboard">motherboard</a> is the main circuit board and backbone of the computer, responsible for connecting and coordinating all hardware components. It provides electrical pathways (called <em>buses</em>) and controllers that allow the <em>Central Processing Unit (CPU)</em>, memory, storage devices, input components (e.g. keyboard, mouse, microphone, scanner), and output components (e.g. monitor, printer, speaker) to communicate quickly and in the correct sequence. The motherboard ensures that data flows smoothly between these parts, much like a central highway system linking different parts of a city. The <em>CPU socket</em> is the slot where the processor is installed; through tiny metal contacts, it connects directly to the motherboard so the CPU can fetch, decode, and execute instructions from memory. Beside it are the memory slots, where <em>Random-Access Memory (RAM)</em> modules are inserted. RAM temporarily holds the data and instructions the CPU is currently working with, allowing fast access and efficient processing.</p>
+<figure class="w50">
+  <img src="../../assets/images/lecture03/motherboard.jpg" alt="Motherboard">
+  <figcaption>
+    The motherboard of a Samsung Galaxy SII; almost all functions of the device are integrated into a very small board. By
+    <a href="//commons.wikimedia.org/wiki/User:1Veertje" title="User:1Veertje">Vera de Kok</a> –
+    <span class="int-own-work" lang="en">Own work</span>,
+    <a href="https://creativecommons.org/licenses/by-sa/3.0" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>,
+    <a href="https://commons.wikimedia.org/w/index.php?curid=20051184">Link</a>
+  </figcaption>
+</figure>
+
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Imagine you open the calculator app on your computer. When you click the icon, the action is sent through the motherboard. The calculator program is loaded into RAM, and the CPU begins reading its instructions from memory and carrying them out. When you type numbers, they are kept in RAM while the CPU performs the calculations. The result is then shown on the screen. If you close the app, the data in RAM is cleared, but the calculator program itself remains stored in a storage device for future use.</p>
 </div>
 <h2 id="von-neumann-architecture">Von Neumann Architecture</h2>
 <p>The <a href="https://en.wikipedia.org/wiki/Von_Neumann_architecture"><em>von Neumann architecture</em></a> (1945) describes how most computers are structured. It consists of five key components. The <strong>input unit</strong> receives data and instructions from external devices. The <strong>memory unit</strong> stores data and instructions, either temporarily during processing or permanently for long-term use. The <strong>arithmetic logic unit</strong> performs arithmetic operations, such as addition and subtraction, as well as logical operations. The <strong>control unit</strong> directs and coordinates all system activities by controlling the flow of data and instructions between components. Finally, the <strong>output unit</strong> presents the processed information to the user or transmits it to other systems through output devices or communication interfaces.</p>
-<p><em>Figure 2.</em> Diagram of the von Neumann architecture. Adapted from “Von Neumann architecture,” Wikipedia, Wikimedia Commons, https://en.wikipedia.org/wiki/Von_Neumann_architecture. Licensed under CC BY-SA 4.0.</p>
+<figure class="w100">
+  <img src="../../assets/images/lecture03/von_neumann.svg" alt="Von Neumann architecture">
+  <figcaption>
+    A von Neumann architecture scheme. By
+    <a href="//commons.wikimedia.org/w/index.php?title=User:Kapooht&amp;action=edit&amp;redlink=1"
+       title="User:Kapooht (page does not exist)">Kapooht</a> –
+    <span class="int-own-work" lang="en">Own work</span>,
+    <a href="https://creativecommons.org/licenses/by-sa/3.0"
+       title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>,
+    <a href="https://commons.wikimedia.org/w/index.php?curid=25789639">Link</a>
+  </figcaption>
+</figure>
+
 <p>Both <strong>data</strong> and <strong>instructions</strong> are stored together in the same memory. This is called the <em>stored-program concept</em>. It was important because it allowed computers to keep programs in memory along with the data they use. This made it possible to change or run different programs by loading new instructions into memory, instead of manually changing the computer’s hardware connections. It simplified computer design, enabled automation of complex tasks, and made programming far more flexible.</p>
-<p>It is common sense to us now, but only because it became the foundation of modern computing. Before the stored-program concept, computers like <a href="https://en.wikipedia.org/wiki/ENIAC">ENIAC</a> had to be rewired by hand for every new task. There was no “program” to load—the hardware was the program. <a href="https://en.wikipedia.org/wiki/John_von_Neumann">John von Neumann</a>’s idea separated hardware (the machine) from software (the instructions it runs) and treated code as just another form of data. That shift made general-purpose computers possible.</p>
+<p>This seems obvious today, but only because it became the foundation of modern computing. Before the stored-program concept, computers like <a href="https://en.wikipedia.org/wiki/ENIAC">ENIAC</a> had to be rewired by hand for every new task. There was no “program” to load—the hardware was the program. <a href="https://en.wikipedia.org/wiki/John_von_Neumann">John von Neumann</a>’s idea separated hardware (the machine) from software (the instructions it runs) and treated code as just another form of data. That shift made general-purpose computers possible.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>When you use a calculator app to add two numbers, both the program’s instructions (load number, add, display result) and the numbers you enter are stored in RAM. The CPU retrieves and executes the instructions one by one, reads the data from memory, performs the addition, and writes the result back, following the stored-program model.</p>
 </div>
 <h2 id="central-processing-unit">Central Processing Unit</h2>
-<p align="center">
-  <img src="../../assets/images/lecture04/motherboard.png" alt="">
-</p>
+<p><a href="https://en.wikipedia.org/wiki/Central_processing_unit">Central Processing Unit (CPU)</a> follows program instructions and performs the steps needed to complete tasks, from typing a word to playing music. The CPU also controls and coordinates the work of other parts of the computer, making sure everything happens in the right order. It has three main components.</p>
+<figure class="w50 float-left">
+  <img src="../../assets/images/lecture03/cpu.jpg" alt="CPU">
+  <figcaption>
+    A high-end consumer CPU made by Intel: an
+    <a href="https://en.wikipedia.org/wiki/List_of_Intel_Core_processors">Intel Core i9-14900KF</a>.
+    By <a href="//commons.wikimedia.org/wiki/User:Pstrahl" title="User:Pstrahl">Pstrahl</a> –
+    <span class="int-own-work" lang="en">Own work</span>,
+    <a href="https://creativecommons.org/licenses/by-sa/4.0"
+       title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>,
+    <a href="https://commons.wikimedia.org/w/index.php?curid=151972144">Link</a>
+  </figcaption>
+</figure>
 
-<p><a href="https://en.wikipedia.org/wiki/Central_processing_unit"><strong>Central Processing Unit (CPU)</strong></a> follows program instructions and performs the steps needed to complete tasks—from typing a word to playing music. The CPU also controls and coordinates the work of other parts of the computer, making sure everything happens in the right order. A CPU consists of three main parts.</p>
-<p><em>Figure 3.</em> A high-end consumer CPU made by <a href="https://en.wikipedia.org/wiki/Intel">Intel</a>: an <a href="https://en.wikipedia.org/wiki/Intel_Core_i9-14900KF">Intel Core i9-14900KF</a>. Adapted from “Central processing unit,” Wikipedia, Wikimedia Commons, https://en.wikipedia.org/wiki/Central_processing_unit. Licensed under <a href="https://creativecommons.org/licenses/by/2.5">CC BY 2.5</a>.</p>
 <p><a href="https://en.wikipedia.org/wiki/Control_unit">Control Unit (CU)</a> manages and directs activities inside the CPU. It tells the computer when to fetch data, when to carry out an instruction, and where to send results. You can think of it as the traffic controller of the CPU.</p>
-<p><a href="https://en.wikipedia.org/wiki/Arithmetic_logic_unit">Arithmetic Logic Unit (ALU)</a> performs arithmetic operations (addition, subtraction, multiplication, division) and logical operations (comparisons such as equal to, greater than, AND, OR, NOT). When the CPU executes an instruction like “add 2 + 3,” the CU sends the task to the ALU. The ALU performs the calculation and sends the result back to registers or memory.</p>
+<p><a href="https://en.wikipedia.org/wiki/Arithmetic_logic_unit">Arithmetic Logic Unit (ALU)</a> performs arithmetic operations (addition, subtraction, multiplication, division) and logical operations (comparisons such as equal to, greater than, AND, OR, NOT). When the CPU executes an instruction like <code>add 2 + 3</code>, the CU sends the task to the ALU. The ALU performs the calculation and sends the result back to registers or memory.</p>
 <p><a href="https://en.wikipedia.org/wiki/Processor_register">Registers</a> are tiny, high-speed memory locations built directly into the CPU. They store data and instructions temporarily during processing. Because they are inside the CPU, registers are much faster than RAM. Examples include:</p>
 <ul>
 <li>Instruction Register (IR) holds the current instruction being executed.</li>
 <li>Program Counter (PC) keeps track of the next instruction’s address in memory.</li>
 <li>Accumulator (ACC) stores intermediate arithmetic and logic results.</li>
 </ul>
-<p>Every action the CPU performs follows four main steps, known as the <a href="https://en.wikipedia.org/wiki/Instruction_cycle"><strong>machine cycle</strong></a>:</p>
+<p>Every action the CPU performs follows four main steps, known as the <a href="https://en.wikipedia.org/wiki/Instruction_cycle">machine cycle</a>:</p>
 <ul>
-<li><strong>Fetch</strong>: the CPU gets an instruction from RAM.</li>
-<li><strong>Decode</strong>: the CPU determines what the instruction means.</li>
-<li><strong>Execute</strong>: the CPU carries out the action (the ALU does the work).</li>
-<li><strong>Store</strong>: the CPU saves the result back to memory or sends it to an output device.</li>
+<li><strong>Fetch.</strong> CPU gets an instruction from RAM.</li>
+<li><strong>Decode.</strong> CPU determines what the instruction means.</li>
+<li><strong>Execute.</strong> CPU carries out the action (the ALU does the work).</li>
+<li><strong>Store.</strong> CPU saves the result back to memory or sends it to an output device.</li>
 </ul>
-<p>This process (<strong>fetch → decode → execute → store</strong>) repeats continuously, millions or billions of times per second.</p>
+<p>This process (<code>fetch → decode → execute → store</code>) repeats continuously, millions or billions of times per second.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>When a computer adds two numbers, several CPU components work together. First, the CU fetches the instruction from main memory (the binary code telling the CPU what to do). Then it decodes the instruction and identifies which data to use. After decoding, the CU sends control signals that tell the ALU to perform the operation and tell the registers when to load or output data.</p>
-<p>The ALU receives the numbers from registers, performs the addition in binary, and produces the result. Registers act as extremely fast storage locations: before the ALU starts, the inputs are placed in registers; after the ALU finishes, the output is stored in a register, ready to be written back to memory or used by the next instruction.</p>
-<p>Throughout the process, the CU enforces timing and order, ensuring that data moves only when it should. This coordination—fetching, decoding, executing, and storing—is what allows simple operations to happen reliably at very high speed.</p>
+<p>When a computer adds two numbers, several CPU components work together. First, the CU fetches the instruction from main memory (the binary code telling the CPU what to do). Then it <strong>decodes</strong> the instruction and identifies which data to use. After decoding, the CU sends control signals that tell the ALU to perform the operation and tell the registers when to load or output data.</p>
+<p>The ALU performs the actual arithmetic (e.g. addition) or logical operations. It receives the two numbers from the registers, adds them in binary form, and produces the result. Meanwhile, the registers act as small, extremely fast storage locations inside the CPU. Before the ALU starts, the numbers to be added are placed in registers. After the ALU finishes, the result is stored in another register, ready to be sent back to main memory or used for the next operation.</p>
+<p>Throughout the process, the CU ensures proper timing and order, making sure that data moves only when it should and that all components work in sync. This precise coordination - fetching, decoding, executing, and storing - is what allows even the simplest task, such as adding two numbers, to happen billions of times per second without error.</p>
 </div>
-<p>The <strong>clock</strong> is the timing system of the CPU. It sends out a steady stream of electrical pulses that set the pace for operations. The <em>clock speed</em> indicates how many cycles occur per second and is measured in Hertz (Hz). For example, a CPU with a 3.0 GHz clock runs about 3 billion cycles per second.</p>
+<p>The <strong>clock</strong> is the timing system of the CPU. It sends out a steady stream of electrical pulses that set the pace for operations. The <em>clock speed</em> indicates how many cycles occur per second and is measured in Hertz (Hz). For example, a CPU with a 3.0 GHz clock runs about 3 billion cycles per second. A cycle is not the same as an instruction; modern CPUs may execute multiple instructions per cycle or require multiple cycles per instruction. The clock ensures that all parts of the CPU work together in perfect rhythm.</p>
 <p><strong>Word size</strong> is the number of bits the CPU can process in one operation. The most common sizes are <em>32-bit</em> and <em>64-bit</em>. A 64-bit CPU can handle larger data chunks and can address much more memory than a 32-bit CPU.</p>
-<p>Modern CPUs contain multiple <strong>cores</strong>, meaning multiple processing units inside a single chip. Each core can run instructions independently, allowing parallel processing. A dual-core CPU can run two heavy tasks at once (for example, encoding a video while running a game), while lighter tasks can be managed by <a href="https://en.wikipedia.org/wiki/Time-sharing">time-sharing</a> even on a single core.</p>
+<p>Modern CPUs contain multiple <strong>cores</strong>, meaning multiple processing units inside a single chip. Each core can run instructions independently, allowing <a href="https://en.wikipedia.org/wiki/Parallel_computing">parallel processing</a>. A dual-core CPU can run two heavy tasks at once (for example, encoding a video while running a game), while lighter tasks can be managed by <a href="https://en.wikipedia.org/wiki/Time-sharing">time-sharing</a> even on a single core. A quad-core CPU can handle four heavy tasks, and an octa-core CPU can handle eight - ideal for heavy work such as gaming or video editing.</p>
 <p><strong>Instruction Set Architecture (ISA)</strong> is the built-in language of the CPU. It defines the commands the CPU can understand and execute. The ISA specifies what operations exist and how programs interact with memory and hardware, while the <a href="https://en.wikipedia.org/wiki/Microarchitecture">microarchitecture</a> describes how a particular CPU implements and executes those instructions internally. Common examples include x86/x86-64 (Intel, AMD) and ARM (mobile devices and many modern laptops).</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>An Intel CPU executes x86 instructions, while many smartphone CPUs execute ARM instructions. Programs must be compiled for the correct instruction set so the CPU can run them.</p>
+<p>Just as people speak different languages, an Intel CPU "speaks" x86 instructions, while a smartphone CPU "speaks" ARM. Programs must be written or compiled in the correct instruction set so the CPU understands them.</p>
 </div>
 <h2 id="graphics-processing-unit">Graphics Processing Unit</h2>
-<p>While the CPU is responsible for general-purpose computation and overall control, modern computers also rely on the <a href="https://en.wikipedia.org/wiki/Graphics_processing_unit"><strong>Graphics Processing Unit (GPU)</strong></a>. A GPU is a specialized processor designed to perform a very large number of simple calculations in <a href="https://en.wikipedia.org/wiki/Parallel_computing">parallel</a>. Originally, GPUs were built for graphics workloads such as rendering 3D scenes and updating frames smoothly in games and graphical applications.</p>
-<p>Unlike the CPU, which has a small number of powerful cores optimized for sequential work, a GPU contains thousands of simpler cores optimized for parallel operations. This makes GPUs efficient at tasks where the same computation must be applied to many data elements at once, such as pixels, vertices, or vectors.</p>
-<p>Today, GPUs are widely used beyond graphics, including scientific computing, simulations, video processing, and <a href="https://en.wikipedia.org/wiki/Artificial_intelligence">artificial intelligence</a>, where large matrix and vector operations are common. In typical workloads, the CPU manages control flow and coordination, while the GPU performs heavy numerical computation.</p>
+<p>While the CPU is responsible for general-purpose computation and overall control of the system, modern computers also rely heavily on the <a href="https://en.wikipedia.org/wiki/Graphics_processing_unit"><strong>Graphics Processing Unit (GPU)</strong></a>. A GPU is a specialized processor designed to perform a very large number of simple calculations in parallel. Originally, GPUs were created to handle graphics tasks such as drawing images, rendering 3D scenes, and updating the screen smoothly in video games and graphical applications.</p>
+<p>Unlike the CPU, which has a small number of powerful cores optimized for sequential and complex tasks, a GPU contains thousands of smaller, simpler cores optimized for parallel work. This makes GPUs extremely efficient at tasks where the same operation must be applied to many data elements at once, such as processing pixels, vertices, or vectors. For example, when rendering an image, a GPU can compute the color of millions of pixels simultaneously, something a CPU would do much more slowly.</p>
+<p>Today, GPUs are important far beyond graphics. They are widely used in scientific computing, simulations, video processing, and especially <a href="../09_ai">artificial intelligence</a> and machine learning, where large <a href="https://en.wikipedia.org/wiki/Matrix_%28mathematics%29">matrix</a> and vector operations are required. In these cases, the CPU typically prepares tasks and manages control flow, while the GPU performs the heavy numerical computations. Together, the CPU and GPU complement each other: the CPU handles decision-making and coordination, and the GPU provides massive computational throughput for parallel workloads.</p>
 <h2 id="memory-devices">Memory Devices</h2>
-<p>Every computer must store data and instructions so the CPU can use them. The place where this information is kept is called memory. Different kinds of memory serve different purposes—some are very fast but <em>volatile</em> (temporary), while others are slower but <em>non-volatile</em> (persistent). Volatile memory loses its contents when power is removed; non-volatile memory does not.</p>
-<p>A common classification is:</p>
-<ul>
-<li><strong>Primary storage</strong>: volatile storage used directly by the CPU (registers, cache, RAM).</li>
-<li><strong>Secondary storage</strong>: non-volatile persistent storage (SSD, HDD) that must be loaded into primary memory before use.</li>
-<li><strong>Tertiary storage</strong>: non-volatile, much slower storage used for backups and archives, often accessed sequentially (optical discs<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>, magnetic tapes).</li>
-</ul>
+<p>Every computer must store data and instructions so the CPU can use them. The place where this information is kept is called memory. Different kinds of memory serve different purposes - some are very fast but <em>volatile</em> (temporary), while others are slower but <em>non-volatile</em> (permanent). The contents of volatile memory are lost when power is turned off, which is not the case for non-volatile memory.</p>
+<p>The classification of computer storage into three main categories is a conventional way of organizing memory types based on their speed, volatility, access patterns, and typical use. <strong>Primary storage</strong> is volatile memory used directly by the CPU for immediate processing and includes registers, cache memory, and main memory, holding the data and instructions currently being executed. <strong>Secondary storage</strong> is non-volatile and provides persistent storage for programs and data, which must be loaded into primary memory before use. <strong>Tertiary storage</strong> is also non-volatile but much slower, mainly used for long-term backups and archives, accessed infrequently and often relying on sequential access, with examples including optical discs<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> (e.g. CD/DVD) and magnetic tapes that offer very large capacity at low cost.</p>
 <h3 id="primary-storage">Primary Storage</h3>
-<p><strong>RAM (Random Access Memory)</strong> is the main working memory. It temporarily stores data and instructions the CPU is currently using. RAM is volatile and has two common types: Dynamic RAM (DRAM) and Static RAM (SRAM).</p>
+<p><a href="https://en.wikipedia.org/wiki/Random-access_memory">RAM (Random Access Memory)</a> is the computer's main working memory. It temporarily stores data and instructions that the CPU is currently using, allowing quick access for ongoing tasks. RAM is volatile and has two main types: Dynamic RAM (DRAM) and Static RAM (SRAM).</p>
 <ul>
-<li><strong>DRAM</strong> stores each bit in a tiny <a href="https://en.wikipedia.org/wiki/Capacitor">capacitor</a>. Because capacitors leak charge, DRAM must be refreshed continuously. DRAM is cheaper and higher capacity, but slower than SRAM. It serves as the computer’s main memory.</li>
-<li><strong>SRAM</strong> uses <a href="https://en.wikipedia.org/wiki/Flip-flop_%28electronics%29">flip-flop circuits</a> that keep data stable while power is on, without refreshing. SRAM is faster but larger and more expensive.</li>
+<li><strong>DRAM</strong> stores each bit of data in a tiny <a href="https://en.wikipedia.org/wiki/Capacitor">capacitor</a> that holds an electrical charge - charged for 1, empty for 0. Because these capacitors leak energy, DRAM must be constantly refreshed to retain data. Its simple design (just one transistor and one capacitor per bit) allows it to hold large amounts of data at a low cost, but this also makes it slower than other memory types. DRAM serves as the <em>main memory</em> in computers, holding the programs and data currently loaded and being used by the CPU, like open browser tabs or a running video, so the CPU can access them quickly.</li>
+<li><strong>SRAM</strong> uses <a href="https://en.wikipedia.org/wiki/Flip-flop_%28electronics%29">flip-flop circuits</a> made of transistors that keep data stable as long as power is on - no refreshing needed. This makes SRAM much faster and more reliable, but also larger and more expensive.</li>
 </ul>
-<p><strong>Cache memory</strong> is a very small, ultra-fast SRAM built into the CPU. It stores frequently used data and instructions so the CPU does not repeatedly fetch them from slower RAM. <em>L1 cache</em> is the smallest and fastest (per core). <em>L2 cache</em> is larger and slower. <em>L3 cache</em> is larger still and often shared across cores.</p>
+<p><strong>Cache</strong> <strong>memory</strong> is a very small, ultra-fast SRAM built directly inside the CPU. It stores data and instructions that are used often, so the CPU doesn't have to fetch them repeatedly from the slower main memory (RAM). <em>L1 cache</em> is the smallest and fastest, located inside each CPU core. <em>L2 cache</em> is larger and slightly slower, typically dedicated to each core. <em>L3 cache</em> is the largest and slowest cache level, shared among all cores in the processor.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Imagine you have several browser tabs open. The content and program state for those tabs are stored in DRAM so the CPU can access them while you work. If power is removed, those in-memory states disappear.</p>
-<p>At the same time, the CPU uses much smaller but faster SRAM cache for the most frequently used instructions and data. When the same parts of a webpage or video are accessed repeatedly, cache reduces the time spent waiting on DRAM, improving responsiveness.</p>
+<p>Imagine you're working on a laptop with several browser tabs open - one for email, one for an online document, and one for a video. All of these open tabs and the data they use are stored in DRAM, which holds the programs and information you are currently using so the CPU can access them quickly. When you switch between tabs, the CPU retrieves the required data directly from DRAM. Because DRAM is volatile, all open tabs and unsaved work are lost if power is removed.</p>
+<p>At the same time, the CPU relies on much smaller but faster SRAM inside the processor, known as cache memory. The cache stores the most frequently used instructions and small pieces of data needed while those browser tabs are running. For example, when parts of a webpage or video are accessed repeatedly, the CPU keeps them in cache so they can be reused immediately without waiting for DRAM. In this way, DRAM functions like a large work surface holding everything you are working on, while SRAM cache is like the few critical notes kept right at hand for instant access.</p>
 </div>
-<p><strong>Read-Only Memory (ROM)<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup></strong> is non-volatile memory that retains data when power is off. During startup, the CPU reads firmware from ROM—commonly <a href="https://en.wikipedia.org/wiki/BIOS">BIOS</a> or <a href="https://en.wikipedia.org/wiki/UEFI">UEFI</a>—which checks hardware and then loads the <a href="https://en.wikipedia.org/wiki/Operating_system">operating system</a> into RAM. ROM is typically programmed by the manufacturer, although modern forms like <a href="https://en.wikipedia.org/wiki/EEPROM">EEPROM</a> can be updated electronically.</p>
+<p><strong>Read-Only Memory (ROM)</strong><sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup> is a non-volatile memory. Unlike RAM, it retains data even when power is off. When the computer is turned on, the CPU reads the <a href="https://en.wikipedia.org/wiki/Firmware">firmware</a> stored in ROM - known as the <a href="https://en.wikipedia.org/wiki/BIOS">BIOS</a> or <a href="https://en.wikipedia.org/wiki/UEFI">UEFI</a>, which checks the hardware (e.g. memory, keyboard, and drives) and then loads the <a href="https://en.wikipedia.org/wiki/Operating_system">operating system</a> into main memory. Historically, ROM was <em>preprogrammed</em> and not easily changed. In modern systems, firmware is stored in flash memory (a type of <a href="https://en.wikipedia.org/wiki/EEPROM">Electrically Erasable Programmable ROM</a>) and can be updated by the user.</p>
 <h3 id="secondary-storage">Secondary Storage</h3>
-<p>Storage devices use two main retrieval methods: <a href="https://en.wikipedia.org/wiki/Sequential_access">sequential access</a> and <a href="https://en.wikipedia.org/wiki/Random_access">direct (random) access</a>. In sequential access, data is read in order until the desired location is reached. In random access, the device can jump directly to a location.</p>
-<p><strong>Hard Disk Drive (HDD)</strong> stores data on spinning magnetic platters, commonly 5,400–7,200 RPM. Data is read and written by a moving head. HDDs provide large capacity at low cost, but are slower due to mechanical movement and more vulnerable to shock. HDDs support random access.</p>
-<p><strong>Solid State Drive (SSD)</strong> stores data in <a href="https://en.wikipedia.org/wiki/Flash_memory">flash memory</a> and has no moving parts, making it much faster and more reliable than HDDs. SSDs offer fast boot times, quick application loading, and low-latency file access. Their cost per gigabyte is typically higher than HDDs.</p>
-<p><em>Figure 4.</em> Storage hierarchy pyramid (made with matplotlib).</p>
-<p>To summarize, the storage hierarchy organizes memory and storage by speed, cost per bit, and capacity. At the top, registers and cache are the fastest but smallest and most expensive per bit. RAM is next: slower than cache, larger, and still volatile. Below RAM, SSDs provide persistent storage with low latency. HDDs provide larger capacity at lower cost but with slower access times. Optical discs and magnetic tape sit lower in the hierarchy: they are cheaper per bit and good for distribution or archival storage, but much slower, especially for random access. Moving upward increases speed and cost per bit while reducing capacity; moving downward increases capacity and lowers cost per bit while increasing access time.</p>
+<p>Storage devices use two main data-retrieval methods: <a href="https://en.wikipedia.org/wiki/Sequential_access">sequential access</a> and <a href="https://en.wikipedia.org/wiki/Random_access">direct (random) access</a>. In sequential access, data is read in a fixed order from the beginning until the desired location is reached, which makes access slower but the system simpler and cheaper to implement. In random access, the device can jump directly to any data location without reading preceding data, resulting in much faster access.</p>
+<p><strong>Hard Disk Drive (HDD)</strong> stores data using <em>magnetic</em> platters that spin at very high speeds, usually between 5,400 and 7,200 revolutions per minute (RPM). Data is written and read by a tiny magnetic head that moves across the surface of the spinning disks without touching them. Because of its mechanical structure, an HDD can hold a large amount of data - commonly ranging from 1 to over 20 terabytes. However, since the disk and read/write head involve physical movement, they are relatively slow and can wear out over time and are more vulnerable to shocks or drops. The device allows random access.</p>
+<p><strong>Solid State Drive (SSD)</strong> stores data using <a href="https://en.wikipedia.org/wiki/Flash_memory">flash memory</a> chips and has no moving parts, which makes it much faster and more reliable than traditional hard drives. Data is stored electronically in millions of tiny transistors_,_ similar to the technology used in <a href="https://en.wikipedia.org/wiki/USB_flash_drive">USB flash drives</a>, but with far faster interfaces and controllers. SSDs provide very fast boot times, quick application loading, and instant file access, which is why they are now the standard in most laptops and modern computers. Since there are no spinning disks or moving heads, SSDs are also silent, lighter, and more resistant to physical shock, making them ideal for portable devices. However, their cost per gigabyte is higher than that of HDDs. SSDs use electronic random access and are much faster than HDDs, which rely on mechanical movement and are slow for random access.</p>
+<figure class="w80 float-left">
+  <img src="../../assets/images/lecture03/storage.png" alt="Storage hierarchy pyramid">
+  <figcaption>
+    Storage hierarchy pyramid (created with
+    <a href="https://matplotlib.org/">matplotlib</a>).
+  </figcaption>
+</figure>
+
+<p>To sum up, the storage hierarchy shows how different types of memory and storage are organized based on speed, cost, and capacity. At the top of the pyramid is cache memory; it is the fastest and most expensive per unit of storage, but also the smallest in size. Cache resides on the CPU chip and provides data almost instantly. Below it is main memory (RAM), which is slightly slower and cheaper, and is used to store data that the CPU is currently working on. Moving further down, flash storage (such as solid-state drives) is non-volatile, meaning it retains data when power is off. It is slower than RAM but much faster than magnetic or optical storage. Next comes magnetic disk storage (hard drives), which provides large capacity at a lower cost, but has slower access due to mechanical movement. Below that are optical discs (such as CDs, DVDs, and Blu-ray), mainly used for media distribution or backups; they are inexpensive but slower and more limited in capacity compared to disks. At the bottom of the pyramid is magnetic tape, which stores massive amounts of data very cheaply but is extremely slow because it relies on sequential access rather than direct access. As you move upward in the hierarchy, speed and cost increase while capacity decreases; as you move downward, capacity increases and cost per bit decreases, but access time becomes slower.</p>
 <h2 id="additional-material">Additional Material</h2>
 <ul>
 <li><a href="https://www.youtube.com/watch?v=_Pqfjer8-O4">How do Transistors Build into a CPU? How do Transistors Work?</a></li>
@@ -975,10 +1546,7 @@
 <p><em>Disk</em> is standard in computer science for magnetic and solid-state storage (hard disk, disk drive). <em>Disc</em> is used for optical media (CD/DVD/Blu-ray discs).&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
 <li id="fn:2">
-<p>ROM is not used as working memory and is best treated separately from primary/secondary/tertiary storage.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
-</li>
-<li id="fn:3">
-<p>ROM is not working memory and is not considered primary memory, because it stores non-volatile firmware used mainly during system startup rather than data and instructions actively processed by the CPU.&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+<p>ROM is not used as working memory and is best treated separately from primary/secondary/tertiary storage. It stores non-volatile firmware used mainly during system startup rather than data and instructions actively processed by the CPU.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>
@@ -1012,6 +1580,44 @@
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../02_binary/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 02. Binary Representation, Arithmetic &amp;amp; Logic Operations">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                02. Binary Representation, Arithmetic &amp; Logic Operations
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../04_algorithm/" class="md-footer__link md-footer__link--next" aria-label="Next: 04. Algorithm &amp;amp; Algorithmic Actions">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                04. Algorithm &amp; Algorithmic Actions
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
