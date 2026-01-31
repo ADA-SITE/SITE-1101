@@ -1,11 +1,17 @@
 # 06. Telecommunications and Computer Networks
 
-:material-account: Rahida Asadli, Ismayil Shahaliyev  
-:material-calendar: Nov 23 2025 :material-calendar-edit: Jan 31, 2026
+:material-account:
+<span class="meta-text">Rahida Asadli, Ismayil Shahaliyev</span>  
+:material-calendar:
+<span class="meta-text">Nov 23, 2025</span>
+&nbsp;&nbsp;
+:material-calendar-edit:
+<span class="meta-text">Jan 31, 2026</span>
+
 
 ## Telecommunications
 
-[Telecommunications](https://en.wikipedia.org/wiki/Telecommunications) at its core, is the long-distance transmission of information using electronic or [electromagnetic signals](https://en.wikipedia.org/wiki/Electromagnetic_spectrum). Whenever two devices exchange information (e.g. voice call, video stream, bank transaction) some form of telecommunications is functioning in the background. Telecommunications allows communication to happen without the sender and receiver being physically close. A phone call from one country to another, a university campus connecting its buildings, or a satellite sending weather data to Earth are all examples of telecommunications enabling interaction across space.
+[Telecommunications](https://en.wikipedia.org/wiki/Telecommunications) at its core is the long-distance transmission of information using electronic or [electromagnetic signals](https://en.wikipedia.org/wiki/Electromagnetic_spectrum). Whenever two devices exchange information (e.g. a voice call, video stream, bank transaction) some form of telecommunications is functioning in the background. Telecommunications allows communication to happen without the sender and receiver being physically close. A phone call from one country to another, a university campus connecting its buildings, or a satellite sending weather data to Earth are all examples of telecommunications enabling interaction across space.
 
 Every telecommunication system follows the same basic structure: _sender → channel (medium) → receiver_. The _sender_ is where information originates. For example, when you type a message on a smartphone, the phone acts as the sender by converting your text into a digital signal suitable for transmission. The signal then travels through the _channel_, which is the path between sender and receiver. This path may be a physical medium, such as a copper or fiber-optic cable, or a wireless medium using electromagnetic waves, as in Wi-Fi or mobile networks. Different channels have different characteristics, affecting speed, cost, and resistance to interference. At the _receiver_, the incoming signal is converted back into a form the user can understand, such as readable text on a phone screen. For communication to work, both sender and receiver must follow shared rules called _protocols_, which define how data is formatted, transmitted, and interpreted. Without protocols, devices would not be able to understand each other.
 
@@ -22,7 +28,7 @@ Before starting our discussion, it is important to understand some of the techni
 !!! note
     Imagine two Internet connections: one with `10 Mbps` and another with `100 Mbps`. If you try to download a `100 MB` video file, the `100 Mbps` connection can transfer far more data per second, so the file will download much faster. In cables, the same logic applies. A [twisted-pair cable](https://en.wikipedia.org/wiki/Twisted_pair) with a bandwidth of `100 Mbps` per 100 meters can only carry a moderate amount of information at once. A [coaxial cable](https://en.wikipedia.org/wiki/Coaxial_cable) can support around `500 Mbps`, so it can transfer several times more data in the same timeframe. [Fiber-optic cable](https://en.wikipedia.org/wiki/Fiber-optic_cable) can carry gigabits of data every second, meaning it has an extremely wide "data highway" that can support huge amounts of information without slowing down.
 
-**Throughput** is the actual amount of data that successfully travels through the network per second. While bandwidth is the theoretical maximum capacity, throughput represents what you really experience in real conditions. Many factors can reduce throughput, such as interference, cable quality, distance, network congestion or equipment limitations. _Network congestion_ happens when more data is trying to pass through the network than the network can handle at that moment. Because the "data highway" is full, everything slows down.
+**Throughput** is the actual amount of data that successfully travels through the network per second. While bandwidth is the theoretical maximum capacity, throughput represents what you really experience in real conditions. Many factors can reduce throughput, such as interference, cable quality, distance, network congestion, or equipment limitations. _Network congestion_ happens when more data is trying to pass through the network than the network can handle at that moment. Because the "data highway" is full, everything slows down.
 
 !!! note
     Suppose your Wi-Fi connection has a bandwidth of `300 Mbps`, but your laptop receives only `80 Mbps` during real usage. This difference comes from obstacles like walls, other Wi-Fi networks nearby, or older hardware. Although the network _could_ support `300 Mbps` in ideal conditions, the throughput is only `80 Mbps` because that is the actual rate at which data is being delivered. Throughput is always equal to or lower than bandwidth. It can never be higher because you cannot exceed the maximum capacity of the medium. When people complain that their "Internet is slow," they are not complaining about bandwidth itself, they are complaining about reduced throughput caused by delays, interference, or congestion.
@@ -39,7 +45,7 @@ Signal type indicates the physical form of the transmitted data. Twisted-pair an
 | **Distance** | ~100 m | ~100–500 m | Kilometers |
 | **EMI sensitivity** | High | Low | None |
 
-**Latency** is the time it takes for a piece of data to travel from one point to another. Even if the bandwidth is high, high latency can make communication feel slow. Local networks have low latency, long-distance communication may have higher latency.
+**Latency** is the time it takes for a piece of data to travel from one point to another. Even if the bandwidth is high, high latency can make communication feel slow. Local networks usually have low latency, while long-distance communication may have higher latency.
 
 !!! success "Exercise"
     Determine bandwidth and throughput of your device's connection.

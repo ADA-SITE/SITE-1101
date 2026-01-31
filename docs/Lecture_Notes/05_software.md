@@ -1,7 +1,13 @@
 # 05. Programming & Software
 
-:material-account: Rahida Asadli, Ismayil Shahaliyev  
-:material-calendar: Nov 9 2025 :material-calendar-edit: Jan 31, 2026
+:material-account:
+<span class="meta-text">Rahida Asadli, Ismayil Shahaliyev</span>  
+:material-calendar:
+<span class="meta-text">Nov 9, 2025</span>
+&nbsp;&nbsp;
+:material-calendar-edit:
+<span class="meta-text">Jan 31, 2026</span>
+
 
 ## Programming
 
@@ -32,7 +38,7 @@ An _interpreter_ is commonly used in situations where development speed, flexibi
 
 
 !!! note
-    Below is an example of an oversimplified workflow Imagine you wrote a short program:
+    Below is an example of an oversimplified workflow. Imagine you wrote a short program:
     ```python
     print("Hello")
     print(10 + 5)
@@ -55,7 +61,7 @@ An _interpreter_ is commonly used in situations where development speed, flexibi
     print("This will not run")
     ```
 
-    Interpreter may do the following:
+    An interpreter may do the following:
     1. Run the first line → prints `Hello`
     2. Run the second line → prints `15`
     3. Run the third line → finds an error (division by zero) and stops.
@@ -69,12 +75,12 @@ Programming languages have evolved over time to make communication between human
 **First-generation (Machine Language).** Consists only of binary digits 0s and 1s. Directly understood by the computer but extremely difficult for humans to write or debug.
 
 ```text
-10110000 00000101 ; load 5 into register
-10110001 00000110 ; load 6 into register
-00000001 ; add
+10110000 00000101 (this may imply load 5 into register)
+10110001 00000110 
+00000001 (this may imply addition)
 ```
 
-**Second-generation (**[**Assembly Language**](https://en.wikipedia.org/wiki/Assembly_language)**).** Uses symbolic codes or abbreviations instead of binary. Easier than machine language, but still closely tied to hardware. Needs an assembler to convert to machine code.
+**Second-generation ([Assembly Language](https://en.wikipedia.org/wiki/Assembly_language)).** Uses symbolic codes or abbreviations instead of binary. Easier than machine language, but still closely tied to hardware. Needs an assembler to convert to machine code.
 
 ```asm
 MOV AX, 5 ; move 5 into register AX
@@ -117,7 +123,7 @@ Example queries a user would ask the Prolog system:
 
 **Post-Fifth Generation (Generative AI Systems).** Modern computing introduces a different paradigm based on [machine learning](https://en.wikipedia.org/wiki/Machine_learning) and [generative models](https://en.wikipedia.org/wiki/Generative_model). In this approach, systems are not programmed with explicit rules or logical facts. Instead, they are trained on large amounts of data and learn statistical patterns that allow them to generate text, code, images, or actions in response to human instructions. Unlike logic-based systems, generative AI does not perform formal logical inference and does not guarantee correctness. Its strength lies in handling ambiguity, incomplete information, and complex real-world data at scale. Users typically interact with such systems using natural language prompts, examples, or goals, rather than writing precise programs. For this reason, generative AI is best understood not as a new programming language generation, but as a new interaction and computation paradigm built on top of existing languages and systems.
 
-##  Software
+## Software
 
 [Software](https://en.wikipedia.org/wiki/Software) consists of computer programs that instruct the computer what to do, and includes design documents and specifications ([documentation](https://en.wikipedia.org/wiki/Software_documentation)). Software converts user commands into machine-level instructions and enables computers to perform everything from calculations to complex design simulations.
 
@@ -143,7 +149,7 @@ Example queries a user would ask the Prolog system:
 In addition to the distinction between system and application software, programs can also be categorized by how they are licensed and distributed, as **proprietary** or **off-the-shelf** software. Many private companies choose proprietary software such as _Microsoft Office 365_ because it offers professional customer support, cloud integration, and regular security updates. In contrast, public institutions and schools often adopt [open-source](https://shahaliyev.org/writings/open-source) alternatives like _LibreOffice_ or _Google Workspace (free edition)_ to reduce licensing costs while still providing students and staff with essential tools for document creation and collaboration. This demonstrates how the choice between proprietary and open-source software often depends on an organization's budget, technical needs, and support requirements.
 
 !!! success "Exercise" 
-    What are the advantage/disadvantages of proprietary and open-source software?
+    What are the advantages/disadvantages of proprietary and open-source software?
 
 ## Operating Systems
 
@@ -160,7 +166,7 @@ In addition to the distinction between system and application software, programs
   </figcaption>
 </figure>
 
-[Operating system](https://en.wikipedia.org/wiki/Operating_system) (OS) is the core software that manages all hardware and software resources. OS acts as a bridge between users, applications, and the computer hardware. It translates high-level user commands into machine-level operations and manages system resources such as memory, processing time, and device communication to ensure efficient coordination across all components.
+[Operating system](https://en.wikipedia.org/wiki/Operating_system) (OS) is the core software that manages all hardware and software resources. The OS acts as a bridge between users, applications, and computer hardware. It translates high-level user commands into machine-level operations and manages system resources such as memory, processing time, and device communication to ensure efficient coordination across all components.
 
 !!! note
     Suppose a user is editing a document in _Microsoft Word_ while listening to music on _Spotify_ and downloading a file from the Internet. The operating system coordinates these simultaneous activities by dividing processor time among the programs, allocating memory to each, and managing input/output requests so that the music continues playing without interruptions and the document remains responsive.
@@ -172,7 +178,7 @@ The [kernel](https://en.wikipedia.org/wiki/Kernel_%28operating_system%29) is the
 
 The kernel is also responsible for [multitasking](https://en.wikipedia.org/wiki/Computer_multitasking). When multiple programs are running at the same time, the kernel rapidly switches the CPU between them, giving each program a small time slice. To the user, all programs appear to run simultaneously, but the kernel carefully controls this sharing to keep the system stable and responsive.
 
-An OS includes much more than the kernel. It also contains system libraries, background services, device drivers, and user interfaces. This is why different OS can be built around the same kernel. For example, [Ubuntu](https://ubuntu.com/) uses the [Linux kernel](https://github.com/torvalds/linux) together with tools and interfaces designed for desktop and server use, while Android uses the same Linux kernel but combines it with a mobile-focused runtime and user interface. In this way, the kernel provides the foundation, and the OS builds a complete environment on top of it.
+An OS includes much more than the kernel. It also contains system libraries, background services, device drivers, and user interfaces. This is why different operating systems can be built around the same kernel. For example, [Ubuntu](https://ubuntu.com/) uses the [Linux kernel](https://github.com/torvalds/linux) together with tools and interfaces designed for desktop and server use, while Android uses the same Linux kernel but combines it with a mobile-focused runtime and user interface. In this way, the kernel provides the foundation, and the OS builds a complete environment on top of it.
 
 ## Additional Material
 - [Programming Basics: Statements & Functions: Crash Course Computer Science #12](https://www.youtube.com/embed/l26oaHV7D40)

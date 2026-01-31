@@ -1,7 +1,13 @@
 # 11. Ethics, Security, and Logical Reasoning
 
-:material-account: Nilufar Ismayilova, Rumiyya Alili, Ismayil Shahaliyev  
-:material-calendar: Nov 29 2025 :material-calendar-edit: Jan 31, 2026
+:material-account:
+<span class="meta-text">Nilufar Ismayilova, Rumiyya Alili, Ismayil Shahaliyev</span>  
+:material-calendar:
+<span class="meta-text">Nov 29, 2025</span>
+&nbsp;&nbsp;
+:material-calendar-edit:
+<span class="meta-text">Jan 31, 2026</span>
+
 
 ## Space Shuttle _Challenger_ Disaster
 
@@ -16,7 +22,7 @@ One of the most important historical examples used to discuss ethics in engineer
   </figcaption>
 </figure>
 
-Investigations later showed that the disaster was not caused by a single technical failure alone, but by a combination of engineering, organizational, and ethical failures. A critical technical issue involved [O-ring](https://en.wikipedia.org/wiki/O-ring) seals in the solid rocket boosters.
+Investigations later showed that the disaster was not caused by a single technical failure, but by a combination of engineering, organizational, and ethical failures. A critical technical issue involved [O-ring](https://en.wikipedia.org/wiki/O-ring) seals in the solid rocket boosters.
 
 These O-rings were responsible for preventing hot combustion gases from escaping during launch. This design created a [single point of failure](https://en.wikipedia.org/wiki/Single_point_of_failure): if the O-ring did not seal properly, there was no additional system to contain the pressure. One component became responsible for the safety of the entire mission.
 
@@ -103,10 +109,10 @@ This reliance on induction raises a major philosophical issue identified by [Dav
 
 [Karl Popper](https://plato.stanford.edu/entries/popper/) later emphasized that _no amount of positive evidence can conclusively prove a scientific theory, but a single counterexample can disprove it_. This idea was popularized through the "black swan" illustration: after centuries of observing only white swans, Europeans concluded that all swans must be white - until the discovery of black swans in Australia instantly [falsified](https://en.wikipedia.org/wiki/Falsifiability) that belief. Popper argued that progress in science comes not from proving theories true, but from exposing them to conditions under which they could be shown false. A claim that cannot, even in principle, be falsified does not count as scientific.
 
-Hume's challenge motivated the search for certainty through deduction. If observation cannot guarantee truth, perhaps truth could be established through pure reasoning. Mathematics follows this strategy: it begins with [axioms](http://axioms) - statements accepted as foundational - and applies strict logical rules to derive conclusions. If the axioms are true, then the conclusions must also be true. Deductive reasoning does not rely on the future behaving like the past; its certainty comes from structure, not observation.
+Hume's challenge motivated the search for certainty through deduction. If observation cannot guarantee truth, perhaps truth could be established through pure reasoning. Mathematics follows this strategy: it begins with [axioms](https://en.wikipedia.org/wiki/Axiom) - statements accepted as foundational - and applies strict logical rules to derive conclusions. If the axioms are true, then the conclusions must also be true. Deductive reasoning does not rely on the future behaving like the past; its certainty comes from structure, not observation.
 
 !!! warning "Important" 
-    Even mathematical certainty is limited by the axioms that define a system. Change those axioms, and the truths derived from them change as well. For example, in [Euclidean geometry](https://en.wikipedia.org/wiki/Euclidean_geometry), based on Euclid's [fifth postulate](https://en.wikipedia.org/wiki/Parallel_postulate), parallel lines are defined as lines that never intersect. But in [spherical geometry](https://en.wikipedia.org/wiki/Spherical_geometry), the closest analogue to straight lines are great circles - and every pair of great circles intersects - so parallel lines do not exist at all. Both geometries are internally valid because each follows logically from different foundational assumptions. Deductive certainty therefore conditional and applies only within the chosen axiomatic framework, not as a universal reflection of reality. Deductive conclusions are guaranteed only if the starting assumptions are.
+    Even mathematical certainty is limited by the axioms that define a system. Change those axioms, and the truths derived from them change as well. For example, in [Euclidean geometry](https://en.wikipedia.org/wiki/Euclidean_geometry), based on Euclid's [fifth postulate](https://en.wikipedia.org/wiki/Parallel_postulate), parallel lines are defined as lines that never intersect. But in [spherical geometry](https://en.wikipedia.org/wiki/Spherical_geometry), the closest analogue to straight lines are great circles - and every pair of great circles intersects - so parallel lines do not exist at all. Both geometries are internally valid because each follows logically from different foundational assumptions. Deductive certainty is therefore conditional and applies only within the chosen axiomatic framework, not as a universal reflection of reality. Deductive conclusions are guaranteed only if the starting assumptions are.
 
 ## Ambiguity of Language
 
@@ -145,7 +151,7 @@ This is an early representation of the [AI alignment problem](https://en.wikiped
 !!! note
     An AI programmed to "maximize user engagement" on social media might discover that divisive, inflammatory content keeps people engaged longer. The algorithm optimized for its stated goal perfectly, but the outcome was harmful: increased polarization and spread of misinformation.
 
-!!! success "Execise" 
+!!! success "Exercise" 
     Design an improved version of the engagement algorithm noted in the example above by specifying a clearer objective function. Include constraints that protect user well-being, reduce misinformation, and prevent harmful content from being promoted, while still allowing the system to recommend interesting material.
 
 The deeper issue is still the inherent ambiguity of natural language. Words like "harm," "obey," and "protect" appear to carry precise meaning, but when applied in complex environments, they require interpretation. A robot asked to prevent harm may choose solutions humans consider outrageous. A system told to obey orders might follow dangerous commands literally.
@@ -172,7 +178,7 @@ Computing professionals must therefore understand _how systems are attacked,_ no
 
 [Social engineering](https://en.wikipedia.org/wiki/Social_engineering_%28security%29) attacks focus on people rather than code. [Phishing](https://en.wikipedia.org/wiki/Phishing) messages may impersonate banks or universities to trick users into giving away credentials. Closely related techniques like [spear-phishing](https://en.wikipedia.org/wiki/Spear-phishing) can compromise entire organizations. These attacks succeed because trust is easier to manipulate than technology.
 
-[Malware](https://en.wikipedia.org/wiki/Malware) attacks exploit weaknesses in software and system configurations. [Trojan horse](https://en.wikipedia.org/wiki/Trojan_horse_%28computing%29) can appear as a legitimate software application and perform malicious actions. [Ransomware](https://en.wikipedia.org/wiki/Ransomware) encrypts data and demands payment. [Worms](https://en.wikipedia.org/wiki/Computer_worm) spread automatically across networks, while [spyware](https://en.wikipedia.org/wiki/Spyware) collects private information silently. Despite their differences, all malware seeks control, disruption, or theft.
+[Malware](https://en.wikipedia.org/wiki/Malware) attacks exploit weaknesses in software and system configurations. [Trojan horse](https://en.wikipedia.org/wiki/Trojan_horse_%28computing%29) can appear as a legitimate software applications and perform malicious actions. [Ransomware](https://en.wikipedia.org/wiki/Ransomware) encrypts data and demands payment. [Worms](https://en.wikipedia.org/wiki/Computer_worm) spread automatically across networks, while [spyware](https://en.wikipedia.org/wiki/Spyware) collects private information silently. Despite their differences, all malware seeks control, disruption, or theft.
 
 [Network attacks](https://en.wikipedia.org/wiki/Cyberattack) target communication itself. [Man-in-the-Middle (MITM) attack](https://en.wikipedia.org/wiki/Man-in-the-middle_attack) intercepts or alters data. [Denial-of-Service (DoS)](https://en.wikipedia.org/wiki/Denial-of-service_attack) attacks overwhelm servers so legitimate users cannot access services. These attacks show that even secure software can fail if communication channels are not protected.
 
@@ -196,7 +202,7 @@ Keeping software, applications, and operating systems updated is essential, as u
 Using secure and trusted networks further reduces exposure to [eavesdropping](https://en.wikipedia.org/wiki/Network_eavesdropping) and interception, particularly when accessing sensitive accounts such as online banking or university services. Together, these practices form a proactive defense: small habits that prevent major harm.
 
 ## Additional Material
-- [Challenger Distaster](https://archive.org/details/ChallengerDisaster)
+- [Challenger Disaster](https://archive.org/details/ChallengerDisaster)
 - [Consequentialism vs. Deontology](https://www.youtube.com/watch?v=NT3VU4B5Dsc)
 - [Absurd Trolley Problems](https://neal.fun/absurd-trolley-problems/)
 - [AI Decides on Absurd Trolley Problems](https://www.youtube.com/watch?v=1boxiCcpZ-w)

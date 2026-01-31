@@ -1,7 +1,13 @@
 # 03. Hardware: CPU, GPU, Memory, Storage Devices
 
-:material-account: Rahida Asadli, Ismayil Shahaliyev  
-:material-calendar: Oct 25 2025 :material-calendar-edit: Jan 30, 2026
+:material-account:
+<span class="meta-text">Rahida Asadli, Ismayil Shahaliyev</span>  
+:material-calendar:
+<span class="meta-text">Oct 25, 2025</span>
+&nbsp;&nbsp;
+:material-calendar-edit:
+<span class="meta-text">Jan 30, 2026</span>
+
 
 ## Hardware
 
@@ -45,7 +51,7 @@ The [_von Neumann architecture_](https://en.wikipedia.org/wiki/Von_Neumann_archi
 
 Both **data** and **instructions** are stored together in the same memory. This is called the _stored-program concept_. It was important because it allowed computers to keep programs in memory along with the data they use. This made it possible to change or run different programs by loading new instructions into memory, instead of manually changing the computer’s hardware connections. It simplified computer design, enabled automation of complex tasks, and made programming far more flexible.
 
-It is common sense to us now, but only because it became the foundation of modern computing. Before the stored-program concept, computers like [ENIAC](https://en.wikipedia.org/wiki/ENIAC) had to be rewired by hand for every new task. There was no “program” to load—the hardware was the program. [John von Neumann](https://en.wikipedia.org/wiki/John_von_Neumann)’s idea separated hardware (the machine) from software (the instructions it runs) and treated code as just another form of data. That shift made general-purpose computers possible.
+This seems obvious today, but only because it became the foundation of modern computing. Before the stored-program concept, computers like [ENIAC](https://en.wikipedia.org/wiki/ENIAC) had to be rewired by hand for every new task. There was no “program” to load—the hardware was the program. [John von Neumann](https://en.wikipedia.org/wiki/John_von_Neumann)’s idea separated hardware (the machine) from software (the instructions it runs) and treated code as just another form of data. That shift made general-purpose computers possible.
 
 !!! note
     When you use a calculator app to add two numbers, both the program’s instructions (load number, add, display result) and the numbers you enter are stored in RAM. The CPU retrieves and executes the instructions one by one, reads the data from memory, performs the addition, and writes the result back, following the stored-program model.
@@ -87,64 +93,60 @@ Every action the CPU performs follows four main steps, known as the [machine cyc
 This process (`fetch → decode → execute → store`) repeats continuously, millions or billions of times per second.
 
 !!! note
-    When a computer adds two numbers, several CPU components work together. First, the CU fetches the instruction from main memory (the binary code telling the CPU what to do). Then it decodes the instruction and identifies which data to use. After decoding, the CU sends control signals that tell the ALU to perform the operation and tell the registers when to load or output data.
+    When a computer adds two numbers, several CPU components work together. First, the CU fetches the instruction from main memory (the binary code telling the CPU what to do). Then it **decodes** the instruction and identifies which data to use. After decoding, the CU sends control signals that tell the ALU to perform the operation and tell the registers when to load or output data.
     
-    The ALU receives the numbers from registers, performs the addition in binary, and produces the result. Registers act as extremely fast storage locations: before the ALU starts, the inputs are placed in registers; after the ALU finishes, the output is stored in a register, ready to be written back to memory or used by the next instruction.
+    The ALU performs the actual arithmetic (e.g. addition) or logical operations. It receives the two numbers from the registers, adds them in binary form, and produces the result. Meanwhile, the registers act as small, extremely fast storage locations inside the CPU. Before the ALU starts, the numbers to be added are placed in registers. After the ALU finishes, the result is stored in another register, ready to be sent back to main memory or used for the next operation.
     
-    Throughout the process, the CU enforces timing and order, ensuring that data moves only when it should. This coordination—fetching, decoding, executing, and storing—is what allows simple operations to happen reliably at very high speed.
+    Throughout the process, the CU ensures proper timing and order, making sure that data moves only when it should and that all components work in sync. This precise coordination - fetching, decoding, executing, and storing - is what allows even the simplest task, such as adding two numbers, to happen billions of times per second without error.
 
-The **clock** is the timing system of the CPU. It sends out a steady stream of electrical pulses that set the pace for operations. The _clock speed_ indicates how many cycles occur per second and is measured in Hertz (Hz). For example, a CPU with a 3.0 GHz clock runs about 3 billion cycles per second.
+The **clock** is the timing system of the CPU. It sends out a steady stream of electrical pulses that set the pace for operations. The _clock speed_ indicates how many cycles occur per second and is measured in Hertz (Hz). For example, a CPU with a 3.0 GHz clock runs about 3 billion cycles per second. A cycle is not the same as an instruction; modern CPUs may execute multiple instructions per cycle or require multiple cycles per instruction. The clock ensures that all parts of the CPU work together in perfect rhythm.
 
 **Word size** is the number of bits the CPU can process in one operation. The most common sizes are _32-bit_ and _64-bit_. A 64-bit CPU can handle larger data chunks and can address much more memory than a 32-bit CPU.
 
-Modern CPUs contain multiple **cores**, meaning multiple processing units inside a single chip. Each core can run instructions independently, allowing parallel processing. A dual-core CPU can run two heavy tasks at once (for example, encoding a video while running a game), while lighter tasks can be managed by [time-sharing](https://en.wikipedia.org/wiki/Time-sharing) even on a single core.
+Modern CPUs contain multiple **cores**, meaning multiple processing units inside a single chip. Each core can run instructions independently, allowing [parallel processing](https://en.wikipedia.org/wiki/Parallel_computing). A dual-core CPU can run two heavy tasks at once (for example, encoding a video while running a game), while lighter tasks can be managed by [time-sharing](https://en.wikipedia.org/wiki/Time-sharing) even on a single core. A quad-core CPU can handle four heavy tasks, and an octa-core CPU can handle eight - ideal for heavy work such as gaming or video editing.
 
 **Instruction Set Architecture (ISA)** is the built-in language of the CPU. It defines the commands the CPU can understand and execute. The ISA specifies what operations exist and how programs interact with memory and hardware, while the [microarchitecture](https://en.wikipedia.org/wiki/Microarchitecture) describes how a particular CPU implements and executes those instructions internally. Common examples include x86/x86-64 (Intel, AMD) and ARM (mobile devices and many modern laptops).
 
 !!! note
-    An Intel CPU executes x86 instructions, while many smartphone CPUs execute ARM instructions. Programs must be compiled for the correct instruction set so the CPU can run them.
+    Just as people speak different languages, an Intel CPU "speaks" x86 instructions, while a smartphone CPU "speaks" ARM. Programs must be written or compiled in the correct instruction set so the CPU understands them.
 
 ## Graphics Processing Unit
 
-While the CPU is responsible for general-purpose computation and overall control, modern computers also rely on the [Graphics Processing Unit (GPU)](https://en.wikipedia.org/wiki/Graphics_processing_unit). A GPU is a specialized processor designed to perform a very large number of simple calculations in [parallel](https://en.wikipedia.org/wiki/Parallel_computing). Originally, GPUs were built for graphics workloads such as rendering 3D scenes and updating frames smoothly in games and graphical applications.
+While the CPU is responsible for general-purpose computation and overall control of the system, modern computers also rely heavily on the [**Graphics Processing Unit (GPU)**](https://en.wikipedia.org/wiki/Graphics_processing_unit). A GPU is a specialized processor designed to perform a very large number of simple calculations in parallel. Originally, GPUs were created to handle graphics tasks such as drawing images, rendering 3D scenes, and updating the screen smoothly in video games and graphical applications.
 
-Unlike the CPU, which has a small number of powerful cores optimized for sequential work, a GPU contains thousands of simpler cores optimized for parallel operations. This makes GPUs efficient at tasks where the same computation must be applied to many data elements at once, such as pixels, vertices, or vectors.
+Unlike the CPU, which has a small number of powerful cores optimized for sequential and complex tasks, a GPU contains thousands of smaller, simpler cores optimized for parallel work. This makes GPUs extremely efficient at tasks where the same operation must be applied to many data elements at once, such as processing pixels, vertices, or vectors. For example, when rendering an image, a GPU can compute the color of millions of pixels simultaneously, something a CPU would do much more slowly.
 
-Today, GPUs are widely used beyond graphics, including scientific computing, simulations, video processing, and [artificial intelligence](../09_ai), where large matrix and vector operations are common. In typical workloads, the CPU manages control flow and coordination, while the GPU performs heavy numerical computation.
+Today, GPUs are important far beyond graphics. They are widely used in scientific computing, simulations, video processing, and especially [artificial intelligence](../09_ai) and machine learning, where large [matrix](https://en.wikipedia.org/wiki/Matrix_%28mathematics%29) and vector operations are required. In these cases, the CPU typically prepares tasks and manages control flow, while the GPU performs the heavy numerical computations. Together, the CPU and GPU complement each other: the CPU handles decision-making and coordination, and the GPU provides massive computational throughput for parallel workloads.
 
 ## Memory Devices
 
-Every computer must store data and instructions so the CPU can use them. The place where this information is kept is called memory. Different kinds of memory serve different purposes—some are very fast but _volatile_ (temporary), while others are slower but _non-volatile_ (persistent). Volatile memory loses its contents when power is removed; non-volatile memory does not.
+Every computer must store data and instructions so the CPU can use them. The place where this information is kept is called memory. Different kinds of memory serve different purposes - some are very fast but _volatile_ (temporary), while others are slower but _non-volatile_ (permanent). The contents of volatile memory are lost when power is turned off, which is not the case for non-volatile memory.
 
-A common classification is:
-
-- **Primary storage.** Volatile storage used directly by the CPU (registers, cache, RAM).
-- **Secondary storage.** Non-volatile persistent storage (SSD, HDD) that must be loaded into primary memory before use.
-- **Tertiary storage.** Non-volatile, much slower storage used for backups and archives, often accessed sequentially (optical discs[^1], magnetic tapes).
+The classification of computer storage into three main categories is a conventional way of organizing memory types based on their speed, volatility, access patterns, and typical use. **Primary storage** is volatile memory used directly by the CPU for immediate processing and includes registers, cache memory, and main memory, holding the data and instructions currently being executed. **Secondary storage** is non-volatile and provides persistent storage for programs and data, which must be loaded into primary memory before use. **Tertiary storage** is also non-volatile but much slower, mainly used for long-term backups and archives, accessed infrequently and often relying on sequential access, with examples including optical discs[^1] (e.g. CD/DVD) and magnetic tapes that offer very large capacity at low cost.
 
 ### Primary Storage
 
-[RAM (Random Access Memory)](https://en.wikipedia.org/wiki/Random-access_memory) is the main working memory. It temporarily stores data and instructions the CPU is currently using. RAM is volatile and has two common types: Dynamic RAM (DRAM) and Static RAM (SRAM).
+[RAM (Random Access Memory)](https://en.wikipedia.org/wiki/Random-access_memory) is the computer's main working memory. It temporarily stores data and instructions that the CPU is currently using, allowing quick access for ongoing tasks. RAM is volatile and has two main types: Dynamic RAM (DRAM) and Static RAM (SRAM).
 
-- **DRAM** stores each bit in a tiny [capacitor](https://en.wikipedia.org/wiki/Capacitor). Because capacitors leak charge, DRAM must be refreshed continuously. DRAM is cheaper and higher capacity, but slower than SRAM. It serves as the computer’s main memory.
-- **SRAM** uses [flip-flop circuits](https://en.wikipedia.org/wiki/Flip-flop_%28electronics%29) that keep data stable while power is on, without refreshing. SRAM is faster but larger and more expensive.
+- **DRAM** stores each bit of data in a tiny [capacitor](https://en.wikipedia.org/wiki/Capacitor) that holds an electrical charge - charged for 1, empty for 0. Because these capacitors leak energy, DRAM must be constantly refreshed to retain data. Its simple design (just one transistor and one capacitor per bit) allows it to hold large amounts of data at a low cost, but this also makes it slower than other memory types. DRAM serves as the _main memory_ in computers, holding the programs and data currently loaded and being used by the CPU, like open browser tabs or a running video, so the CPU can access them quickly.
+- **SRAM** uses [flip-flop circuits](https://en.wikipedia.org/wiki/Flip-flop_%28electronics%29) made of transistors that keep data stable as long as power is on - no refreshing needed. This makes SRAM much faster and more reliable, but also larger and more expensive.
 
-**Cache memory** is a very small, ultra-fast SRAM built into the CPU. It stores frequently used data and instructions so the CPU does not repeatedly fetch them from slower RAM. _L1 cache_ is the smallest and fastest (per core). _L2 cache_ is larger and slower. _L3 cache_ is larger still and often shared across cores.
+**Cache** **memory** is a very small, ultra-fast SRAM built directly inside the CPU. It stores data and instructions that are used often, so the CPU doesn't have to fetch them repeatedly from the slower main memory (RAM). _L1 cache_ is the smallest and fastest, located inside each CPU core. _L2 cache_ is larger and slightly slower, typically dedicated to each core. _L3 cache_ is the largest and slowest cache level, shared among all cores in the processor.
 
 !!! note
-    Imagine you have several browser tabs open. The content and program state for those tabs are stored in DRAM so the CPU can access them while you work. If power is removed, those in-memory states disappear.
-    
-    At the same time, the CPU uses much smaller but faster SRAM cache for the most frequently used instructions and data. When the same parts of a webpage or video are accessed repeatedly, cache reduces the time spent waiting on DRAM, improving responsiveness.
+    Imagine you're working on a laptop with several browser tabs open - one for email, one for an online document, and one for a video. All of these open tabs and the data they use are stored in DRAM, which holds the programs and information you are currently using so the CPU can access them quickly. When you switch between tabs, the CPU retrieves the required data directly from DRAM. Because DRAM is volatile, all open tabs and unsaved work are lost if power is removed.
 
-**Read-Only Memory (ROM)**[^2] is non-volatile memory that retains data when power is off. During startup, the CPU reads firmware from ROM—commonly [BIOS](https://en.wikipedia.org/wiki/BIOS) or [UEFI](https://en.wikipedia.org/wiki/UEFI)—which checks hardware and then loads the [operating system](https://en.wikipedia.org/wiki/Operating_system) into RAM. ROM is typically programmed by the manufacturer, although modern forms like [EEPROM](https://en.wikipedia.org/wiki/EEPROM) can be updated electronically.
+    At the same time, the CPU relies on much smaller but faster SRAM inside the processor, known as cache memory. The cache stores the most frequently used instructions and small pieces of data needed while those browser tabs are running. For example, when parts of a webpage or video are accessed repeatedly, the CPU keeps them in cache so they can be reused immediately without waiting for DRAM. In this way, DRAM functions like a large work surface holding everything you are working on, while SRAM cache is like the few critical notes kept right at hand for instant access.
+
+**Read-Only Memory (ROM)**[^2] is a non-volatile memory. Unlike RAM, it retains data even when power is off. When the computer is turned on, the CPU reads the [firmware](https://en.wikipedia.org/wiki/Firmware) stored in ROM - known as the [BIOS](https://en.wikipedia.org/wiki/BIOS) or [UEFI](https://en.wikipedia.org/wiki/UEFI), which checks the hardware (e.g. memory, keyboard, and drives) and then loads the [operating system](https://en.wikipedia.org/wiki/Operating_system) into main memory. Historically, ROM was _preprogrammed_ and not easily changed. In modern systems, firmware is stored in flash memory (a type of [Electrically Erasable Programmable ROM](https://en.wikipedia.org/wiki/EEPROM)) and can be updated by the user.
 
 ### Secondary Storage
 
-Storage devices use two main retrieval methods: [sequential access](https://en.wikipedia.org/wiki/Sequential_access) and [direct (random) access](https://en.wikipedia.org/wiki/Random_access). In sequential access, data is read in order until the desired location is reached. In random access, the device can jump directly to a location.
+Storage devices use two main data-retrieval methods: [sequential access](https://en.wikipedia.org/wiki/Sequential_access) and [direct (random) access](https://en.wikipedia.org/wiki/Random_access). In sequential access, data is read in a fixed order from the beginning until the desired location is reached, which makes access slower but the system simpler and cheaper to implement. In random access, the device can jump directly to any data location without reading preceding data, resulting in much faster access.
 
-**Hard Disk Drive (HDD)** stores data on spinning magnetic platters, commonly 5,400–7,200 RPM. Data is read and written by a moving head. HDDs provide large capacity at low cost, but are slower due to mechanical movement and more vulnerable to shock. HDDs support random access.
+**Hard Disk Drive (HDD)** stores data using _magnetic_ platters that spin at very high speeds, usually between 5,400 and 7,200 revolutions per minute (RPM). Data is written and read by a tiny magnetic head that moves across the surface of the spinning disks without touching them. Because of its mechanical structure, an HDD can hold a large amount of data - commonly ranging from 1 to over 20 terabytes. However, since the disk and read/write head involve physical movement, they are relatively slow and can wear out over time and are more vulnerable to shocks or drops. The device allows random access.
 
-**Solid State Drive (SSD)** stores data in [flash memory](https://en.wikipedia.org/wiki/Flash_memory) and has no moving parts, making it much faster and more reliable than HDDs. SSDs offer fast boot times, quick application loading, and low-latency file access. Their cost per gigabyte is typically higher than HDDs.
+**Solid State Drive (SSD)** stores data using [flash memory](https://en.wikipedia.org/wiki/Flash_memory) chips and has no moving parts, which makes it much faster and more reliable than traditional hard drives. Data is stored electronically in millions of tiny transistors_,_ similar to the technology used in [USB flash drives](https://en.wikipedia.org/wiki/USB_flash_drive), but with far faster interfaces and controllers. SSDs provide very fast boot times, quick application loading, and instant file access, which is why they are now the standard in most laptops and modern computers. Since there are no spinning disks or moving heads, SSDs are also silent, lighter, and more resistant to physical shock, making them ideal for portable devices. However, their cost per gigabyte is higher than that of HDDs. SSDs use electronic random access and are much faster than HDDs, which rely on mechanical movement and are slow for random access.
 
 <figure class="w80 float-left">
   <img src="../../assets/images/lecture03/storage.png" alt="Storage hierarchy pyramid">
@@ -154,11 +156,9 @@ Storage devices use two main retrieval methods: [sequential access](https://en.w
   </figcaption>
 </figure>
 
-
-To summarize, the storage hierarchy organizes memory and storage by speed, cost per bit, and capacity. At the top, registers and cache are the fastest but smallest and most expensive per bit. RAM is next: slower than cache, larger, and still volatile. Below RAM, SSDs provide persistent storage with low latency. HDDs provide larger capacity at lower cost but with slower access times. Optical discs and magnetic tape sit lower in the hierarchy: they are cheaper per bit and good for distribution or archival storage, but much slower, especially for random access. Moving upward increases speed and cost per bit while reducing capacity; moving downward increases capacity and lowers cost per bit while increasing access time.
+To sum up, the storage hierarchy shows how different types of memory and storage are organized based on speed, cost, and capacity. At the top of the pyramid is cache memory; it is the fastest and most expensive per unit of storage, but also the smallest in size. Cache resides on the CPU chip and provides data almost instantly. Below it is main memory (RAM), which is slightly slower and cheaper, and is used to store data that the CPU is currently working on. Moving further down, flash storage (such as solid-state drives) is non-volatile, meaning it retains data when power is off. It is slower than RAM but much faster than magnetic or optical storage. Next comes magnetic disk storage (hard drives), which provides large capacity at a lower cost, but has slower access due to mechanical movement. Below that are optical discs (such as CDs, DVDs, and Blu-ray), mainly used for media distribution or backups; they are inexpensive but slower and more limited in capacity compared to disks. At the bottom of the pyramid is magnetic tape, which stores massive amounts of data very cheaply but is extremely slow because it relies on sequential access rather than direct access. As you move upward in the hierarchy, speed and cost increase while capacity decreases; as you move downward, capacity increases and cost per bit decreases, but access time becomes slower.
 
 ## Additional Material
-
 - [How do Transistors Build into a CPU? How do Transistors Work?](https://www.youtube.com/watch?v=_Pqfjer8-O4)
 - [How do Hard Disk Drives Work?](https://www.youtube.com/watch?v=wtdnatmVdIg)
 - [How does Computer Memory Work?](https://www.youtube.com/watch?v=7J7X7aZvMXQ)

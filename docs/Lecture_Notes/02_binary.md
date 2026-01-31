@@ -1,16 +1,21 @@
 # 02. Binary Representation, Arithmetic & Logic Operations
 
-:material-account: Nilufar Ismayilova, Ismayil Shahaliyev  
-:material-calendar: Oct 23, 2025 :material-calendar-edit: Jan 30, 2026
+:material-account:
+<span class="meta-text">Nilufar Ismayilova, Ismayil Shahaliyev</span>  
+:material-calendar:
+<span class="meta-text">Oct 23, 2025</span>
+&nbsp;&nbsp;
+:material-calendar-edit:
+<span class="meta-text">Jan 30, 2026</span>
 
 ## Digital vs Analog
 
-_Discrete_ means values change in separate, well-defined steps with no possible values in between _Continuous_ means values can vary smoothly and without breaks over a range — between any two values, there are infinitely many possible intermediate values.
+_Discrete_ means values change in separate, well-defined steps with no possible values in between. _Continuous_ means values can vary smoothly and without breaks over a range — between any two values, there are infinitely many possible intermediate values.
 
 !!! note
-    A standard light switch is either on or off — there is nothing between those two states — hence, is discrete. Likewise, a digital clock that shows `14:35` jumps straight to `14:36` with no "in-between" time displayed. In a mercury thermometer, however, if the temperature is $21°C$ and then rises to $22°C$, it passes through $21.1°C$, $21.11°C$, $21.111°C$, and so on. The temperature does not "jump" from one reading to another. It changes continuously.
+    A standard light switch is either on or off — there is nothing between those two states — hence, it is discrete. Likewise, a digital clock that shows `14:35` jumps straight to `14:36` with no "in-between" time displayed. In a mercury thermometer, however, if the temperature is $21°C$ and then rises to $22°C$, it passes through $21.1°C$, $21.11°C$, $21.111°C$, and so on. The temperature does not "jump" from one reading to another. It changes continuously.
 
-This distinction is why _digital_ systems are far more reliable than _analog_ ones. In a continuous analog system, even a tiny fluctuation (temperature drift or electrical noise) can change the value. In a discrete digital system, as long as the signal is close enough to one of the two states (for example, above $3V$ is $1$ and below $1V$ is $0$), the system will interpret it correctly. This tolerance to noise is why modern computers rely almost entirely on discrete binary states.
+This distinction is why _digital_ systems are far more noise-tolerant than _analog_ ones. In a continuous analog system, even a tiny fluctuation (temperature drift or electrical noise) can change the value. In a discrete digital system, as long as the signal is close enough to one of the two states (for example, above $3V$ is interpreted as $1$, below $1V$ as $0$, with an undefined region in between), the system will interpret it correctly. This tolerance to noise is why modern computers rely almost entirely on discrete binary states.
 
 !!! note
     In an analog system, numbers $3$ and $5$ could be represented by physical quantities such as voltage levels of $3V$ and $5V$. To add them, the machine might combine the voltages to produce $8V$. But if noise shifts levels by just $0.2V$, the output might become $7.8V$ or $8.2V$, which no longer corresponds exactly to $8$. Repeated operations would accumulate these errors, making the result unreliable.
@@ -87,9 +92,13 @@ Just like in the decimal system, numbers in binary can be added together. Since 
 | 1 + 1 | 0 | 1 |
 
 In digital systems, subtraction is often performed using addition:
-$A − B = A + (−B)$. To make this work with the same adder circuit, computers represent negative numbers using [two's complement](https://en.wikipedia.org/wiki/Two%27s_complement).
+$A − B = A + (−B)$. To make this possible, computers represent negative numbers in [two's complement](https://en.wikipedia.org/wiki/Two%27s_complement) form, allowing a single adder circuit to handle both addition and subtraction.
 
-With 3 bits, there are $2^3 = 8$ different bit patterns. In **unsigned** representation, they represent $0$ to $7$. A naïve "sign bit" approach (one sign bit + magnitude bits) creates two zeros (+0 and −0) and breaks arithmetic in practice. Two's complement avoids these issues. With 3 bits, positives go from `000` (0) to `011` (3), and negatives go from `100` (−4) to `111` (−1). There is only one zero, and addition/subtraction works naturally. To find the negative of a number in two’s complement:
+With 3 bits, there are $2^3 = 8$ different bit patterns. How we interpret those patterns depends on whether we want only positive numbers or both positive and negative. If we choose **unsigned representation**, all 3 bits are used for positive numbers. The patterns go from `000` to `111`, which correspond to the numbers $0$ through $7$.
+
+If we decide to include negative numbers, we can, for example, use one bit as a sign. The first bit indicates whether the number is positive (0) or negative (1), and the remaining two bits show the magnitude: `000` represents $+0$, `001` is $+1$, `010` is $+2$, `011` is $+3$, and the negative side goes from `100` (-0) to `111` (-3). This wastes one code for $-0$ and makes arithmetic complicated and inefficient (try subtracting $2$ from $1$ in with sign bit representation). Hence, the naïve "sign bit" approach (one sign bit + magnitude bits) creates two zeros ($+0$ and $−0$) and breaks arithmetic in practice. 
+
+Two's complement avoids these issues. With 3 bits, positives go from `000` (0) to `011` (3), and negatives go from `100` (−4) to `111` (−1). There is only one zero, and addition/subtraction works naturally. To find the negative of a number in two’s complement:
 
 1. Invert the bits
 2. Add 1
@@ -117,7 +126,7 @@ Compute $B−A$ using 4-bit binary.
 | 2 | Two’s complement of 7 | 0111 → 1000 → 1000 + 0001 = 1001₂ |
 | 3 | Add | 0101 + 1001 = 1110₂ |
 | 4 | Interpret as negative | 1110₂ is negative in 4-bit two’s complement |
-| 5 | Magnitude (optional) | 1110 → 0001 → +1 = 0010₂ → 2₁₀, so result is −2₁₀ |
+| 5 | Magnitude (optional) | 1110 → 0001 → 0001 + 1 = 0010₂ → 2₁₀, so result is −2₁₀ |
 
 !!! success "Exercise"
     Subtract any two numbers in binary using two’s complement.
@@ -145,7 +154,7 @@ Modern computer chips contain billions of transistors packed into an area smalle
 
 ## Logic Gates
 
-All digital logic is based on [Boolean algebra](https://en.wikipedia.org/wiki/Boolean_algebra), named after [George Boole](https://en.wikipedia.org/wiki/George_Boole). In this system, everything is either `true` or `false`, or in computer terms, $1$ or $0$. Logic operations are implemented using [logic gates](https://en.wikipedia.org/wiki/Logic_gate). Every complex computation — from addition to running software — reduces to many fast gate operations.
+All digital logic is based on [Boolean algebra](https://en.wikipedia.org/wiki/Boolean_algebra), named after [George Boole](https://en.wikipedia.org/wiki/George_Boole). In this system, everything is either `true` or `false`, or in computer terms, $1$ or $0$. Logic operations are implemented using [logic gates](https://en.wikipedia.org/wiki/Logic_gate), built inside a processor. Every complex calculation - from adding numbers to running software - comes from millions of tiny logical steps happening very fast.
 
 <div class="figure-grid">
   <figure>

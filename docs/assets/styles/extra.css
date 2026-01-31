@@ -181,3 +181,19 @@
 }
 
 
+
+.meta-text {
+  font-size: 0.9em;
+  font-weight: 500;
+  opacity: 0.9;
+  white-space: nowrap;
+}
+
+/* spacing after metadata block */
+.meta-text:last-of-type {
+  margin-bottom: 0.9em;
+  display: inline-block;
+}
+
+
+

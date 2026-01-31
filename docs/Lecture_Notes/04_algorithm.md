@@ -1,7 +1,13 @@
 # 04. Algorithm & Algorithmic Actions
 
-:material-account: Nilufar Ismayilova, Ismayil Shahaliyev  
-:material-calendar: Oct 25 2025 :material-calendar-edit: Jan 30, 2026
+:material-account:
+<span class="meta-text">Nilufar Ismayilova, Ismayil Shahaliyev</span>  
+:material-calendar:
+<span class="meta-text">Oct 25, 2025</span>
+&nbsp;&nbsp;
+:material-calendar-edit:
+<span class="meta-text">Jan 30, 2026</span>
+
 
 An [algorithm](https://en.wikipedia.org/wiki/Algorithm) is a step-by-step procedure or set of rules to solve a specific problem or perform a task. It is like a recipe in cooking: you follow a clear sequence of actions to achieve a specific result. In computer science, algorithms receive some _input_, _process_ it in a logical way, and produce an _output_. What makes a **good algorithm** is that it has a clear starting point, a clear ending point, and every step is unambiguous - there is no confusion about how it should be executed.
 
@@ -30,7 +36,7 @@ Knuth also wrote a [special foreword](https://cs.stanford.edu/~knuth/azerbaijan.
 Algorithmic actions describe the fundamental operations that make up any computer program. These actions determine how a program makes decisions, repeats steps, organizes tasks, and manages data. The five main algorithmic actions are **selection**, **repetition**, **modularization**, **recursion**, and **name binding**.
 
 ### Selection
-_Selection_ means choosing between different paths of execution based on a condition. It allows the program to "decide" what to do depending on input or data values. In the pseudo-code below, if the temperature is above 30 °C, the system turns on the air conditioner; otherwise, it keeps it off:
+_Selection_ means choosing between different paths of execution based on a condition. It allows the program to "decide" what to do depending on input or data values. In the pseudo-code below, if the temperature is above 30°C, the system turns on the air conditioner; otherwise, it keeps it off:
 
 ```c
 if (temperature > 30) {
@@ -67,7 +73,7 @@ class Calculator:
         return a - b
 ```
 
-In*engineering, a car is designed in modules such as the engine, transmission, and electrical system, each of which can be developed or replaced independently. In education, a curriculum may be modularized into separate courses or subjects, each focusing on a distinct domain of knowledge but contributing to an integrated learning goal. In management, an organization may be divided into departments - finance, marketing, research, operations - each acting as a module with a specific role but coordinated under one structure. In architecture, buildings are designed with modular components such as prefabricated walls or units that can be rearranged or replaced.
+In engineering, a car is designed in modules such as the engine, transmission, and electrical system, each of which can be developed or replaced independently. In education, a curriculum may be modularized into separate courses or subjects, each focusing on a distinct domain of knowledge but contributing to an integrated learning goal. In management, an organization may be divided into departments - finance, marketing, research, operations - each acting as a module with a specific role but coordinated under one structure. In architecture, buildings are designed with modular components such as prefabricated walls or units that can be rearranged or replaced.
 
 Modularization is about **complexity management**: dividing a whole into parts that are independent in function and cooperative in purpose. At even higher levels, modularization can be systemic or societal. Complex infrastructures - transportation networks, communication systems, and governance structures - are modularized into interacting parts [so that local failures do not collapse the entire system](https://en.wikipedia.org/wiki/Financial_crisis_of_2007%E2%80%932008).
 
@@ -77,10 +83,10 @@ Modularization is about **complexity management**: dividing a whole into parts t
 
 ### Recursion
 
-_Recursion_ occurs when a function calls itself to solve smaller parts of the same problem. Each recursive step reduces the problem size until it reaches a **base case**, the simplest situation where the function stops calling itself. Base case is **not** the starting point, it is the stopping condition
+_Recursion_ occurs when a function calls itself to solve smaller parts of the same problem. Each recursive step reduces the problem size until it reaches a **base case**, the simplest situation where the function stops calling itself. The base case is **not** the starting point, it is the stopping condition
 
 !!! note
-    You can imagine of real-life recursion: tree has branches, branches have their smaller branches, those branches have their own smaller branches, etc. But this recursion may go infinitely and you usually need to stop at some point. That stopping condition is the base case. Let's say, after four-five branching steps a tree will stop growing any branches. With that logic, there is no base case in the case of two mirrors oppositely directed to each other. There is no base can and you will see infinite reflections. Or: _infinite recursion._
+    You can imagine real-life recursion: a tree has branches, branches have smaller branches, those branches have their own smaller branches, etc. But this recursion may go infinitely and you usually need to stop at some point. That stopping condition is the base case. Let's say, after four-five branching steps a tree will stop growing any branches. With that logic, there is no base case in the case of two mirrors oppositely directed to each other. There is no base case and you will see infinite reflections. Or: _infinite recursion._
 
 We know that the factorial of `n` is the factorial of the previous number multiplied by `n`. That means:
 ```c
@@ -136,13 +142,13 @@ factorial(4) = factorial(3) * 4 = factorial(2) * 3 * 4 = factorial(1) * 2 * 3 * 
 
 _Name binding_ refers to the process of connecting _identifiers_ (names) to specific objects, values, or _memory locations_ in a program. It defines where and when a variable's name is linked to the data it represents. This action allows the program to store, access, and update information consistently.
 
-When you type `70`, somewhere in the memory an **object** is created. For example in memory cell represented with hexadecimal number `0x21A95BC`, bytes will allocated to represent `70` in binary. Then, if you want to reuse that value in the future, you need to **assign** (not equalize) that value to an identifier. 
+When a program needs to store the value `70`, it allocates memory to represent it. For example in memory cell represented with hexadecimal number `0x21A95BC`, bytes will be allocated to represent `70` in binary. Then, if you want to reuse that value in the future, you need to **assign** (not equalize) that value to an identifier. 
 
 ```c
 speed = 70
 ```
 
-The identifier speed becomes bound to the value `70` stored in memory. If later the value changes (`speed = 50`), the same name now refers to a different value but the same memory binding.
+The identifier speed becomes bound to the value `70` stored in memory. If later the value changes (`speed = 50`), the same name now refers to a different value, possibly stored in a different memory location.
 
 ## Dijkstra's Shortest Path Algorithm
 

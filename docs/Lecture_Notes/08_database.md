@@ -1,9 +1,15 @@
 # 08. Databases & Database Management Systems
 
-:material-account: Rahida Asadli, Rumiyya Alili, Ismayil Shahaliyev  
-:material-calendar: Dec 1 2025 :material-calendar-edit: Jan 31, 2026
+:material-account:
+<span class="meta-text">Rahida Asadli, Rumiyya Alili, Ismayil Shahaliyev</span>  
+:material-calendar:
+<span class="meta-text">Dec 1, 2025</span>
+&nbsp;&nbsp;
+:material-calendar-edit:
+<span class="meta-text">Jan 31, 2026</span>
 
-In the past, many systems stored information in simple text files. For example, a file named students.txt could have lines like:
+
+In the past, many systems stored information in simple text files. For example, a file named `students.txt` could have lines like:
 
 ```text
 1201, Rəfail, IT, 3.5
@@ -12,7 +18,7 @@ In the past, many systems stored information in simple text files. For example, 
 
 Each line is one student. To use this information in a program, the programmer has to open the file, read each line, and split it into parts (ID, name, major, GPA). That "splitting into parts" is what we call [parsing](https://en.wikipedia.org/wiki/Parsing): taking one long [string](https://en.wikipedia.org/wiki/String_%28computer_science%29) like `1201, Rəfail, IT, 3.5` and turning it into separate values: `1201`, `Rəfail`, `IT` , and `3.5`.
 
-If the university also has courses, grades, payments, dorms, and so on, there may be many different text files: students.txt , courses.txt , grades.txt, etc. Every application (mobile app, website, internal admin tool) must know how each file is structured and must write its own code to read, search, and update those files.
+If the university also has courses, grades, payments, dorms, and so on, there may be many different text files: `students.txt`, `courses.txt`, `grades.txt`, etc. Every application (mobile app, website, internal admin tool) must know how each file is structured and must write its own code to read, search, and update those files.
 
 This creates several problems (**Exercise.** Which problems?):
 
@@ -53,7 +59,7 @@ When a database table contains thousands or millions of records, searching for s
 When you create an index on a table, the database manager requires you to specify an _index key field_, the column on which the index will be based. For example, if you frequently search for students by their Student ID, you would create an index on the Student ID column. The database then performs these steps:
 
 - _Reading and Extracting._ The DBMS reads each record in the table and extracts the value from the key field along with a [pointer](https://en.wikipedia.org/wiki/Pointer_%28computer_programming%29) that indicates where that record is physically stored.
-- _Sorting._ All extracted values are sorted in alphanumeric order. This sorted list becomes the index.
+- _Sorting._ These values are organized in sorted order as part of the index structure.
 - _Creating a Search Structure._ The index is typically organized as a [tree structure](https://en.wikipedia.org/wiki/Tree_structure). This allows the database to search very efficiently. Instead of checking every entry, it uses a [divide and conquer](https://en.wikipedia.org/wiki/Divide-and-conquer_algorithm) approach: it starts at the top of the tree and narrows down the search by following branches, similar to how you would search for a word in a dictionary by opening it roughly in the middle and then deciding whether to look in the first half or second half.
 
 In practice, databases do not rely on the simple [binary search](https://en.wikipedia.org/wiki/Binary_search) described in the example above. Instead, they use structures such as [B-trees](https://en.wikipedia.org/wiki/B-tree) (or [B+ trees](https://en.wikipedia.org/wiki/B%2B_tree)) which generalize the same divide-and-conquer principle while being optimized for disk access and large datasets.
@@ -62,9 +68,9 @@ While indexes dramatically speed up searches, they come with costs. Indexes requ
 
 ## Data Models
 
-A database is never built "in the abstract". Database always [models](https://en.wikipedia.org/wiki/Data_modeling) something that exists in the real world. It means that every important object and every important interaction in those processes should be representable as data in the database.
+A database is never built "in the abstract". A database always [models](https://en.wikipedia.org/wiki/Data_modeling) something that exists in the real world. It means that every important object and every important interaction in those processes should be representable as data in the database.
 
-[Entity-Relationship (ER) diagram](https://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model) is a graphical representation of the data model. ER diagram uses a small set of visual symbols to represent the structure of data. Each symbol corresponds to a key concept: _entities, attributes_, and _relationships_. ER diagram is the blueprint from which the entire database [schema](http://schema) is built.
+[Entity-Relationship (ER) diagram](https://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model) is a graphical representation of the data model. An ER diagram uses a small set of visual symbols to represent the structure of data. Each symbol corresponds to a key concept: _entities, attributes_, and _relationships_. ER diagram is the blueprint from which the entire database [schema](http://schema) is built.
 
 **Entity** is something that exists independently and can be uniquely identified. It is an [abstraction](https://en.wikipedia.org/wiki/Abstraction_%28computer_science%29) that captures one distinguishable concept in the real world. The important point is that each entity must be capable of having data stored about it, and it can be uniquely distinguished from all other entities. Entities behave like nouns in language. Examples: _Employee_, _Computer_, _Song_, _Book_, _Department_.
 
@@ -74,7 +80,7 @@ A database is never built "in the abstract". Database always [models](https://en
 
 Each relationship has a **_cardinality_** (`1:1`, `1:N`, or `M:N`) that determines how the relationship will appear in the database schema. For example, one employee works in one department (`1:1`), one department has many employees (`1:N`), a student takes many courses and a course has many students (`M:N`).
 
-A data model _can_ be the collection of all these entities, their attributes, and their relationships. These constraints determine how tables will be constructed in the relational model. This data model is more than just storage: if the business rule says "a student cannot enroll in the same course twice in the same semester", that rule should be reflected in the model.
+A data model _can_ be the collection of all these entities, their attributes, and their relationships. These elements determine how tables will be constructed in the relational model. This data model is more than just storage: if the business rule says "a student cannot enroll in the same course twice in the same semester", that rule should be reflected in the model.
 
 !!! success "Exercise"
     Provide an example of good and bad data models.
@@ -187,7 +193,7 @@ A [transaction](https://en.wikipedia.org/wiki/Database_transaction) moves the da
 
 [ACID](https://en.wikipedia.org/wiki/ACID) describes the four rules a transaction must follow for the database to stay correct.
 
-**A** for **Atomicity**. A transaction must be completed fully, or not at all
+**A** for **Atomicity**. A transaction must be completed fully, or not at all.
 
 !!! note "Example"
     You transfer 20 AZN from your Bank Account A to Account B. Two steps occur: 1) Subtract 20 AZN from A, 2) Add 20 AZN to B. If step 2) fails (network crash), step 1) must be undone. Atomicity ensures money does not "disappear".
@@ -213,7 +219,8 @@ In contrast, many NoSQL systems were designed for large-scale, [distributed envi
 
 ## CAP Theorem
 
-[CAP theorem](https://en.wikipedia.org/wiki/CAP_theorem) states that a distributed data store cannot simultaneously guarantee _Consistency, Availability,_ and _Partition tolerance_. For example, when a network partition occurs, the system must choose between remaining available or maintaining strict consistency. about distributed systems - a system cannot guarantee all three.
+[CAP theorem](https://en.wikipedia.org/wiki/CAP_theorem) states that a distributed data store cannot simultaneously guarantee _Consistency, Availability,_ and _Partition tolerance_. For example, when a network partition occurs, the system must choose between remaining available or maintaining strict consistency. In distributed systems, a system cannot guarantee all three.
+
 
 **C** for **Consistency.** Everyone sees the same data
 

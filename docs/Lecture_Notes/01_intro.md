@@ -1,7 +1,12 @@
 # 01. Introduction
 
-:material-account: Rahida Asadli, Ismayil Shahaliyev  
-:material-calendar: Oct 10, 2025 :material-calendar-edit: Jan 30, 2026
+:material-account:
+<span class="meta-text">Rahida Asadli, Ismayil Shahaliyev</span>  
+:material-calendar:
+<span class="meta-text">Oct 10, 2025</span>
+&nbsp;&nbsp;
+:material-calendar-edit:
+<span class="meta-text">Jan 30, 2026</span>
 
 [_Engineering_](https://en.wikipedia.org/wiki/Engineering) (from Latin _ingenium_: cleverness) is the creative application of **scientific principles** to design, build, operate, and predict the behavior of structures, machines, processes, or systems in a safe and efficient manner to achieve a specific **objective**.
 
@@ -39,7 +44,7 @@ _Context_ is the background, circumstances, or setting that gives meaning to dat
 
 ## System
 
-[Cybernetics](https://en.wikipedia.org/wiki/Cybernetics) is the study of control, communication, and feedback in systems, a field developed by [Norbert Wiener](https://en.wikipedia.org/wiki/Norbert_Wiener). During WWII, Weiner worked on predicting the future position of enemy aircraft: he realized that both the gun and the pilot form a feedback system are constantly correcting actions based on error and delay rather than following a fixed plan. This insight led him to extend control theory beyond machines to living systems, emphasizing self-regulation and adaptation under uncertainty. This way of thinking later influenced [artificial intelligence](https://en.wikipedia.org/wiki/Artificial_intelligence) and [deep learning](https://en.wikipedia.org/wiki/Deep_learning), where feedback from errors is used to adjust internal _parameters_ and improve performance.
+[Cybernetics](https://en.wikipedia.org/wiki/Cybernetics) is the study of control, communication, and feedback in systems, a field developed by [Norbert Wiener](https://en.wikipedia.org/wiki/Norbert_Wiener). During WWII, Wiener worked on predicting the future position of enemy aircraft: he realized that the gun–pilot system forms a feedback system, constantly correcting actions based on error and delay rather than following a fixed plan. This insight led him to extend control theory beyond machines to living systems, emphasizing self-regulation and adaptation under uncertainty. This way of thinking later influenced [artificial intelligence](https://en.wikipedia.org/wiki/Artificial_intelligence) and [deep learning](https://en.wikipedia.org/wiki/Deep_learning), where feedback from errors is used to adjust internal _parameters_ and improve performance.
 
 !!! tip
     We will discuss artificial intelligence in our future weeks. See the [lecture notes](../09_ai) dedicated to the topic.
@@ -60,16 +65,15 @@ _System_ is a set of interrelated components working together toward a common go
 !!! note
     In a home heating system, the desired room temperature is the input, the furnace heating the air is the process, and the warm air circulating through the house is the output. Feedback comes from a thermostat, which senses the actual temperature and switches the furnace on or off to keep the room at the set temperature.
 
-
 - **Input.** The resources (data, materials, or energy) that enter the system.
 - **Process.** The transformation mechanism that converts input into output.
 - **Output.** The result produced by the system.
 - **Feedback.** Information from the output that is sent back to the system to influence future inputs or the process itself.
 
 !!! note
-    In the mid-19th century, several suspension bridges across Europe failed due to poor system design - weak materials and unpredictable environmental conditions. When John Roebling proposed the Brooklyn Bridge, he applied engineering systems thinking to overcome these failures.  Roebling's bridge demonstrates how system components and interactions determine reliability and success. When one subsystem (e.g., faulty cables) failed, built-in redundancies maintained the system's stability - an example of system resilience and feedback control in practice.
+    In the mid-19th century, several suspension bridges across Europe failed due to poor system design - weak materials and unpredictable environmental conditions. When John Roebling proposed the Brooklyn Bridge, he applied engineering systems thinking to overcome these failures. Roebling's bridge demonstrates how system components and interactions determine reliability and success. When one subsystem (e.g., faulty cables) failed, built-in redundancies maintained the system's stability.
 
-_Information system_ is a set of interrelated components that collect, **process**, store, disseminate **data** and **information**, provides a **feedback** mechanism to monitor and control its operation to make sure it continues to meet its goals and **objectives**.
+_Information system_ is a set of interrelated components that collect, **process**, store, disseminate **data** and **information**, and provide a **feedback** mechanism to monitor and control its operation to make sure it continues to meet its goals and **objectives**.
 
 
 !!! note

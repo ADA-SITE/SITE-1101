@@ -1,7 +1,13 @@
 # 10. Systems Development Life Cycle
 
-:material-account: Rahida Asadli, Rumiyya Alili, Ismayil Shahaliyev  
-:material-calendar: Dec 15 2025 :material-calendar-edit: Jan 31, 2026
+:material-account:
+<span class="meta-text">Rahida Asadli, Rumiyya Alili, Ismayil Shahaliyev</span>  
+:material-calendar:
+<span class="meta-text">Dec 15, 2025</span>
+&nbsp;&nbsp;
+:material-calendar-edit:
+<span class="meta-text">Jan 31, 2026</span>
+
 
 [Systems Development Life Cycle (SDLC)](https://en.wikipedia.org/wiki/Systems_development_life_cycle) is a framework that guides the creation of an information system from initial idea to a working product. It describes the process of identifying system requirements, designing the system, building it, and deploying it to users.
 
@@ -60,7 +66,7 @@ Economic feasibility focuses on whether the system is worth its cost. It compare
 !!! note
     If a supermarket plans to install self-checkout machines, it must consider whether the reduction in staff costs and faster checkout times will save more money than the cost of purchasing and maintaining the machines. If the benefits are greater than the costs, the project is economically feasible.
 
-Organizational feasibility examines how the system will fit within the organization and whether people will accept and use it. A system can fail even if it is technically and economically sound, simply because users resist it. _If we build it, will users demand it?_
+Organizational feasibility examines how the system will fit within the organization and whether people will accept and use it. A system can fail even if it is technically and economically sound, simply because users resist it. _If we build it, will users accept and use it?_
 
 !!! note
     If a university introduces a new online attendance system, it must ensure that lecturers and students are willing to use it and that proper training is provided. Strong management support is also essential for organizational feasibility.
@@ -71,7 +77,7 @@ If the project is approved, it moves into [project management](https://en.wikipe
 
 ### Analysis Phase
 
-_Analysis phase_ focuses on understanding the system in detail before it is designed or built. In this phase, the project team answers three key questions: **_who_** _will use the system_**,** **_what_** _the system must do, and_ **_where_** _and_ **_when_** _it will be used._ The goal is to clearly understand the current situation and define what the new system should achieve.
+_Analysis phase_ focuses on understanding the system in detail before it is designed or built. In this phase, the project team answers three key questions: **who** will use the system, **what** the system must do, and **where** and **when** it will be used. The goal is to clearly understand the current situation and define what the new system should achieve.
 
 During the analysis phase, the team first studies any existing system that is already in use. The team looks for problems, weaknesses, delays, errors, or user complaints. At the same time, they imagine how a better system could work in the future.
 
@@ -97,7 +103,7 @@ One of the first tasks in the design phase is choosing a _design strategy_. This
 
 After the design strategy is chosen, the team creates the [_system architecture_](https://en.wikipedia.org/wiki/Systems_architecture) _design_. This design describes the overall technical structure of the system, including the hardware, software, and network infrastructure. In many cases, the new system does not replace everything but instead connects to existing systems.
 
-At the same time, the team designs the [_user interface_](https://en.wikipedia.org/wiki/User_interface)_,_ which defines how users interact with the system. This includes screens, menus, buttons, forms, and reports. The goal is to make the system easy to use and understandable.
+At the same time, the team designs the [_user interface_](https://en.wikipedia.org/wiki/User_interface), which defines how users interact with the system. This includes screens, menus, buttons, forms, and reports. The goal is to make the system easy to use and understandable.
 
 The design phase also includes creating _database and file specifications._ These specifications clearly define what data will be stored, how it will be organized, and where it will be saved.
 
@@ -110,7 +116,7 @@ All design outputs are combined into a single document called the _system specif
 
 ### Implementation Phase
 
-In the _implementation phase_ phase, the system is actually built and put into use. If the organization decided to buy an existing software package during the design phase, implementation includes installing and configuring that software instead of building it from scratch. This phase usually receives the most attention because it is often the longest and most expensive part of system development.
+In the _implementation phase_, the system is actually built and put into use. If the organization decided to buy an existing software package during the design phase, implementation includes installing and configuring that software instead of building it from scratch. This phase usually receives the most attention because it is often the longest and most expensive part of system development.
 
 The first step of implementation is _system construction_. During system construction, programmers write the code, databases are created, and system components are connected. At the same time, the system is carefully _tested_ to make sure it works as expected. **Testing is extremely important** because fixing errors after the system is already in use can be very costly and disruptive. For example, if an online banking system has an error in transaction processing, it could lead to financial losses and loss of customer trust. For this reason, organizations often spend more time testing the system than writing the actual code.
 
@@ -155,7 +161,7 @@ One major advantage of the waterfall model is its clarity and structure. Because
     A university develops a course registration prototype with simple search and enrollment features. Students test it, suggest improvements, and developers iteratively refine it until it becomes the production system.
 
 
-The _throwaway prototyping_ uses prototypes as a learning tool that are discarded after serving their purpose, not evolved into the final system. After initial requirements analysis, the team builds quick design prototypes to explore alternatives, clarify uncertainties, and test technical feasibility. These may be simple mock-up screens or small [proof-of-concept](https://en.wikipedia.org/wiki/Proof_of_concept) components. Once major questions are answered, prototypes are discarded and full development begins. This approach reduces risk and leads to more stable and reliable final systems because important problems are solved before real development begins. However, it can take longer to deliver since the prototypes themselves are not reused.
+_Throwaway prototyping_ uses prototypes as a learning tool that are discarded after serving their purpose, not evolved into the final system. After initial requirements analysis, the team builds quick design prototypes to explore alternatives, clarify uncertainties, and test technical feasibility. These may be simple mock-up screens or small [proof-of-concept](https://en.wikipedia.org/wiki/Proof_of_concept) components. Once major questions are answered, prototypes are discarded and full development begins. This approach reduces risk and leads to more stable and reliable final systems because important problems are solved before real development begins. However, it can take longer to deliver since the prototypes themselves are not reused.
 
 !!! note
     Before developing a new hospital patient management system, the team builds a quick prototype that simulates patient registration, appointment scheduling, and record lookup using mock data and simple screens. The prototype is shown to doctors, nurses, and administrative staff to discover missing requirements, confusing workflows, and unrealistic assumptions. After this feedback is collected and the requirements are clarified, the prototype is discarded and the real system is designed and implemented using proper architecture, security, and performance standards.
@@ -242,4 +248,4 @@ JAD is typically used during the analysis phase, especially for systems with man
 - [What is Agile?](https://www.youtube.com/watch?v=Z9QbYZh1YXY)
 - [UML use case diagrams](https://www.youtube.com/watch?v=4emxjxonNRI&t=446)
 - [UML class diagrams](https://www.youtube.com/watch?v=6XrL5jXmTwM)
-- [Sotware Testing Explained in 100 Seconds](https://www.youtube.com/watch?v=u6QfIXgjwGQ)
+- [Software Testing Explained in 100 Seconds](https://www.youtube.com/watch?v=u6QfIXgjwGQ)
