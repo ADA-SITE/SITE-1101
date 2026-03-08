@@ -143,6 +143,66 @@ In this SITE 1101 team project, students explore how [computer hardware](/lectur
     </div>
   </article>
 
+    <article class="team-card">
+    <div class="team-media">
+      <iframe
+        src="https://www.youtube.com/embed/nJNhMmQfaaA"
+        title="Team 5 video"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <div class="team-info">
+      <div class="team-title">
+        <span class="team-label">Team 5:</span>
+        <span class="team-members">Ravan Fataliyev, Roya Alizada, Subhan Abbasli</span>
+      </div>
+      <div class="team-semester">Spring 2026</div>
+    </div>
+  </article>
+
+  <article class="team-card">
+    <div class="team-media">
+      <iframe
+        src="https://www.youtube.com/embed/5OPZF-YN6yg"
+        title="Team 9 video"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <div class="team-info">
+      <div class="team-title">
+        <span class="team-label">Team 9:</span>
+        <span class="team-members">Solmaz Adigozalli, Jabrayil Goyushov, Yusif Raufzada, Shamir Valiyev</span>
+      </div>
+      <div class="team-semester">Spring 2026</div>
+    </div>
+  </article>
+
+    <article class="team-card">
+    <div class="team-media">
+      <iframe
+        src="https://www.youtube.com/embed/GNseYjYp-1k"
+        title="Team 8 video"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <div class="team-info">
+      <div class="team-title">
+        <span class="team-label">Team 8:</span>
+        <span class="team-members">Daniz Ahmadova, Ilaha Osmanova, Emil Humbatov</span>
+      </div>
+      <div class="team-semester">Spring 2026</div>
+    </div>
+  </article>
+
 </div>
 
 
