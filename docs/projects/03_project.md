@@ -3,8 +3,8 @@
 <div class="team-grid">
   <article class="team-card">
     <div class="team-links">
-      <a class="team-link team-link--split" href="https://www.instagram.com/team83_site1101/reel/DDm3Xv-sSYW/" target="_blank" rel="noopener">"car" edit</a>
-      <a class="team-link team-link--split" href="https://www.instagram.com/reel/DDm3cNmM_Nf/" target="_blank" rel="noopener">broken hearts 💔</a>
+      <a class="team-link team-link--split team-link--car-edit" href="https://www.instagram.com/team83_site1101/reel/DDm3Xv-sSYW/" target="_blank" rel="noopener"><span class="team-link-label">"car" edit</span></a>
+      <a class="team-link team-link--split team-link--broken-hearts" href="https://www.instagram.com/reel/DDm3cNmM_Nf/" target="_blank" rel="noopener"><span class="team-link-label">broken hearts 💔</span></a>
     </div>
 
     <div class="team-info">
