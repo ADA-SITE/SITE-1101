@@ -1,5 +1,7 @@
 # Project 3
 
+In this SITE 1101 team project, students define [algorithms](../notes/04_algorithm/) and [program](../notes/05_software/) the [LEGO Mindstorms](https://education.lego.com/en-us/product-resources/mindstorms-ev3/teacher-resources/classroom-materials/) robots to sense the environment and carry out planned behaviors. Below are some of the finest video submissions by students.
+
 <div class="team-grid">
   <article class="team-card">
     <div class="team-links">

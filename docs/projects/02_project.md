@@ -1,5 +1,7 @@
 # Project 2
 
+In this SITE 1101 team project, students teach [algorithms](../notes/04_algorithm/) to schoolchildren through [Hour of Code](https://hourofcode.com/) activity and contribute socially. Below are some of the finest video submissions by students.
+
 <div class="team-grid">
   <article class="team-card">
     <div class="team-media">

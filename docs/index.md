@@ -1,46 +1,39 @@
 # 🎓 SITE 1101: Principles of Information Systems
 
-The course provides a general overview of what SITE students of the [ADA University](https://www.ada.edu.az/en/about/ada-university) will study throughout their bachelor’s program. It introduces the fundamentals of information technology and computer-based systems, including hardware, software, network, database, artificial intelligence, system analysis and design, programming, etc. The course was originally developed by [Araz Yusubov](https://www.ada.edu.az/en/schools/site/members/faculty/58-araz-yusubov) and [Nuraddin Sadili](https://www.ada.edu.az/en/schools/site/members/faculty/76-nuraddin-sadili) with iterations over the years.
+The course provides a general overview of what SITE students of the [ADA University](https://www.ada.edu.az/en/about/ada-university) will study throughout their bachelor's program. It introduces the fundamentals of information technology and computer-based systems, including hardware, software, network, database, artificial intelligence, system analysis and design, programming... The course in its current form was originally developed by [Araz Yusubov](https://www.ada.edu.az/en/schools/site/members/faculty/58-araz-yusubov) and had many iterations over the years (since 2014!).
 
-## Fall 2025
+## Fall 2026
 
-This website was launched at the end of the Fall 2025 semester with the efforts of our great Teaching Assistants [Nilufar Ismayilova](https://www.linkedin.com/in/nilufar-ismayilova-24b7523a2), [Rahida Asadli](https://www.linkedin.com/in/rahidaasadli) (see [Lecture Notes](Lecture_Notes)), and [Rahman Karimov](https://www.linkedin.com/in/rahman-karimov-22444b25b) (Website), as well as the guidance of the course instructors [Rumiyya Alili](https://www.linkedin.com/in/rumiyya-alili) and [Ismayil Shahaliyev](https://www.ada.edu.az/en/schools/site/members/faculty/72-ismayil-shahaliyev).
+Office Hours? Games! There will be (optional) weekly social activity where students will debate and play various games (charades, pictionary, etc.) for teambuilding, lecture overview, and Q&A. It should be fun! Details will be shared over the Blackboard.
 
-## Spring 2026
+## Communication Rules
 
-The course was taught by Ismayil Shahaliyev and Araz Yusubov. The website was migrated to `mkdocs` with updates for the ongoing semester. Project 4 was brought back with certain revision of the course content.
-
-## Office Hours
-
-Students are required to consistently check the course Blackboard page for announcements. General-purpose questions useful to other students should be asked on Blackboard discussion page. For private matters, students should use email. See [communication rules](general/communication) for further details. TA office hours for the semester will be shared on blackboard.
+Students are required to consistently check the course Blackboard page for announcements. General-purpose questions useful to other students should be asked on Blackboard discussion page. For private matters, students should use email. See [communication rules](general/communication) for further details.
 
 ## Technological Requirements
 Students are to use their laptops to implement the class assignments. [Github account](https://github.com/), downloaded [git version control](https://git-scm.com/book/ms/v2/Getting-Started-About-Version-Control) system, and IDE ([VSCode](https://code.visualstudio.com/) or [Cursor](https://cursor.com/download)) will also be needed. Additional requirements may be provided by the instructor during the semester.
 
 
 ## Deadline Policy
-Deadlines will never be extended. When submitting, a student must consider possible internet
-connection issues, uploaded file size, etc. Late submissions of one minute until thirty minutes
-will receive a 10% penalty, late submissions of thirty minutes until one day will receive a 25%
-penalty with no claim for bonuses (if there are any), late submissions of more than one day will receive zero.
+Deadlines will never be extended. When submitting, a student must consider possible internet connection issues, uploaded file size, etc. **Late submissions** of 1 minute until 30 minutes will receive a 10% penalty, late submissions of thirty minutes until one day will receive a 25% penalty with no claim for bonuses (if there are any), late submissions of more than one day will receive 0.
 
-## Participation
-Students are expected to review the material covered in class and come prepared for the next
-session’s discussions. Participation will be encouraged through both general discussion
-questions and individual questions directed to selected students.[^1] For **excused absences** (e.g. illnesses), a student must write an email with a document of proof to their advisor, who will inform the relevant instructors.
+## Participation & Attendance
 
-## Homeworks and Projects
-The detailed instructions and grading criteria of homeworks and projects will be communicated
-to students during the semester. Students are expected follow the instructions and submit their
-assignments before the deadline. 
+Students are expected to review the material covered in class and come prepared. Participation will be tested with a quiz-based game. If a student is called upon and is absent they will receive a grade of 0.[^1] Total grade will be calculated as average of all participation points. For **excused absences** (i.e. illnesses, university-wide events, events related to a student’s major), a student must write an email with a document of proof to their academic advisor, who will inform the relevant instructors. Instructors will then make a decision.
+
+## Projects
+The detailed instructions and grading criteria for projects will be communicated to students during the semester. Students are expected follow the instructions and submit their assignments before the deadline. In team projects, students will form a group of 4 (± 1) members. Examples of some of the high-quality projects can be found in the project's page.
 
 
 ## Examination
-You will have two exams: midterm and final. Both exams will be computer-based (unless noted
-otherwise) with questions of various types (e.g. multiple-choice, fill-in-the-blank, code/essay). More specific rules will be communicated to you before the exam.[^2]
+There will be two exams: midterm and final. Both exams will be computer-based (unless noted otherwise) with questions of various types (e.g. multiple-choice, fill-in-the-blank, code/essay). More specific rules or updates will be communicated to students before the exam.[^2]
 
 ## Study Materials
-Study materials will be shared with you on blackboard throughout the semester. [Lecture Notes](Lecture_Notes) are available online for this course.
+The course textbook is an optional reading: _Principles of Information Systems_ (Stair & Reynolds, 13th edition or later, can be found at ADA University library). Compact lecture notes and additional material are provided online in the course website. Further study materials will be shared with students on Blackboard throughout the semester.
+
+## Past Iterations
+
+**Fall 2025.** The course website was launched. [Lecture Notes](notes/01_intro) and [Project Leaderboard](projects/01_project) were introduced. **Spring 2026.** The website was migrated to `mkdocs`. The [robotics project](projects/03_project/) was brought back with certain revision of the course content.
 
 [^1]: In case of difficulties in communication, you are encouraged to consult your academic advisor and seek psychological support.
 

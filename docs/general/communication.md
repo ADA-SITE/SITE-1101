@@ -12,7 +12,7 @@ If it is a **general-purpose question**, an answer to which will be **useful to 
 ## Emails
 If it is a **personal (private) question**, then a student should opt for an email. Emails should follow the provided template (see below) and have all the relevant emails in [carbon copy (CC)](https://sparkmailapp.com/blog/email-cc-bcc-meaning). For example, in case of writing an individual question to your instructor, you should put all co-instructor emails in CC. In case of writing an email regarding your team project, you should put all co-instructor AND all teammate emails in CC. 
 
-Your emails should have a meaningful title (subject), introduction, body, and signature. The following is one possible template that you can use in your daily email conversations. You can [automatically generate](https://online.ada.edu.az/signature/ada.html) it for yourselves for ADA University. .
+Your emails should have a meaningful title (subject), introduction, body, and signature. The following is one possible template that you can use in your daily email conversations. You can [automatically generate](https://online.ada.edu.az/signature/ada.html) it for yourselves for ADA University.
 
 
 <figure style="margin: 1em 0; text-align: center;">

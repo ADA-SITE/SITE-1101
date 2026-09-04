@@ -1,6 +1,6 @@
 # Project 1
 
-In this SITE 1101 team project, students explore how [computer hardware](/lectures/site-1101-lecture-notes-04/) works by physically building and testing basic digital logic. The project focuses on constructing NOT, AND, and OR [logic gates](/lectures/site-1101-lecture-notes-03/) from scratch using transistors, resistors, LEDs, and a breadboard in our beautiful lab room B012 managed by our great Lab Coordinator [Nariman Vahabli](https://www.linkedin.com/in/nariman-vahabli-856970251). Bonus tasks extend learning by combining gates to create NAND and XOR logic through collaboration. Below are some of the finest videos by students.
+In this SITE 1101 team project, students explore how [computer hardware](../notes/03_hardware/) works by physically building and testing basic digital logic. The project focuses on constructing NOT, AND, and OR [logic gates](../notes/02_binary/) from scratch using transistors, resistors, LEDs, and a breadboard in labs managed by [Nariman Vahabli](https://www.linkedin.com/in/nariman-vahabli-856970251). Below are some of the finest video submissions by students.
 
 <div class="team-grid">
 <article class="team-card">

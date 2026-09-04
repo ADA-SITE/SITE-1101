@@ -1,5 +1,7 @@
 # Project 4
 
+In this SITE 1101 individual project, students build a personal portfolio website and publish it online. Below are some of the submissions by students.
+
 <div class="team-grid">
   <article class="team-card">
     <div class="team-media">
