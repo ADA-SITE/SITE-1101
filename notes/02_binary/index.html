@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://ada-site.github.io/SITE-1101/Lecture_Notes/01_intro/">
+        <link rel="canonical" href="https://ada-site.github.io/SITE-1101/notes/02_binary/">
       
       
-        <link rel="prev" href="../../general/resources/">
+        <link rel="prev" href="../01_intro/">
       
       
-        <link rel="next" href="../02_binary/">
+        <link rel="next" href="../03_hardware/">
       
       
         
@@ -25,7 +25,7 @@
     
     
       
-        <title>01. Introduction - SITE 1101 Principles of Information Systems</title>
+        <title>02. Binary Representation, Arithmetic & Logic Operations - SITE 1101 Principles of Information Systems</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#01-introduction" class="md-skip">
+        <a href="#02-binary-representation-arithmetic-logic-operations" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              01. Introduction
+              02. Binary Representation, Arithmetic &amp; Logic Operations
             
           </span>
         </div>
@@ -225,7 +225,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../course/2025_fall/" class="md-tabs__link">
+        <a href="../../course/2026_fall/" class="md-tabs__link">
           
   
   
@@ -267,11 +267,11 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+        <a href="../01_intro/" class="md-tabs__link">
           
   
   
-  Lecture Notes
+  Notes
 
         </a>
       </li>
@@ -405,14 +405,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../course/2025_fall/" class="md-nav__link">
+      <a href="../../course/2026_fall/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Fall 2025
+    Fall 2026
   
 
     
@@ -613,7 +613,7 @@
   <span class="md-ellipsis">
     
   
-    Lecture Notes
+    Notes
   
 
     
@@ -629,11 +629,39 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Lecture Notes
+    Notes
   
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01_intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    01. Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -658,7 +686,7 @@
   <span class="md-ellipsis">
     
   
-    01. Introduction
+    02. Binary Representation, Arithmetic &amp; Logic Operations
   
 
     
@@ -676,7 +704,7 @@
   <span class="md-ellipsis">
     
   
-    01. Introduction
+    02. Binary Representation, Arithmetic &amp; Logic Operations
   
 
     
@@ -702,10 +730,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#data-information-knowledge" class="md-nav__link">
+  <a href="#digital-vs-analog" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Data, Information, Knowledge
+        Digital vs Analog
       
     </span>
   </a>
@@ -713,10 +741,82 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#system" class="md-nav__link">
+  <a href="#bit-byte-data-units" class="md-nav__link">
     <span class="md-ellipsis">
       
-        System
+        Bit, Byte, Data Units
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#number-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Number Systems
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#twos-complement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Two’s Complement
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Two’s Complement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1-positive-result" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 1: Positive result
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2-negative-result" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 2: Negative result
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transistors-and-moores-law" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Transistors and Moore’s Law
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logic-gates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logic Gates
       
     </span>
   </a>
@@ -738,34 +838,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../02_binary/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    02. Binary Representation, Arithmetic &amp; Logic Operations
-  
-
-    
-  </span>
-  
-  
-
-      </a>
     </li>
   
 
@@ -1230,10 +1302,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#data-information-knowledge" class="md-nav__link">
+  <a href="#digital-vs-analog" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Data, Information, Knowledge
+        Digital vs Analog
       
     </span>
   </a>
@@ -1241,10 +1313,82 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#system" class="md-nav__link">
+  <a href="#bit-byte-data-units" class="md-nav__link">
     <span class="md-ellipsis">
       
-        System
+        Bit, Byte, Data Units
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#number-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Number Systems
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#twos-complement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Two’s Complement
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Two’s Complement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1-positive-result" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 1: Positive result
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2-negative-result" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 2: Negative result
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transistors-and-moores-law" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Transistors and Moore’s Law
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logic-gates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logic Gates
       
     </span>
   </a>
@@ -1282,98 +1426,496 @@
   
 
 
-<h1 id="01-introduction">01. Introduction</h1>
+<h1 id="02-binary-representation-arithmetic-logic-operations">02. Binary Representation, Arithmetic &amp; Logic Operations</h1>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"/></svg></span>
-<span class="meta-text">Rahida Asadli, Ismayil Shahaliyev</span><br />
+<span class="meta-text">Nilufar Ismayilova, Ismayil Shahaliyev</span><br />
 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg></span>
-<span class="meta-text">Oct 10, 2025</span>
+<span class="meta-text">Oct 23, 2025</span>
 &nbsp;&nbsp;
 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h5v-2H5V8h14v1h2V5a2 2 0 0 0-2-2m2.7 10.35-1 1-2.05-2 1-1c.2-.21.54-.22.77 0l1.28 1.28c.19.2.19.52 0 .72M12 18.94l6.07-6.06 2.05 2L14.06 21H12z"/></svg></span>
 <span class="meta-text">Jan 30, 2026</span></p>
-<p><a href="https://en.wikipedia.org/wiki/Engineering"><em>Engineering</em></a> (from Latin <em>ingenium</em>: cleverness) is the creative application of <strong>scientific principles</strong> to design, build, operate, and predict the behavior of structures, machines, processes, or systems in a safe and efficient manner to achieve a specific <strong>objective</strong>.</p>
-<p><a href="https://en.wikipedia.org/wiki/Technology"><em>Technology</em></a> (from ancient Greek <em>τέχνη + λογία = techne + logia</em>: science + art, skill) is the application of techniques, skills, methods, and processes to produce goods and services or achieve specific objectives.</p>
-<!--
+<h2 id="digital-vs-analog">Digital vs Analog</h2>
+<p><em>Discrete</em> means values change in separate, well-defined steps with no possible values in between. <em>Continuous</em> means values can vary smoothly and without breaks over a range — between any two values, there are infinitely many possible intermediate values.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A standard light switch is either on or off — there is nothing between those two states — hence, it is discrete. Likewise, a digital clock that shows <code>14:35</code> jumps straight to <code>14:36</code> with no "in-between" time displayed. In a mercury thermometer, however, if the temperature is <span class="arithmatex">\(21°C\)</span> and then rises to <span class="arithmatex">\(22°C\)</span>, it passes through <span class="arithmatex">\(21.1°C\)</span>, <span class="arithmatex">\(21.11°C\)</span>, <span class="arithmatex">\(21.111°C\)</span>, and so on. The temperature does not "jump" from one reading to another. It changes continuously.</p>
+</div>
+<p>This distinction is why <em>digital</em> systems are far more noise-tolerant than <em>analog</em> ones. In a continuous analog system, even a tiny fluctuation (temperature drift or electrical noise) can change the value. In a discrete digital system, as long as the signal is close enough to one of the two states (for example, above <span class="arithmatex">\(3V\)</span> is interpreted as <span class="arithmatex">\(1\)</span>, below <span class="arithmatex">\(1V\)</span> as <span class="arithmatex">\(0\)</span>, with an undefined region in between), the system will interpret it correctly. This tolerance to noise is why modern computers rely almost entirely on discrete binary states.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In an analog system, numbers <span class="arithmatex">\(3\)</span> and <span class="arithmatex">\(5\)</span> could be represented by physical quantities such as voltage levels of <span class="arithmatex">\(3V\)</span> and <span class="arithmatex">\(5V\)</span>. To add them, the machine might combine the voltages to produce <span class="arithmatex">\(8V\)</span>. But if noise shifts levels by just <span class="arithmatex">\(0.2V\)</span>, the output might become <span class="arithmatex">\(7.8V\)</span> or <span class="arithmatex">\(8.2V\)</span>, which no longer corresponds exactly to <span class="arithmatex">\(8\)</span>. Repeated operations would accumulate these errors, making the result unreliable.</p>
+</div>
+<p>Digital circuits only need to distinguish between a small set of clearly separated values, which makes them more reliable, scalable, and resistant to noise. The simplest and most robust choice for that was the usage two discrete states. This directly matches what electronic components can reliably detect: current flowing or not, voltage high or low, transistor open or closed. Those two states are naturally represented by <span class="arithmatex">\(0\)</span> and <span class="arithmatex">\(1\)</span>, forming the <a href="https://en.wikipedia.org/wiki/Binary_number">binary number</a> system.</p>
+<h2 id="bit-byte-data-units">Bit, Byte, Data Units</h2>
+<p>All digital information — including instructions themselves — is expressed as <em>bits</em> (binary digits, formally introduced by <a href="https://en.wikipedia.org/wiki/Claude_Shannon">Claude Shannon</a> in <a href="https://en.wikipedia.org/wiki/A_Mathematical_Theory_of_Communication">A Mathematical Theory of Communication</a>). A <em>bit</em> is the smallest unit of data and can hold one of two values: <span class="arithmatex">\(0\)</span> or <span class="arithmatex">\(1\)</span>. Every number, letter, image, or instruction is ultimately encoded as a sequence of bits.</p>
+<p>With two bits, there are <code>2×2=4</code> possible combinations: <code>00</code>, <code>01</code>, <code>10</code>, and <code>11</code>. With three bits, there are <code>2×2×2=8</code> combinations: <code>000</code>, <code>001</code>, <code>010</code>, <code>011</code>, <code>100</code>, <code>101</code>, <code>110</code>, and <code>111</code>. In general, with <span class="arithmatex">\(N\)</span> bits, the total number of combinations is <span class="arithmatex">\(2^N\)</span>. Each additional bit doubles the range of values that can be represented.</p>
+<p>Eight bits grouped together form a <em>byte</em>, the standard unit for representing a single character or a small piece of data. For example, the binary sequence <code>01000001</code> represents the letter <span class="arithmatex">\(A\)</span>  in <a href="https://en.wikipedia.org/wiki/ASCII">ASCII</a>. Larger quantities of data are measured in multiples of bytes: kilobytes (KB), megabytes (MB), gigabytes (GB), and beyond.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Data Unit</strong></th>
+<th><strong>Size</strong></th>
+<th><strong>Data Unit</strong></th>
+<th><strong>Size</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bit (b)</td>
+<td><span class="arithmatex">\(1\)</span></td>
+<td>Byte (B)</td>
+<td><span class="arithmatex">\(8\)</span> bits</td>
+</tr>
+<tr>
+<td>Kilobyte (KB)</td>
+<td><span class="arithmatex">\(10^3\)</span> bytes</td>
+<td>Megabyte (MB)</td>
+<td><span class="arithmatex">\(10^{6}\)</span> bytes</td>
+</tr>
+<tr>
+<td>Gigabyte (GB)</td>
+<td><span class="arithmatex">\(10^{9}\)</span> bytes</td>
+<td>Terabyte (TB)</td>
+<td><span class="arithmatex">\(10^{12}\)</span> bytes</td>
+</tr>
+<tr>
+<td>Petabyte (PB)</td>
+<td><span class="arithmatex">\(10^{15}\)</span> bytes</td>
+<td>Exabyte (EB)</td>
+<td><span class="arithmatex">\(10^{18}\)</span> bytes</td>
+</tr>
+<tr>
+<td>Zettabyte (ZB)</td>
+<td><span class="arithmatex">\(10^{21}\)</span> bytes</td>
+<td>Yottabyte (YB)</td>
+<td><span class="arithmatex">\(10^{24}\)</span> bytes</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition success">
+<p class="admonition-title">Exercise</p>
+<p>How many different colors can be represented in an <a href="https://en.wikipedia.org/wiki/RGB_color_model">RGB image</a> if each of the three color channels (Red, Green, Blue) is stored using 8 bits?</p>
+</div>
+<h2 id="number-systems">Number Systems</h2>
+<p>Every piece of data inside a computer — numbers, letters, images, even videos — is represented using <em>number systems</em>. A number system defines how we represent and interpret numerical values using a specific set of symbols (digits) and a <em>base</em> that indicates how many symbols are available.</p>
+<table>
+<thead>
+<tr>
+<th><strong>System</strong></th>
+<th><strong>Base</strong></th>
+<th><strong>Digits Used</strong></th>
+<th><strong>Example</strong></th>
+<th><strong>Usage</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Decimal</strong></td>
+<td>10</td>
+<td>0–9</td>
+<td>245₁₀</td>
+<td>Everyday counting and arithmetic.</td>
+</tr>
+<tr>
+<td><strong>Binary</strong></td>
+<td>2</td>
+<td>0, 1</td>
+<td>101101₂</td>
+<td>Used internally by digital computers.</td>
+</tr>
+<tr>
+<td><strong>Hexadecimal</strong></td>
+<td>16</td>
+<td>0–9, A–F</td>
+<td>2AF₁₆</td>
+<td>Memory addresses, machine code, colors, compact notation.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In decimal, binary, hexadecimal systems, each position represents a power of 2, 10, 16, respectively.Hexadecimal system uses 0–9 and A–F for values 10–15. Each hex digit equals 4 binary bits.</p>
+<ul>
+<li>245₁₀ = (2×10²) + (4×10¹) + (5×10⁰) = 200 + 40 + 5 = 245₁₀</li>
+<li>1011₂ = (1×2³) + (0×2²) + (1×2¹) + (1×2⁰) = 8 + 0 + 2 + 1 = 11₁₀</li>
+<li>2AF₁₆ = (2×16²) + (A×16¹) + (F×16⁰) = (2×256) + (10×16) + (15×1) = 687₁₀</li>
+</ul>
+</div>
+<table>
+<thead>
+<tr>
+<th><strong>Decimal</strong></th>
+<th><strong>Binary</strong></th>
+<th><strong>Hex</strong></th>
+<th><strong>Decimal</strong></th>
+<th><strong>Binary</strong></th>
+<th><strong>Hex</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0000</td>
+<td>0</td>
+<td>8</td>
+<td>1000</td>
+<td>8</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0001</td>
+<td>1</td>
+<td>9</td>
+<td>1001</td>
+<td>9</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0010</td>
+<td>2</td>
+<td>10</td>
+<td>1010</td>
+<td>A</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0011</td>
+<td>3</td>
+<td>11</td>
+<td>1011</td>
+<td>B</td>
+</tr>
+<tr>
+<td>4</td>
+<td>0100</td>
+<td>4</td>
+<td>12</td>
+<td>1100</td>
+<td>C</td>
+</tr>
+<tr>
+<td>5</td>
+<td>0101</td>
+<td>5</td>
+<td>13</td>
+<td>1101</td>
+<td>D</td>
+</tr>
+<tr>
+<td>6</td>
+<td>0110</td>
+<td>6</td>
+<td>14</td>
+<td>1110</td>
+<td>E</td>
+</tr>
+<tr>
+<td>7</td>
+<td>0111</td>
+<td>7</td>
+<td>15</td>
+<td>1111</td>
+<td>F</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Decimal → Binary:</strong> Convert 13₁₀ by writing it as powers of two: 8+4+1=13. Hence 1101₂.</p>
+<p><strong>Binary → Decimal:</strong> 1011₂ means 8+2+1=11, so it is 11₁₀.</p>
+<p><strong>Binary ↔ Hexadecimal:</strong> Group into 4-bit chunks: 10101110₂ = 1010₂ 1110₂ = AE₁₆.</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Exercise</p>
+<p>Write down different numbers and convert back and forth between decimal, binary, and hexadecimal.</p>
+</div>
+<h2 id="twos-complement">Two’s Complement</h2>
+<p>Just like in the decimal system, numbers in binary can be added together. Since binary uses only <span class="arithmatex">\(0\)</span> and <span class="arithmatex">\(1\)</span>, the addition rules are simple. Binary addition is a core operation performed by the <a href="../03_hardware">Arithmetic Logic Unit (ALU)</a> in a CPU.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Addition</strong></th>
+<th><strong>Result</strong></th>
+<th><strong>Carry</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0 + 0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0 + 1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1 + 0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1 + 1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>In digital systems, subtraction is often performed using addition:
+<span class="arithmatex">\(A − B = A + (−B)\)</span>. To make this possible, computers represent negative numbers in <a href="https://en.wikipedia.org/wiki/Two%27s_complement">two's complement</a> form, allowing a single adder circuit to handle both addition and subtraction.</p>
+<p>With 3 bits, there are <span class="arithmatex">\(2^3 = 8\)</span> different bit patterns. How we interpret those patterns depends on whether we want only positive numbers or both positive and negative. If we choose <strong>unsigned representation</strong>, all 3 bits are used for positive numbers. The patterns go from <code>000</code> to <code>111</code>, which correspond to the numbers <span class="arithmatex">\(0\)</span> through <span class="arithmatex">\(7\)</span>.</p>
+<p>If we decide to include negative numbers, we can, for example, use one bit as a sign. The first bit indicates whether the number is positive (0) or negative (1), and the remaining two bits show the magnitude: <code>000</code> represents <span class="arithmatex">\(+0\)</span>, <code>001</code> is <span class="arithmatex">\(+1\)</span>, <code>010</code> is <span class="arithmatex">\(+2\)</span>, <code>011</code> is <span class="arithmatex">\(+3\)</span>, and the negative side goes from <code>100</code> (-0) to <code>111</code> (-3). This wastes one code for <span class="arithmatex">\(-0\)</span> and makes arithmetic complicated and inefficient (try subtracting <span class="arithmatex">\(2\)</span> from <span class="arithmatex">\(1\)</span> in with sign bit representation). Hence, the naïve "sign bit" approach (one sign bit + magnitude bits) creates two zeros (<span class="arithmatex">\(+0\)</span> and <span class="arithmatex">\(−0\)</span>) and breaks arithmetic in practice. </p>
+<p>Two's complement avoids these issues. With 3 bits, positives go from <code>000</code> (0) to <code>011</code> (3), and negatives go from <code>100</code> (−4) to <code>111</code> (−1). There is only one zero, and addition/subtraction works naturally. To find the negative of a number in two’s complement:</p>
+<ol>
+<li>Invert the bits</li>
+<li>Add 1</li>
+<li>Discard any overflow carry</li>
+</ol>
+<h3 id="example-1-positive-result">Example 1: Positive result</h3>
+<p><span class="arithmatex">\(A=7\)</span>, <span class="arithmatex">\(B=5\)</span>. Compute <span class="arithmatex">\(A - B\)</span> using 4-bit binary.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Step</strong></th>
+<th><strong>Operation</strong></th>
+<th><strong>Result</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Write in binary</td>
+<td>A = 0111₂, B = 0101₂</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Two’s complement of B</td>
+<td>0101 → 1010 → 1010 + 0001 = 1011₂</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Add</td>
+<td>0111 + 1011 = 10010₂</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Discard carry</td>
+<td>0010₂</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Convert</td>
+<td>2₁₀</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example-2-negative-result">Example 2: Negative result</h3>
+<p>Compute <span class="arithmatex">\(B−A\)</span> using 4-bit binary.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Step</strong></th>
+<th><strong>Operation</strong></th>
+<th><strong>Result</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Write in binary</td>
+<td>5 = 0101₂, 7 = 0111₂</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Two’s complement of 7</td>
+<td>0111 → 1000 → 1000 + 0001 = 1001₂</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Add</td>
+<td>0101 + 1001 = 1110₂</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Interpret as negative</td>
+<td>1110₂ is negative in 4-bit two’s complement</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Magnitude (optional)</td>
+<td>1110 → 0001 → 0001 + 1 = 0010₂ → 2₁₀, so result is −2₁₀</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition success">
+<p class="admonition-title">Exercise</p>
+<p>Subtract any two numbers in binary using two’s complement.</p>
+</div>
+<h2 id="transistors-and-moores-law">Transistors and Moore’s Law</h2>
 <figure class="w80">
-  <img src="../../assets/images/lecture01/westernization.png" alt="Europeanization (Molla Nasraddin)">
+  <img src="../../assets/images/lecture02/transistor.svg" alt="NPN transistor">
   <figcaption>
-    The caricature (1911) from the satirical
-    <a href="https://en.wikipedia.org/wiki/Molla_Nasraddin_(magazine)" target="_blank" rel="noopener noreferrer">
-      Molla Nasraddin magazine
-    </a>.
-    On the left, the Japanese man is shown adopting European (modern) knowledge and tools in a practical way (skills and technology),
-    while keeping his cultural heritage by wearing traditional outfit.
-    On the right, a local Muslim (Azerbaijani) is shown copying only the outward style (clothes and manners) without the inward transformation.
-    Modernization and progress should be understood as inward development through integration of technology.
+    By <a href="//commons.wikimedia.org/wiki/User:Omegatron" title="User:Omegatron">Omegatron</a>.
+    The <a href="//commons.wikimedia.org/wiki/Help:SVG" title="Help:SVG">SVG</a> code is
+    <a rel="nofollow" href="https://validator.w3.org/check?uri=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FSpecial%3AFilepath%2FBJT_NPN_symbol.svg&amp;doctype=Inline">valid</a>.
+    This symbol was created with
+    <a href="https://en.wikipedia.org/wiki/Inkscape">Inkscape</a>.
+    <a href="https://creativecommons.org/licenses/by-sa/3.0"
+       title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>,
+    <a href="https://commons.wikimedia.org/w/index.php?curid=2792640">Link</a>
   </figcaption>
 </figure>
--->
 
-<h2 id="data-information-knowledge">Data, Information, Knowledge</h2>
-<p><em>Data</em> (plural, from Latin datum - something given) are raw facts, figures, or symbols without <strong>context</strong> or interpretation. They represent unprocessed observations and have little meaning on their own. <em>Information</em> is data that has been processed, organized, or structured in a way that gives it context and meaning. <em>Knowledge</em> is the understanding, insight, and experience gained from interpreting and applying information.</p>
+<p>Modern computer chips contain billions of transistors packed into an area smaller than a fingernail. In 1965, Intel co-founder <a href="https://en.wikipedia.org/wiki/Gordon_Moore">Gordon Moore</a> observed that the number of transistors on a chip was roughly doubling every two years, which became known as <a href="https://en.wikipedia.org/wiki/Moore%27s_law">Moore’s Law</a> (it is not a physical law). This trend made computers faster, smaller, and cheaper for decades.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Data: "30," "32," "31" just raw numbers with no context. Information: "The temperatures recorded over three days were 30°C, 32°C, and 31°C." - now the data has context and meaning. Knowledge: "Since temperatures above 30°C increase water evaporation, watering plants in the early morning is more effective." - applying the information to guide action.</p>
+<p>Transistor scaling has slowed due to physical and engineering constraints such as heat dissipation (power density), leakage currents at very small geometries, and the increasing difficulty and cost of manufacturing at nanometer scales.</p>
 </div>
-<p><em>Context</em> is the background, circumstances, or setting that gives meaning to data, information, or events. It allows us to interpret and understand facts correctly by showing how they relate to one another and to the situation in which they occur.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Numbers like 1, 4, 9, 16, and 25 by themselves are just data. Without context, our experience may lead us to assume they are the squares of numbers from 1 to 5. But such a quick pattern recognition may mislead us once the context is given that these numbers represent the quantity of ice cream sold in a small grocery store on five different days. Context gives data its true significance and turns it into meaningful information.</p>
-</div>
-<h2 id="system">System</h2>
-<p><a href="https://en.wikipedia.org/wiki/Cybernetics">Cybernetics</a> is the study of control, communication, and feedback in systems, a field developed by <a href="https://en.wikipedia.org/wiki/Norbert_Wiener">Norbert Wiener</a>. During WWII, Wiener worked on predicting the future position of enemy aircraft: he realized that the gun–pilot system forms a feedback system, constantly correcting actions based on error and delay rather than following a fixed plan. This insight led him to extend control theory beyond machines to living systems, emphasizing self-regulation and adaptation under uncertainty. This way of thinking later influenced <a href="https://en.wikipedia.org/wiki/Artificial_intelligence">artificial intelligence</a> and <a href="https://en.wikipedia.org/wiki/Deep_learning">deep learning</a>, where feedback from errors is used to adjust internal <em>parameters</em> and improve performance.</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>We will discuss artificial intelligence in our future weeks. See the <a href="../09_ai">lecture notes</a> dedicated to the topic.</p>
-</div>
-<p><em>System</em> is a set of interrelated components working together toward a common goal by accepting <strong>inputs</strong>, <strong>processing</strong> them, and producing <strong>outputs</strong>. <em>Control system</em> is a system that continuously monitors outputs and uses <strong>feedback</strong> to adjust inputs or processes, maintaining the system's desired performance and stability.</p>
-<figure class="w80">
-  <img src="../../assets/images/lecture01/feedback_model.svg" alt="Feedback Model (Control System)">
-  <figcaption>
-    By <a href="//commons.wikimedia.org/wiki/User:Intgr" title="User:Intgr">Intgr</a> –
-    <span class="int-own-work" lang="en">Own work</span>,
-    Public Domain,
-    <a href="https://commons.wikimedia.org/w/index.php?curid=2836622">Link</a>
-  </figcaption>
-</figure>
+<h2 id="logic-gates">Logic Gates</h2>
+<p>All digital logic is based on <a href="https://en.wikipedia.org/wiki/Boolean_algebra">Boolean algebra</a>, named after <a href="https://en.wikipedia.org/wiki/George_Boole">George Boole</a>. In this system, everything is either <code>true</code> or <code>false</code>, or in computer terms, <span class="arithmatex">\(1\)</span> or <span class="arithmatex">\(0\)</span>. Logic operations are implemented using <a href="https://en.wikipedia.org/wiki/Logic_gate">logic gates</a>, built inside a processor. Every complex calculation - from adding numbers to running software - comes from millions of tiny logical steps happening very fast.</p>
+<div class="figure-grid">
+  <figure>
+    <img src="../../assets/images/lecture02/not.svg" alt="NOT gate">
+    <figcaption>
+      NOT gate, By <a href="//commons.wikimedia.org/wiki/User:Inductiveload" title="User:Inductiveload">Inductiveload</a> –
+      <span class="int-own-work" lang="en">Own work</span>, Public Domain,
+      <a href="https://commons.wikimedia.org/w/index.php?curid=5729018">Link</a>
+    </figcaption>
+  </figure>
 
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>In a home heating system, the desired room temperature is the input, the furnace heating the air is the process, and the warm air circulating through the house is the output. Feedback comes from a thermostat, which senses the actual temperature and switches the furnace on or off to keep the room at the set temperature.</p>
+  <figure>
+    <img src="../../assets/images/lecture02/and.svg" alt="AND gate">
+    <figcaption>
+      AND gate, By <a href="//commons.wikimedia.org/wiki/User:Inductiveload" title="User:Inductiveload">Inductiveload</a> –
+      <span class="int-own-work" lang="en">Own work</span>, Public Domain,
+      <a href="https://commons.wikimedia.org/w/index.php?curid=5729013">Link</a>
+    </figcaption>
+  </figure>
+
+  <figure>
+    <img src="../../assets/images/lecture02/or.svg" alt="OR gate">
+    <figcaption>
+      OR gate, By <a href="//commons.wikimedia.org/wiki/User:Inductiveload" title="User:Inductiveload">Inductiveload</a> –
+      <span class="int-own-work" lang="en">Own work</span>, Public Domain,
+      <a href="https://commons.wikimedia.org/w/index.php?curid=5729019">Link</a>
+    </figcaption>
+  </figure>
+
+  <figure>
+    <img src="../../assets/images/lecture02/xor.svg" alt="XOR gate">
+    <figcaption>
+      XOR gate, By <a href="//commons.wikimedia.org/wiki/User:Inductiveload" title="User:Inductiveload">Inductiveload</a> –
+      <span class="int-own-work" lang="en">Own work</span>, Public Domain,
+      <a href="https://commons.wikimedia.org/w/index.php?curid=5729022">Link</a>
+    </figcaption>
+  </figure>
 </div>
-<ul>
-<li><strong>Input.</strong> The resources (data, materials, or energy) that enter the system.</li>
-<li><strong>Process.</strong> The transformation mechanism that converts input into output.</li>
-<li><strong>Output.</strong> The result produced by the system.</li>
-<li><strong>Feedback.</strong> Information from the output that is sent back to the system to influence future inputs or the process itself.</li>
-</ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>In the mid-19th century, several suspension bridges across Europe failed due to poor system design - weak materials and unpredictable environmental conditions. When John Roebling proposed the Brooklyn Bridge, he applied engineering systems thinking to overcome these failures. Roebling's bridge demonstrates how system components and interactions determine reliability and success. When one subsystem (e.g., faulty cables) failed, built-in redundancies maintained the system's stability.</p>
+
+<p><strong>Truth tables</strong> are a precise way to describe how a logical operation behaves. They list all possible input values (usually 0 and 1) and show the exact output produced for each case. This makes the behavior of a logic gate or logical rule completely unambiguous and easy to verify. Below are standard truth tables for basic logic gates.</p>
+<p>The <strong>NOT gate</strong> inverts its input.</p>
+<table>
+<thead>
+<tr>
+<th><strong>A</strong></th>
+<th><strong>Q</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>Both <strong>AND gate</strong> and <strong>OR gate</strong> take two inputs. AND outputs 1 only if both inputs are 1. OR outputs 1 if at least one input is 1.</p>
+<table>
+<thead>
+<tr>
+<th><strong>A</strong></th>
+<th><strong>B</strong></th>
+<th><strong>AND (Q)</strong></th>
+<th><strong>OR (Q)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>The <strong>XOR (exclusive OR) gate</strong> outputs 1 only when the inputs are different.</p>
+<table>
+<thead>
+<tr>
+<th><strong>A</strong></th>
+<th><strong>B</strong></th>
+<th><strong>Q</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition success">
+<p class="admonition-title">Exercise</p>
+<p>How would you implement XOR using only NOT, AND, and OR? You can use an online <a href="https://logic.ly/demo/">digital logic simulator</a>.</p>
 </div>
-<p><em>Information system</em> is a set of interrelated components that collect, <strong>process</strong>, store, disseminate <strong>data</strong> and <strong>information</strong>, and provide a <strong>feedback</strong> mechanism to monitor and control its operation to make sure it continues to meet its goals and <strong>objectives</strong>.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>A library information system records books (input), organizes and catalogs them (process), provides search results for users (output), and updates records based on borrowing activity (feedback).</p>
-</div>
-<p><em>Computer-Based Information System</em> is a single set of</p>
-<ul>
-<li>hardware,</li>
-<li>software,</li>
-<li>databases,</li>
-<li>telecommunications,</li>
-<li>people, and</li>
-<li>procedures</li>
-</ul>
-<p>that are configured to collect, manipulate, store, and process data into information.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>An online banking system takes transaction requests as input, processes them through secure software, and provides account balances or confirmations as output. Feedback such as error alerts or user actions improves future transactions and system reliability.</p>
+<div class="admonition success">
+<p class="admonition-title">Exercise</p>
+<p>Use logic gates to add any two single-bit binary numbers. Which gates would you use? Hint: use the addition table provided in the section dedicated to "two's complement".</p>
 </div>
 <h2 id="additional-material">Additional Material</h2>
 <ul>
-<li><a href="https://www.youtube.com/watch?v=dyckL6HuLRU">One of the most epic engineering feats in history</a></li>
-<li><a href="https://www.youtube.com/watch?v=xnClSss50pI">How do Steam Engines Work?</a></li>
-<li><a href="https://www.youtube.com/embed/kXhJ3hHK9hQ">The Meaning of Knowledge</a></li>
+<li><a href="https://www.youtube.com/watch?v=O5nskjZ_GoI">Early Computing: Crash Course Computer Science #1</a></li>
+<li><a href="https://www.youtube.com/watch?v=LN0ucKNX0hc">Electronic Computing: Crash Course Computer Science #2</a></li>
+<li><a href="https://www.youtube.com/watch?v=gI-qXk7XojA">Boolean Logic &amp; Logic Gates: Crash Course Computer Science #3</a></li>
+<li><a href="https://www.youtube.com/watch?v=lKTsv6iVxV4&amp;">Binary: Plusses &amp; Minuses (Why We Use Two’s Complement) - Computerphile</a></li>
+<li><a href="https://www.youtube.com/watch?v=AF8d72mA41M">Why It Was Almost Impossible to Make the Blue LED</a></li>
 </ul>
 
 
@@ -1410,7 +1952,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../general/resources/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Policies &amp;amp; Resources">
+          <a href="../01_intro/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 01. Introduction">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1420,20 +1962,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Policies &amp; Resources
+                01. Introduction
               </div>
             </div>
           </a>
         
         
           
-          <a href="../02_binary/" class="md-footer__link md-footer__link--next" aria-label="Next: 02. Binary Representation, Arithmetic &amp;amp; Logic Operations">
+          <a href="../03_hardware/" class="md-footer__link md-footer__link--next" aria-label="Next: 03. Hardware: CPU, GPU, Memory, Storage Devices">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                02. Binary Representation, Arithmetic &amp; Logic Operations
+                03. Hardware: CPU, GPU, Memory, Storage Devices
               </div>
             </div>
             <div class="md-footer__button md-icon">
