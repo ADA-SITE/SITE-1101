@@ -178,7 +178,7 @@ In a _ring topology_, each device connects to exactly two others, forming a clos
 In a mesh topology, every device connects directly to several other devices. There are multiple paths for data to travel. If one link fails, the network automatically uses another path. This provides very high reliability and performance but requires more cables and is more expensive to build.
 
 !!! note
-    [Internet backbone](../07_internet) providers use mesh topology. Major routers in different cities and countries connect through multiple redundant links so that if one line fails, global communication continues without interruption.
+    [Internet backbone](07_internet_www.md) providers use mesh topology. Major routers in different cities and countries connect through multiple redundant links so that if one line fails, global communication continues without interruption.
 
 | **Topology** | **Advantages** | **Disadvantages** |
 |-------------|----------------|------------------|

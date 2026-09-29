@@ -82,7 +82,7 @@ Every piece of data inside a computer — numbers, letters, images, even videos 
 
 ## Two’s Complement
 
-Just like in the decimal system, numbers in binary can be added together. Since binary uses only $0$ and $1$, the addition rules are simple. Binary addition is a core operation performed by the [Arithmetic Logic Unit (ALU)](../03_hardware) in a CPU.
+Just like in the decimal system, numbers in binary can be added together. Since binary uses only $0$ and $1$, the addition rules are simple. Binary addition is a core operation performed by the [Arithmetic Logic Unit (ALU)](03_hardware.md) in a CPU.
 
 | **Addition** | **Result** | **Carry** |
 | --- | --- | --- |

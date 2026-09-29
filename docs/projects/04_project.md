@@ -39,7 +39,6 @@ In this SITE 1101 individual project, students build a personal portfolio websit
     </div>
   </article>
 
-  <!--
   <article class="team-card">
     <div class="team-media">
       <a href="https://ilahe07.github.io/personal-blog/" target="_blank" rel="noopener">
@@ -57,7 +56,6 @@ In this SITE 1101 individual project, students build a personal portfolio websit
       <div class="team-semester">Fall 2025</div>
     </div>
   </article>
-  -->
 
   <article class="team-card">
     <div class="team-media">

@@ -47,7 +47,7 @@ _Context_ is the background, circumstances, or setting that gives meaning to dat
 [Cybernetics](https://en.wikipedia.org/wiki/Cybernetics) is the study of control, communication, and feedback in systems, a field developed by [Norbert Wiener](https://en.wikipedia.org/wiki/Norbert_Wiener). During WWII, Wiener worked on predicting the future position of enemy aircraft: he realized that the gun–pilot system forms a feedback system, constantly correcting actions based on error and delay rather than following a fixed plan. This insight led him to extend control theory beyond machines to living systems, emphasizing self-regulation and adaptation under uncertainty. This way of thinking later influenced [artificial intelligence](https://en.wikipedia.org/wiki/Artificial_intelligence) and [deep learning](https://en.wikipedia.org/wiki/Deep_learning), where feedback from errors is used to adjust internal _parameters_ and improve performance.
 
 !!! tip
-    We will discuss artificial intelligence in our future weeks. See the [lecture notes](../09_ai) dedicated to the topic.
+    We will discuss artificial intelligence in our future weeks. See the [lecture notes](09_AI.md) dedicated to the topic.
 
 _System_ is a set of interrelated components working together toward a common goal by accepting **inputs**, **processing** them, and producing **outputs**. _Control system_ is a system that continuously monitors outputs and uses **feedback** to adjust inputs or processes, maintaining the system's desired performance and stability.
 

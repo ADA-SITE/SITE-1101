@@ -31,10 +31,6 @@ There will be two exams: midterm and final. Both exams will be computer-based (u
 ## Study Materials
 The course textbook is an optional reading: _Principles of Information Systems_ (Stair & Reynolds, 13th edition or later, can be found at ADA University library). Compact lecture notes and additional material are provided online in the course website. Further study materials will be shared with students on Blackboard throughout the semester.
 
-## Past Iterations
-
-**Fall 2025.** The course website was launched. [Lecture Notes](notes/01_intro) and [Project Leaderboard](projects/01_project) were introduced. **Spring 2026.** The website was migrated to `mkdocs`. The [robotics project](projects/03_project/) was brought back with certain revision of the course content.
-
 [^1]: In case of difficulties in communication, you are encouraged to consult your academic advisor and seek psychological support.
 
 [^2]: You are expected to be aware of the [Exam Rules and Regulations](https://www.ada.edu.az/file_upload/policies/stud_as_reg.pdf). If you have special needs or health  issues, you are strongly recommended to contact the University’s Student Academic Support Services well ahead of the examination date. It is your responsibility to manage conflicts in your schedule and notify your instructors about it at least two weeks before the examination date.

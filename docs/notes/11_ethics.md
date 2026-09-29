@@ -142,7 +142,7 @@ The prolific science-fiction writer and professor of biochemistry [Isaac Asimov]
 2. A robot must obey the orders given it by human beings except where such orders would conflict with the First Law.
 3. A robot must protect its own existence as long as such protection does not conflict with the First or Second Laws.
 
-In structure, these laws resemble boolean algebra or programming statements: IF/THEN, AND/OR rules that one would encounter in basic propositional logic or in early [digital logic design](../02_binary): _IF a robot must obey humans AND must NOT harm humans, THEN commands that would cause harm are NOT allowed._ The laws function like conditional chains in a circuit.
+In structure, these laws resemble boolean algebra or programming statements: IF/THEN, AND/OR rules that one would encounter in basic propositional logic or in early [digital logic design](02_binary_logic.md): _IF a robot must obey humans AND must NOT harm humans, THEN commands that would cause harm are NOT allowed._ The laws function like conditional chains in a circuit.
 
 While the laws seem logical and protective, Asimov's own stories showed how these clean, binary rules break down, and produce unintended and sometimes dangerous consequences. Consider the First Law's prohibition against allowing humans "to come to harm". In Asimov's fiction, robots interpreting this literally concluded they must protect humans from all possible danger - including themselves. This led robots to imprison humans, restricting freedom and choices to eliminate any risk of harm. The rule was followed perfectly, but the outcome violated human well-being.
 
