@@ -2,82 +2,86 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://ada-site.github.io/SITE-1101/</loc>
-         <lastmod>2026-09-04</lastmod>
+         <lastmod>2026-09-29</lastmod>
+    </url>
+    <url>
+         <loc>https://ada-site.github.io/SITE-1101/course/2025_fall/</loc>
+         <lastmod>2026-09-29</lastmod>
     </url>
     <url>
          <loc>https://ada-site.github.io/SITE-1101/course/2026_fall/</loc>
-         <lastmod>2026-09-04</lastmod>
+         <lastmod>2026-09-29</lastmod>
     </url>
     <url>
          <loc>https://ada-site.github.io/SITE-1101/course/2026_spring/</loc>
-         <lastmod>2026-09-04</lastmod>
+         <lastmod>2026-09-29</lastmod>
     </url>
     <url>
          <loc>https://ada-site.github.io/SITE-1101/general/communication/</loc>
-         <lastmod>2026-09-04</lastmod>
+         <lastmod>2026-09-29</lastmod>
     </url>
     <url>
          <loc>https://ada-site.github.io/SITE-1101/general/resources/</loc>
-         <lastmod>2026-09-04</lastmod>
+         <lastmod>2026-09-29</lastmod>
     </url>
     <url>
          <loc>https://ada-site.github.io/SITE-1101/notes/01_intro/</loc>
-         <lastmod>2026-09-04</lastmod>
+         <lastmod>2026-09-29</lastmod>
     </url>
     <url>
-         <loc>https://ada-site.github.io/SITE-1101/notes/02_binary/</loc>
-         <lastmod>2026-09-04</lastmod>
+         <loc>https://ada-site.github.io/SITE-1101/notes/02_binary_logic/</loc>
+         <lastmod>2026-09-29</lastmod>
     </url>
     <url>
          <loc>https://ada-site.github.io/SITE-1101/notes/03_hardware/</loc>
-         <lastmod>2026-09-04</lastmod>
+         <lastmod>2026-09-29</lastmod>
     </url>
     <url>
-         <loc>https://ada-site.github.io/SITE-1101/notes/04_algorithm/</loc>
-         <lastmod>2026-09-04</lastmod>
+         <loc>https://ada-site.github.io/SITE-1101/notes/04_algorithms/</loc>
+         <lastmod>2026-09-29</lastmod>
     </url>
     <url>
          <loc>https://ada-site.github.io/SITE-1101/notes/05_software/</loc>
-         <lastmod>2026-09-04</lastmod>
+         <lastmod>2026-09-29</lastmod>
     </url>
     <url>
-         <loc>https://ada-site.github.io/SITE-1101/notes/06_network/</loc>
-         <lastmod>2026-09-04</lastmod>
+         <loc>https://ada-site.github.io/SITE-1101/notes/06_networks/</loc>
+         <lastmod>2026-09-29</lastmod>
     </url>
     <url>
-         <loc>https://ada-site.github.io/SITE-1101/notes/07_internet/</loc>
-         <lastmod>2026-09-04</lastmod>
+         <loc>https://ada-site.github.io/SITE-1101/notes/07_internet_www/</loc>
+         <lastmod>2026-09-29</lastmod>
     </url>
     <url>
-         <loc>https://ada-site.github.io/SITE-1101/notes/08_database/</loc>
-         <lastmod>2026-09-04</lastmod>
+         <loc>https://ada-site.github.io/SITE-1101/notes/08_databases/</loc>
+         <lastmod>2026-09-29</lastmod>
     </url>
     <url>
-         <loc>https://ada-site.github.io/SITE-1101/notes/09_ai/</loc>
-         <lastmod>2026-09-04</lastmod>
+         <loc>https://ada-site.github.io/SITE-1101/notes/09_AI/</loc>
+         <lastmod>2026-09-29</lastmod>
     </url>
     <url>
-         <loc>https://ada-site.github.io/SITE-1101/notes/10_sdlc/</loc>
-         <lastmod>2026-09-04</lastmod>
+         <loc>https://ada-site.github.io/SITE-1101/notes/10_SDLC/</loc>
+         <lastmod>2026-09-29</lastmod>
     </url>
     <url>
          <loc>https://ada-site.github.io/SITE-1101/notes/11_ethics/</loc>
-         <lastmod>2026-09-04</lastmod>
+         <lastmod>2026-09-29</lastmod>
     </url>
     <url>
          <loc>https://ada-site.github.io/SITE-1101/projects/01_project/</loc>
-         <lastmod>2026-09-04</lastmod>
+         <lastmod>2026-09-29</lastmod>
     </url>
     <url>
          <loc>https://ada-site.github.io/SITE-1101/projects/02_project/</loc>
-         <lastmod>2026-09-04</lastmod>
+         <lastmod>2026-09-29</lastmod>
     </url>
     <url>
          <loc>https://ada-site.github.io/SITE-1101/projects/03_project/</loc>
-         <lastmod>2026-09-04</lastmod>
+         <lastmod>2026-09-29</lastmod>
     </url>
     <url>
          <loc>https://ada-site.github.io/SITE-1101/projects/04_project/</loc>
-         <lastmod>2026-09-04</lastmod>
+         <lastmod>2026-09-29</lastmod>
     </url>
 </urlset>
